@@ -3,30 +3,33 @@
 @import "common/var";
 
 @mixin menu-item {
-  height: 56px;
-  line-height: 56px;
-  font-size: 14px;
-  color: $--menu-item-color;
-  padding: 0 20px;
-  list-style: none;
-  cursor: pointer;
   position: relative;
+  padding: 12px 24px;
+  font-size: inherit;
+  // height: 56px;
+  // line-height: 56px;
+  // font-size: 14px;
+  // color: $--menu-item-color;
+  // padding: 0 20px;
+  list-style: none;
   transition: border-color .3s, background-color .3s, color .3s;
   box-sizing: border-box;
-  white-space: nowrap;
+  cursor: pointer;
+  @include utils-ellipsis;
 
   * {
     vertical-align: middle;
   }
 
-  i {
-    color: $--color-text-secondary;
-  }
-
+  // i {
+  //   color: $--color-text-secondary;
+  // }
+  
+  &.is-active,
   &:hover,
   &:focus {
     outline: none;
-    background-color: $--menu-item-hover-fill;
+    background-color: $menu-item-hover;
   }
 
   @include when(disabled) {
@@ -37,12 +40,13 @@
 }
 
 @include b(menu) {
-  border-right: solid 1px #e6e6e6;
+  // border-right: solid 1px #e6e6e6;
   list-style: none;
   position: relative;
   margin: 0;
-  padding-left: 0;
-  background-color: $--menu-item-fill;
+  padding: 12px 0;
+  background-color: transparent;
+  color: $--color-white;
   @include utils-clearfix;
 
   @include m(horizontal) {
@@ -112,7 +116,8 @@
         color: $--color-text-secondary;
 
         &.is-active {
-          color: $--color-text-primary;
+          background-color: $menu-item-hover;
+          // color: $--color-text-primary;
         }
       }
     }
@@ -159,6 +164,7 @@
 
     .el-submenu {
       position: relative;
+
       & .el-menu {
         position: absolute;
         margin-left: 5px;
@@ -201,11 +207,11 @@
     margin-right: 5px;
     width: 24px;
     text-align: center;
-    font-size: 18px;
+    // font-size: 18px;
     vertical-align: middle;
   }
   @include when(active) {
-    color: $--color-primary;
+    // color: $--color-primary;
     i {
       color: inherit;
     }
@@ -221,18 +227,18 @@
     @include menu-item;
 
     &:hover {
-      background-color: $--menu-item-hover-fill;
+      background-color: $menu-item-hover;
     }
   }
   & .el-menu {
     border: none;
   }
-  & .el-menu-item {
-    height: 50px;
-    line-height: 50px;
-    padding: 0 45px;
-    min-width: 200px;
-  }
+  // & .el-menu-item {
+  //   height: 50px;
+  //   line-height: 50px;
+  //   padding: 0 45px;
+  //   min-width: 200px;
+  // }
   @include e(icon-arrow) {
     position: absolute;
     top: 50%;
@@ -261,10 +267,10 @@
   }
   [class^="el-icon-"] {
     vertical-align: middle;
-    margin-right: 5px;
+    margin-right: 3px;
     width: 24px;
     text-align: center;
-    font-size: 18px;
+    // font-size: 18px;
   }
 }
 
@@ -273,7 +279,7 @@
     padding: 0;
   }
   @include e(title) {
-    padding: 7px 0 7px 20px;
+    padding: 6px 0 6px 20px;
     line-height: normal;
     font-size: 12px;
     color: $--color-text-secondary;

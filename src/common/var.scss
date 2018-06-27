@@ -41,8 +41,8 @@ $--color-danger-lighter: mix($--color-white, $--color-danger, 90%) !default;
 $--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
 
 $--color-text-primary: #303133 !default;
-$--color-text-regular: #606266 !default;
-$--color-text-secondary: #909399 !default;
+$--color-text-regular: #8391A0 !default;
+$--color-text-secondary: #8C8C8C !default;
 $--color-text-placeholder: #c0c4cc !default;
 
 /* Link
@@ -599,9 +599,9 @@ $--steps-padding: 20px !default;
 
 /* Menu
 --------------------------*/
+$sidebar-bg: darken(saturate($--color-primary,20%),16%) !default;
 $--menu-item-color: $--color-text-primary !default;
-$--menu-item-fill: $--color-white !default;
-$--menu-item-hover-fill: $--color-primary-light-9 !default;
+$menu-item-hover: lighten($--color-primary,3.8%) !default;
 
 /* Rate
 --------------------------*/
@@ -751,3 +751,16 @@ $input-disabled-color:#f5f5f5 !default;
 
 
 
+/* Base Style (By Lucinda)
+--------------------------------- */
+$padding-base: 24px;
+$padding-sm: 12px;
+$padding-xs: 6px;
+$padding-lg: 36px;
+$padding-xl: 48px;
+
+$margin-base: $padding-base;
+$margin-sm: $padding-sm;
+$margin-xs: $padding-xs;
+$margin-lg: $padding-lg;
+$margin-xl: $padding-xl;

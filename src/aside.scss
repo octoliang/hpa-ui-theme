@@ -1,7 +1,24 @@
 @import "mixins/mixins";
 
 @include b(aside) {
-  overflow: auto;
-  box-sizing: border-box;
-  flex-shrink: 0;
+  // position: absolute;
+  // min-width: 200px;
+  // height: 100%;
+  // min-height: 100%;
+  // background: $sidebar-bg;
+  // overflow: auto;
+  // box-sizing: border-box;
+  // flex-shrink: 0;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-width: 200px;
+  min-width: 200px;
+  width: 200px;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: $sidebar-bg;
+  z-index: 10;
 }

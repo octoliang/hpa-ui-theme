@@ -2,9 +2,11 @@
 @import "common/var";
 
 @include b(main) {
-  flex: 1;
-  flex-basis: auto;
-  overflow: auto;
-  box-sizing: border-box;
-  padding: $--main-padding;
+  // flex: 1;
+  // flex-basis: auto;
+  // overflow: auto;
+  // box-sizing: border-box;
+  // padding: $--main-padding;
+
+  padding: 84px 24px 24px 24px;
 }
