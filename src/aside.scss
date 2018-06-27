@@ -16,9 +16,16 @@
   max-width: 200px;
   min-width: 200px;
   width: 200px;
+  height: 100%;
   min-height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   background: $sidebar-bg;
   z-index: 10;
+
+  &-logo{
+    width: 100%;
+    height: $header-height;
+    background: darken(saturate($--color-primary,15%),29%);
+  }
 }

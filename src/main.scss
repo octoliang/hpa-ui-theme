@@ -8,5 +8,5 @@
   // box-sizing: border-box;
   // padding: $--main-padding;
 
-  padding: 84px 24px 24px 24px;
+  padding: $header-height+$padding-base $padding-base $padding-base $padding-base;
 }

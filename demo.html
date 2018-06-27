@@ -9,6 +9,9 @@
   <div id="app">
     <el-container>
       <el-aside width="200px">
+        <div class="el-aside-logo">
+          <a href="javascript:void(0)"></a>
+        </div>
         <el-menu default-active="3">
           <el-submenu index="1">
             <template slot="title">
@@ -47,18 +50,7 @@
       </el-aside>
       
       <el-container>
-        <el-header>
-          <el-dropdown>
-            <i class="el-icon-setting"></i>
-            <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>查看</el-dropdown-item>
-              <el-dropdown-item>新增</el-dropdown-item>
-              <el-dropdown-item>删除</el-dropdown-item>
-            </el-dropdown-menu>
-          </el-dropdown>
-          <span>王小虎</span>
-        </el-header>
-        
+        <el-header></el-header>
         <el-main>Main</el-main>
       </el-container>
     </el-container>
