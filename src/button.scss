@@ -133,13 +133,16 @@
   @include m(danger) {
     @include button-variant($--button-danger-color, $--button-danger-fill, $--button-danger-border);
   }
-  @include m(info) {
-    @include button-variant($--button-info-color, $--button-info-fill, $--button-info-border);
-  }
-  @include m(medium) {
-    @include button-size($--button-medium-padding-vertical, $--button-medium-padding-horizontal, $--button-medium-font-size, $--button-medium-border-radius);
+  @include m(huge) {
+    @include button-size($btn-huge-padding-vertical, $btn-huge-padding-horizontal, $btn-huge-font, $btn-huge-border-radius);
     @include when(circle) {
-      padding: $--button-medium-padding-vertical;
+      padding:$btn-huge-padding-vertical;
+    }
+  }
+  @include m(large) {
+    @include button-size($btn-large-padding-vertical, $btn-large-padding-horizontal, $btn-large-font, $btn-large-border-radius);
+    @include when(circle) {
+      padding:$btn-large-padding-vertical;
     }
   }
   @include m(small) {
@@ -148,10 +151,10 @@
       padding: $--button-small-padding-vertical;
     }
   }
-  @include m(mini) {
-    @include button-size($--button-mini-padding-vertical, $--button-mini-padding-horizontal, $--button-mini-font-size, $--button-mini-border-radius);
+  @include m(tiny) {
+    @include button-size($btn-tiny-padding-vertical, $btn-tiny-padding-horizontal, $btn-tiny-font, $btn-tiny-border-radius);
     @include when(circle) {
-      padding: $--button-mini-padding-vertical;
+      padding:$btn-tiny-padding-vertical;
     }
   }
   @include m(text) {

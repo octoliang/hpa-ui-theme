@@ -7,9 +7,54 @@
 </head>
 <body>
   <div id="app">
-    <el-dialog :visible.sync="visible" title="Hello world">
-      <p>Try Element</p>
-    </el-dialog> -->
+        <!-- button -->
+        <h2 class="first-h2">button</h2>
+        <div style="padding: 20px;">
+            <el-button  size="huge">huge button</el-button>
+            <el-button  size="large">large button</el-button>
+            <el-button>default button</el-button>
+            <el-button  size="small">small button</el-button>
+            <el-button  size="tiny">tiny button</el-button>
+            <div style="padding:20px 20px 0px 0;">
+              <el-button  type="primary">primary</el-button>
+              <el-button  type="success">success</el-button>   
+              <el-button  type="warning">warning</el-button>   
+              <el-button  type="danger">danger</el-button>
+              <el-button  class="secondary">secondary</el-button>   
+              <el-button  disabled>disabled</el-button>
+            </div>     
+        </div>
+        <!-- button -->
+
+        <!-- check -->
+        <h2>check</h2>
+        <div class="pd-box">
+            <el-checkbox  v-model="check">备选项</el-checkbox>
+            <el-checkbox  v-model="check" disabled>禁用项</el-checkbox>
+        </div>  
+        <!-- check -->
+
+        <!--radio-->
+        <h2>radio</h2>
+        <div class="pd-box">
+          <el-radio v-model="radio" label="1">备选项1</el-radio>
+          <el-radio v-model="radio" label="2">备选项2</el-radio>
+        </div>  
+        <!-- radio -->
+
+        <!-- input -->
+        <h2>input</h2>
+        <div class="pd-box">
+          <div class="demo-input-box">
+            <el-input v-model="inputvalue4" placeholder="禁用输入框" disabled></el-input>
+            <el-input v-model="inputvalue1" placeholder="large" size="large"></el-input>
+            <el-input v-model="inputvalue2" placeholder="默认"></el-input>
+            <el-input v-model="inputvalue3" placeholder="small" size="small"></el-input>
+          </div>
+        </div>  
+        <!-- input -->
+
+        
   </div>
 </body>
   <!-- import Vue before Element -->
@@ -20,8 +65,35 @@
     new Vue({
       el: '#app',
       data: function() {
-        return { visible: false }
+        return { 
+          visible: false,
+          check:true,
+          radio:'1',
+          inputvalue1:"",
+          inputvalue2:"",
+          inputvalue3:"",
+          inputvalue4:""
+        }
       }
     })
   </script>
 </html>
+<style>
+    h2{
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+    .first-h2{
+        padding-bottom: 0;
+        padding-top: 20px;
+    }
+
+    .pd-box{
+        padding:0px 20px 20px 20px;
+    }
+
+    .demo-input-box .el-input{
+        width:148px;
+        margin-right: 5px;
+    }
+</style> 
