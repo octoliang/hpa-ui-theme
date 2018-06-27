@@ -14,7 +14,7 @@ $--color-transition-base: color .2s cubic-bezier(.645,.045,.355,1) !default;
 $--color-white: #fff !default;
 $--color-black: #000 !default;
 
-$--color-primary: #409EFF !default;
+$--color-primary: #0f7ae6 !default;
 $--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default; /* 53a8ff */
 $--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default; /* 66b1ff */
 $--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default; /* 79bbff */
@@ -25,9 +25,9 @@ $--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default; /
 $--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default; /* d9ecff */
 $--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default; /* ecf5ff */
 
-$--color-success: #67c23a !default;
-$--color-warning: #e6a23c !default;
-$--color-danger: #f56c6c !default;
+$--color-success: #3fae2a !default;
+$--color-warning: #ffa300 !default;
+$--color-danger: #ff5347 !default;
 $--color-info: #909399 !default;
 
 $--color-success-light: mix($--color-white, $--color-success, 80%) !default;
@@ -58,7 +58,7 @@ $--background-color-base: #f5f7fa !default;
 -------------------------- */
 $--border-width-base: 1px !default;
 $--border-style-base: solid !default;
-$--border-color-base: #dcdfe6 !default;
+$--border-color-base: #d9d9d9!default;
 $--border-color-light: #e4e7ed !default;
 $--border-color-lighter: #ebeef5 !default;
 $--border-color-extra-light: #f2f6fc !default;
@@ -83,6 +83,8 @@ $--fill-base: $--color-white !default;
 $--font-path: 'fonts' !default;
 $--font-size-base: 14px !default;
 $--font-size-small: 13px !default;
+$--font-size-tiny: 12px !default;
+$--font-size-middle: 16px !default;
 $--font-size-large: 18px !default;
 $--font-color-disabled-base: #bbb !default;
 $--font-weight-primary: 500 !default;
@@ -164,8 +166,8 @@ $--checkbox-button-checked-border-color: $--color-primary !default;
 $--radio-font-size: 14px !default;
 $--radio-font-weight: $--font-weight-primary !default;
 $--radio-color: $--color-text-regular !default;
-$--radio-input-height: 14px !default;
-$--radio-input-width: 14px !default;
+$--radio-input-height: 16px !default;
+$--radio-input-width: 16px !default;
 $--radio-input-border-radius: $--border-radius-circle !default;
 $--radio-input-fill: $--color-white !default;
 $--radio-input-border: $--border-base !default;
@@ -316,7 +318,7 @@ $--notification-danger-color: $--color-danger !default;
 $--input-font-size: $--font-size-base !default;
 $--input-color: $--color-text-regular !default;
 $--input-width: 140px !default;
-$--input-height: 40px !default;
+$--input-height: 36px !default;
 $--input-border: $--border-base !default;
 $--input-border-color: $--border-color-base !default;
 $--input-border-radius: $--border-radius-base !default;
@@ -396,17 +398,17 @@ $--tab-vertical-header-count-fill: $--color-text-secondary !default;
 $--button-font-size: 14px !default;
 $--button-font-weight: $--font-weight-primary !default;
 $--button-border-radius: $--border-radius-base !default;
-$--button-padding-vertical: 12px !default;
+$--button-padding-vertical: 8px !default;
 $--button-padding-horizontal: 20px !default;
 
 $--button-medium-font-size: 14px !default;
 $--button-medium-border-radius: $--border-radius-base !default;
-$--button-medium-padding-vertical: 10px !default;
+$--button-medium-padding-vertical: 8px !default;
 $--button-medium-padding-horizontal: 20px !default;
 
 $--button-small-font-size: 12px !default;
-$--button-small-border-radius: #{$--border-radius-base - 1} !default;
-$--button-small-padding-vertical: 9px !default;
+$--button-small-border-radius: #{$--border-radius-base - 2} !default;
+$--button-small-padding-vertical: 5px !default;
 $--button-small-padding-horizontal: 15px !default;
 
 $--button-mini-font-size: 12px !default;
@@ -419,7 +421,7 @@ $--button-default-fill: $--color-white !default;
 $--button-default-border: $--border-color-base !default;
 
 $--button-disabled-color: $--color-text-placeholder !default;
-$--button-disabled-fill: $--color-white !default;
+$--button-disabled-fill: #f5f5f5 !default;
 $--button-disabled-border: $--border-color-lighter !default;
 
 $--button-primary-border: $--color-primary !default;
@@ -710,3 +712,42 @@ $--breakpoints-spec: (
   'lg-and-down': (max-width: $--xl - 1),
   'xl-only' : (min-width: $--xl),
 );
+
+
+/* the new variable  tanxukai
+--------------------------*/
+
+/*button*/
+
+$btn-huge-font: 18px !default;
+$btn-huge-border-radius: $--border-radius-base !default;
+$btn-huge-padding-vertical: 12px !default;
+$btn-huge-padding-horizontal: 20px !default;
+
+
+$btn-large-font: 16px !default;
+$btn-large-border-radius: $--border-radius-base !default;
+$btn-large-padding-vertical: 10px !default;
+$btn-large-padding-horizontal: 20px !default;
+
+
+$btn-tiny-font: 10px !default;
+$btn-tiny-border-radius: #{$--border-radius-base - 2} !default;
+$btn-tiny-padding-vertical: 4px !default;
+$btn-tiny-padding-horizontal: 20px !default;
+
+
+/*input*/
+
+$input-large-font: 16px !default;
+$input-large-height: 44px !default;
+
+
+$input-small-font: 14px !default;
+$input-small-height: 24px !default;
+
+
+$input-disabled-color:#f5f5f5 !default;
+
+
+

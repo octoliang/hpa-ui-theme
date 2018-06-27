@@ -1,4 +1,58 @@
 @import 'common/var';
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); //  remove tap highlight color for mobile safari
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+} 
+
+ // unify the setting of elements's margin and padding for browsers
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
@@ -76,4 +130,31 @@ hr {
   margin-bottom: 20px;
   border: 0;
   border-top: 1px solid #eeeeee;
+}
+
+// Reset fonts for relevant elements
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+input[type="text"],
+textarea {
+  -webkit-appearance: none;
+}
+
+ul,
+ol {
+  list-style: none;
+} 
+
+// Remove the clear button of a text input control in IE10+
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
 }

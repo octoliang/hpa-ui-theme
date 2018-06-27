@@ -154,9 +154,10 @@
 
   @include when(disabled) {
     .el-input__inner {
-      background-color: $--input-disabled-fill;
+      background-color:  $input-disabled-color;
       border-color: $--input-disabled-border;
       color: $--input-disabled-color;
+      border:none;
       cursor: not-allowed;
 
       &::placeholder {
@@ -181,6 +182,19 @@
     }
   }
 
+  @include m(large) {
+    font-size: $input-large-font;
+
+    @include e(inner) {
+      height: $input-large-height;
+      line-height: $input-large-height;
+    }
+
+    .el-input__icon {
+      line-height: $input-large-height;
+    }
+  }
+
   @include m(medium) {
     font-size: $--input-medium-font-size;
 
@@ -194,15 +208,15 @@
     }
   }
   @include m(small) {
-    font-size: $--input-small-font-size;
+    font-size: $input-small-font;
 
     @include e(inner) {
-      height: $--input-small-height;
-      line-height: $--input-small-height;
+      height: $input-small-height;
+      line-height: $input-small-height;
     }
 
     .el-input__icon {
-      line-height: $--input-small-height;
+      line-height: $input-small-height;
     }
   }
   @include m(mini) {
