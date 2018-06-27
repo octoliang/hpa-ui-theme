@@ -1,7 +1,7 @@
 {
-  "name": "element-theme-chalk",
-  "version": "2.4.1",
-  "description": "Element component chalk theme.",
+  "name": "hpa-ui-theme",
+  "version": "1.0.5",
+  "description": "Element component hpa-ui-theme",
   "main": "lib/index.css",
   "style": "lib/index.css",
   "files": [
@@ -13,18 +13,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ElementUI/theme-chalk.git"
+    "url": "https://github.com/garyhe0780/hpa-ui-theme.git"
   },
   "keywords": [
     "element",
     "theme"
   ],
-  "author": "yi.shyang@ele.me",
+  "author": "garyhe0780 <gary.he@shareworks.cn>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ElementUI/theme-chalk/issues"
   },
-  "homepage": "https://github.com/ElementUI/theme-chalk#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
