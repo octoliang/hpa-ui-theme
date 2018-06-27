@@ -26,6 +26,18 @@
   &-logo{
     width: 100%;
     height: $header-height;
+    padding: $padding-xs $padding-sm;
     background: darken(saturate($--color-primary,15%),29%);
+
+    >a{
+      display: block;
+
+      >img{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+      }
+    }
   }
 }
