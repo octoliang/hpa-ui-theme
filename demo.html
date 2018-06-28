@@ -52,25 +52,31 @@
       <el-container>
         <el-header></el-header>
         <el-main>
+          <el-breadcrumb>
+            <el-breadcrumb-item :to="{ path: '/' }">Dashboard</el-breadcrumb-item>
+            <el-breadcrumb-item><a href="/">Home</a></el-breadcrumb-item>
+            <el-breadcrumb-item>Property Management</el-breadcrumb-item>
+          </el-breadcrumb>
           <el-button @click="dialogVisible = true">点击打开 Dialog</el-button>
-          <!-- 
-            el-dialog-side       width:540px; (Default)
-            el-dialog-side-lg    width:960px;
-            el-dialog-side-sm    width:420px;
-            el-dialog-side-xs    width:360px;
-           -->
-          <el-dialog
-            :visible.sync="dialogVisible"
-            class="el-dialog-side">
-            <div>Content</div>
-            <span slot="footer" class="dialog-footer">
-              <el-button @click="dialogVisible = false">Cancel</el-button>
-              <el-button type="primary" @click="dialogVisible = false">Submit</el-button>
-            </span>
-          </el-dialog>
         </el-main>
       </el-container>
     </el-container>
+
+    <!-- 
+      el-dialog-side       width:540px; (Default)
+      el-dialog-side-lg    width:960px;
+      el-dialog-side-sm    width:420px;
+      el-dialog-side-xs    width:360px;
+      -->
+      <el-dialog
+      :visible.sync="dialogVisible"
+      class="el-dialog-side">
+      <div>Content</div>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="dialogVisible = false">Cancel</el-button>
+        <el-button type="primary" @click="dialogVisible = false">Submit</el-button>
+      </span>
+    </el-dialog>
   </div>
 </body>
   <!-- import Vue before Element -->

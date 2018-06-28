@@ -3,32 +3,73 @@
 @import "common/var";
 
 @include b(breadcrumb) {
-  font-size: 14px;
-  line-height: 1;
+  // font-size: 14px;
+  // line-height: 1;
+  height: 36px;
+  line-height: 36px;
+  margin: 0 0 $margin-base;
+  color: $--color-text-regular;
+  font-size: inherit;
   @include utils-clearfix;
 
   @include e(separator) {
-    margin: 0 9px;
-    font-weight: bold;
-    color: $--color-text-placeholder;
+    display: none;
+    // margin: 0 9px;
+    // font-weight: bold;
+    // color: $--color-text-placeholder;
 
-    &[class*=icon] {
-      margin: 0 6px;
-      font-weight: normal;
-    }
+    // &[class*=icon] {
+    //   margin: 0 6px;
+    //   font-weight: normal;
+    // }
   }
 
   @include e(item) {
     float: left;
+    position: relative;
+    padding: 0 $padding-sm;
+
+    &:after{
+      display: block;
+      content: "";
+      position: absolute;
+      right: -3px;
+      top: 50%;
+      width: 6px;
+      height: 1px;
+      background: $--color-text-regular;
+    }
+
+    &:first-child {
+      margin: 0 $margin-sm 0 0;
+      padding: 0 $padding-base 0 0;
+      font-size: $--font-size-large;
+      font-weight: 500;
+  
+      &:after{
+        content: "";
+        top: 0;
+        right: 0;
+        width: 1px;
+        height: 100%;
+        background: lighten($--border-color-base,2.2%);
+      }
+    }
+
+    &:last-child{
+      &:after{
+        display: none;
+      }
+    }
 
     @include e(inner) {
-      color: $--color-text-regular;
+      // color: $--color-text-regular;
 
       &.is-link, & a {
-        font-weight: bold;
+        // font-weight: bold;
         text-decoration: none;
         transition: $--color-transition-base;
-        color: $--color-text-primary;
+        color: $--color-text-regular;
 
         &:hover {
           color: $--color-primary;

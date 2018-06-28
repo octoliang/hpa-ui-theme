@@ -754,14 +754,14 @@ $input-disabled-color:#f5f5f5 !default;
 
 /* Base Style (By Lucinda)
 --------------------------------- */
-$padding-base: 24px;
-$padding-sm: 12px;
-$padding-xs: 6px;
-$padding-lg: 36px;
-$padding-xl: 48px;
+$padding-base: 24px !default;
+$padding-sm: 12px !default;
+$padding-xs: 6px !default;
+$padding-lg: 36px !default;
+$padding-xl: 48px !default;
 
-$margin-base: $padding-base;
-$margin-sm: $padding-sm;
-$margin-xs: $padding-xs;
-$margin-lg: $padding-lg;
-$margin-xl: $padding-xl;
+$margin-base: $padding-base !default;
+$margin-sm: $padding-sm !default;
+$margin-xs: $padding-xs !default;
+$margin-lg: $padding-lg !default;
+$margin-xl: $padding-xl !default;
