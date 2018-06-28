@@ -51,45 +51,26 @@
       
       <el-container>
         <el-header></el-header>
-        <el-main>Main</el-main>
+        <el-main>
+          <el-button @click="dialogVisible = true">点击打开 Dialog</el-button>
+          <!-- 
+            el-dialog-side       width:540px; (Default)
+            el-dialog-side-lg    width:960px;
+            el-dialog-side-sm    width:420px;
+            el-dialog-side-xs    width:360px;
+           -->
+          <el-dialog
+            :visible.sync="dialogVisible"
+            class="el-dialog-side">
+            <div>Content</div>
+            <span slot="footer" class="dialog-footer">
+              <el-button @click="dialogVisible = false">Cancel</el-button>
+              <el-button type="primary" @click="dialogVisible = false">Submit</el-button>
+            </span>
+          </el-dialog>
+        </el-main>
       </el-container>
     </el-container>
-
-    <!-- <el-menu style="width: 200px;" default-active="3">
-      <el-submenu index="1">
-        <template slot="title">
-          <i class="el-icon-menu"></i>
-          <span>Dashboard</span>
-        </template>
-        <el-menu-item-group title="Group1">
-          <el-menu-item index="1-1">Option1</el-menu-item>
-          <el-menu-item index="1-2">Option2</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group title="Group2">
-          <el-menu-item index="1-3">Option3</el-menu-item>
-        </el-menu-item-group>
-        <el-submenu index="1-4">
-          <template slot="title">Option4</template>
-          <el-menu-item index="1-4-1">Option4-1</el-menu-item>
-        </el-submenu>
-      </el-submenu>
-      <el-menu-item index="2">
-        <i class="el-icon-menu"></i>
-        <span slot="title">Application</span>
-      </el-menu-item>
-      <el-menu-item index="3">
-        <i class="el-icon-menu"></i>
-        <span slot="title">Acquisition</span>
-      </el-menu-item>
-      <el-menu-item index="4">
-        <i class="el-icon-menu"></i>
-        <span slot="title">HOA</span>
-      </el-menu-item>
-      <el-menu-item index="5">
-        <i class="el-icon-menu"></i>
-        <span slot="title">Property Management</span>
-      </el-menu-item>
-    </el-menu> -->
   </div>
 </body>
   <!-- import Vue before Element -->
@@ -100,7 +81,9 @@
     new Vue({
       el: '#app',
       data: function() {
-        return { visible: false }
+        return { 
+          dialogVisible: false
+        };
       }
     })
   </script>
