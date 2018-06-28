@@ -58,8 +58,8 @@
     margin: 0;
     display: inline-block;
     position: relative;
-    width: $--switch-width;
-    height: $--switch-height;
+    width: $--switch-width !important;
+    height: $--switch-height !important;
     border: 1px solid $--switch-off-color;
     outline: none;
     border-radius: $--switch-core-border-radius;
@@ -116,4 +116,85 @@
   & .label-fade-leave-active {
     opacity: 0;
   }
+}
+
+// @mixin new-switch($width:44px,$height:22px){
+//   @include e(core){
+//     margin: 0;
+//     display: inline-block;
+//     position: relative;
+//     width:$width !important;
+//     height: $height !important;
+//     border: 1px solid $--switch-off-color;
+//     outline: none;
+//     border-radius: $--switch-core-border-radius;
+//     box-sizing: border-box;
+//     background: $--switch-off-color;
+//     cursor: pointer;
+//     transition: border-color .3s, background-color .3s;
+//     vertical-align: middle;
+//   }
+// }
+
+// @include new-switch($width:28px,$height:24px)
+
+//small
+@include b(switch){
+  &-small{
+    .el-switch__core{
+      width: 28px !important;
+      height: 16px !important;
+      &:after{
+        width:12px !important;
+        height:12px !important ;
+      }
+    }
+  }
+}
+.el-switch-small.is-checked .el-switch__core::after{
+  margin-left: -13px;
+}
+
+@include b(switch){
+  &-text{
+      .el-switch__core::before{
+          content: "Off";
+          position:absolute;
+          top: 0px;
+          right: 4px;
+          font-size: 12px;
+          color:#fff;
+      }
+  }
+  &-icon{
+    .el-switch__core::before{
+          content:"X";
+          position:absolute;
+          top: 0px;
+          right: 9px;
+          font-size: 12px;
+          color:#fff;
+    }
+  }
+}
+//text
+.el-switch-text.is-checked .el-switch__core::before{
+      content:"No";
+      position:absolute;
+      top: 0px;
+      left: 4px;
+      font-size: 12px;
+      color:#fff;
+}
+
+
+//icon
+
+.el-switch-icon.is-checked .el-switch__core::before{
+  content:"√";
+  position:absolute;
+  top: 0px;
+  left:9px;
+  font-size: 12px;
+  color:#fff;
 }

@@ -22,7 +22,10 @@
               <el-button  type="danger">danger</el-button>
               <el-button  class="secondary">secondary</el-button>   
               <el-button  disabled>disabled</el-button>
-            </div>     
+              <el-button  icon="el-icon-delete" circle   class="no-border"></el-button>
+              <el-button  icon="el-icon-delete" circle  type="primary"></el-button>    
+              <el-button  icon="el-icon-delete" circle  type="warning"></el-button>       
+            </div>
         </div>
         <!-- button -->
 
@@ -54,6 +57,80 @@
         </div>  
         <!-- input -->
 
+        <!-- Dropdown -->
+        <h2>Dropdown</h2>
+        <div class="Dropdown-box">
+           <el-dropdown size="large" split-button type="primary">
+            large
+            <el-dropdown-menu slot="dropdown">
+              <el-dropdown-item>黄金糕</el-dropdown-item>
+              <el-dropdown-item>狮子头</el-dropdown-item>
+              <el-dropdown-item>螺蛳粉</el-dropdown-item>
+              <el-dropdown-item>双皮奶</el-dropdown-item>
+              <el-dropdown-item>蚵仔煎</el-dropdown-item>
+            </el-dropdown-menu>
+          </el-dropdown>
+          
+          <el-dropdown  split-button type="primary">
+            default
+            <el-dropdown-menu slot="dropdown">
+              <el-dropdown-item>黄金糕</el-dropdown-item>
+              <el-dropdown-item>狮子头</el-dropdown-item>
+              <el-dropdown-item>螺蛳粉</el-dropdown-item>
+              <el-dropdown-item>双皮奶</el-dropdown-item>
+              <el-dropdown-item>蚵仔煎</el-dropdown-item>
+            </el-dropdown-menu>
+          </el-dropdown>
+          
+          <el-dropdown size="small" split-button type="primary">
+            small
+            <el-dropdown-menu slot="dropdown">
+              <el-dropdown-item>黄金糕</el-dropdown-item>
+              <el-dropdown-item>狮子头</el-dropdown-item>
+              <el-dropdown-item>螺蛳粉</el-dropdown-item>
+              <el-dropdown-item>双皮奶</el-dropdown-item>
+              <el-dropdown-item>蚵仔煎</el-dropdown-item>
+            </el-dropdown-menu>
+          </el-dropdown>
+        </div>
+        <!-- Dropdown -->
+
+        <!-- Date  Picker -->
+        <h2>Data Picker</h2>
+        <div class="DatePicker-Box">
+            <el-date-picker v-model="datevalue1" type="datetime" placeholder="选择日期时间(large)" size="large" class="iconRight"></el-date-picker>
+            <el-date-picker v-model="datevalue1" type="datetime" placeholder="选择日期时间(default)" class="iconRight"></el-date-picker>
+            <el-date-picker v-model="datevalue1" type="datetime" placeholder="选择日期时间(small)" size="small" class="iconRight"></el-date-picker>
+        </div>
+
+        <!-- Date  Picker -->
+
+        <!-- Select -->
+        <h2>Select</h2>
+        <div class="Select-Box">
+            <el-select v-model="selectvalue1" placeholder="请选择" size="large">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+            <el-select v-model="selectvalue2" placeholder="请选择">
+              <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+            <el-select v-model="selectvalue3" placeholder="请选择" size="small">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div> 
+        <!-- Select -->
+
+        <!-- switch -->
+        <h2>switch</h2>
+        <div class="Switch-Box">
+          <!-- 默认值改为44 -->
+          <el-switch v-model="switchvalue1" active-value="#1890ff" ></el-switch>
+          <el-switch v-model="switchvalue2"  active-value="#1890ff" class="el-switch-small"></el-switch> 
+          <el-switch v-model="switchvalue3"  active-value="#1890ff" class="el-switch-text"></el-switch>
+          <el-switch v-model="switchvalue4"  active-value="#1890ff" class="el-switch-icon"></el-switch>
+        </div>
+        <!-- switch -->
+
         
   </div>
 </body>
@@ -72,7 +149,32 @@
           inputvalue1:"",
           inputvalue2:"",
           inputvalue3:"",
-          inputvalue4:""
+          inputvalue4:"",
+          datevalue1:"",
+          selectvalue1:"",
+          selectvalue2:"",
+          selectvalue3:"",
+          switchvalue1:"",
+          switchvalue2:"",
+          switchvalue3:"",
+          switchvalue4:"",
+          switchvalue5:"",
+          options: [{
+            value: '选项1',
+            label: '黄金糕'
+          }, {
+            value: '选项2',
+            label: '双皮奶'
+          }, {
+            value: '选项3',
+            label: '蚵仔煎'
+          }, {
+            value: '选项4',
+            label: '龙须面'
+          }, {
+            value: '选项5',
+            label: '北京烤鸭'
+          }],
         }
       }
     })
@@ -88,12 +190,25 @@
         padding-top: 20px;
     }
 
-    .pd-box{
+    .pd-box,.Dropdown-box, .DatePicker-Box,.Select-Box,.Switch-Box{
         padding:0px 20px 20px 20px;
     }
 
     .demo-input-box .el-input{
         width:148px;
         margin-right: 5px;
+    }
+    .Dropdown-box .el-dropdown{
+        vertical-align: bottom;
+        margin-right:5px;
+    }
+
+    .DatePicker-Box  .el-date-editor{
+       vertical-align: middle;
+       margin-right: 5px;
+    }
+
+    .no-border{
+       border:none;
     }
 </style> 
