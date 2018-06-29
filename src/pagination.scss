@@ -5,19 +5,32 @@
 
 @include b(pagination) {
   white-space: nowrap;
-  padding: 2px 5px;
-  color: $--pagination-color;
-  font-weight: bold;
+  // padding: 2px 5px;
+  color: $--color-text-regular;
+  // font-weight: bold;
   @include utils-clearfix;
+
+  &-wrap{
+    @include utils-clearfix;
+
+    .el-pagination {
+      float: right;
+
+      &-text{
+        line-height: $pagenation-size-base;
+      }
+    }
+  }
+
 
   span:not([class*=suffix]),
   button {
     display: inline-block;
-    font-size: $--pagination-font-size;
-    min-width: $--pagination-button-width;
-    height: $--pagination-button-height;
-    line-height: $--pagination-button-height;
-    vertical-align: top;
+    font-size: inherit;
+    min-width: $pagenation-size-base;
+    height: $pagenation-size-base;
+    line-height: $pagenation-size-base;
+    // vertical-align: top;
     box-sizing: border-box;
   }
 
@@ -40,7 +53,7 @@
     .el-input__inner {
       padding-right: 25px;
       border-radius: $--pagination-border-radius;
-      height: $--pagination-button-height;
+      height: $pagenation-size-base;
     }
   }
 
@@ -54,12 +67,13 @@
     }
 
     &:hover {
-      color: $--pagination-hover-fill;
+      color: $primary-color-main;
     }
 
     &:disabled {
       color: $--pagination-button-disabled-color;
-      background-color: $--pagination-button-disabled-fill;
+      // background-color: $--pagination-button-disabled-fill;
+      background: $disabled-color-base;
       cursor: not-allowed;
     }
   }
@@ -136,11 +150,11 @@
     color: $--color-text-regular;
 
     .el-input .el-input__inner {
-      font-size: $--pagination-font-size;
+      font-size: inherit;
       padding-left: 8px;
 
       &:hover {
-        border-color: $--pagination-hover-fill;
+        border-color: $primary-color-main;
       }
     }
   }
@@ -168,7 +182,7 @@
   @include e(editor) {
     line-height: 18px;
     padding: 0 2px;
-    height: $--pagination-button-height;
+    height: $pagenation-size-base;
       
     text-align: center;
     margin: 0 2px;
@@ -180,7 +194,7 @@
     }
 
     &.el-input .el-input__inner {
-      height: $--pagination-button-height;
+      height: $pagenation-size-base;
     }
 
     .el-input__inner::-webkit-inner-spin-button,
@@ -194,14 +208,19 @@
     .btn-prev,
     .btn-next,
     .el-pager li {
-      margin: 0 5px;
-      background-color: $--color-info-lighter;
+      min-width: $pagenation-size-base;
+      height: $pagenation-size-base;
+      line-height: $pagenation-size-base;
+      margin: 0 $margin-xs / 2;
+      background: $--color-white;
       color: $--color-text-regular;
-      min-width: 30px;
-      border-radius: 2px;
+      border: $--border-base;
+      border-radius: $--border-radius-base;
 
       &.disabled {
+        background: $disabled-color-base;
         color: $--color-text-placeholder;
+        border-color: $--border-color-lighter;
       }
     }
 
@@ -209,18 +228,29 @@
       padding: 0;
 
       &:disabled {
+        background: $disabled-color-base;
         color: $--color-text-placeholder;
+        border-color: $--border-color-lighter;
       }
+    }
+    
+    .btn-prev{
+      margin: 0 $margin-xs / 2 0 0;
+    }
+
+    .btn-next{
+      margin: 0 0 0 $margin-xs / 2;
     }
 
     .el-pager li:not(.disabled) {
       &:hover {
-        color: $--pagination-hover-fill;
+        color: $primary-color-main;
       }
 
       &.active {
-        background-color: $--color-primary;
+        background-color: $primary-color-main;
         color: $--color-white;
+        border-color: transparent;
       }
     }
 
@@ -240,7 +270,7 @@
   list-style: none;
   display: inline-block;
   vertical-align: top;
-  font-size: 0;
+  // font-size: 0;
   padding: 0;
   margin: 0;
 
@@ -249,18 +279,18 @@
   }
 
   li {
-    padding: 0 4px;
-    background: $--pagination-fill;
-    vertical-align: top;
     display: inline-block;
-    font-size: $--pagination-font-size;
-    min-width: $--pagination-button-width;
-    height: $--pagination-button-height;
-    line-height: $--pagination-button-height;
+    margin: 0;
+    padding: 0 $padding-xs;
+    font-size: inherit;
+    min-width: $pagenation-size-base;
+    height: $pagenation-size-base;
+    line-height: $pagenation-size-base;
+    background: $--pagination-fill;
+    text-align: center;
+    vertical-align: top;
     cursor: pointer;
     box-sizing: border-box;
-    text-align: center;
-    margin: 0;
 
     &.btn-quicknext,
     &.btn-quickprev {
@@ -285,11 +315,11 @@
     }
 
     &:hover {
-      color: $--pagination-hover-fill;
+      color: $primary-color-main;
     }
 
     &.active {
-      color: $--pagination-hover-fill;
+      color: $primary-color-main;
       cursor: default;
     }
   }

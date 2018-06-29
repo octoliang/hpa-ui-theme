@@ -57,7 +57,7 @@
             <el-breadcrumb-item><a href="/">Home</a></el-breadcrumb-item>
             <el-breadcrumb-item>Property Management</el-breadcrumb-item>
           </el-breadcrumb>
-          <el-card class="box-card">
+          <el-card>
             <div slot="header" class="clearfix">
               <span>NRTP Renewal Price Review</span>
               <!-- <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button> -->
@@ -236,6 +236,15 @@
                 </template>
               </el-table-column>
             </el-table>
+            
+            <div class="el-pagination-wrap">
+              <span class="el-pagination-text">Showing 10 of 100 entries</span>
+              <el-pagination
+                background
+                layout="prev, pager, next"
+                :total="1000">
+              </el-pagination>
+            </div>
           </el-card>
 
           <!-- <el-button @click="dialogVisible = true">点击打开 Dialog</el-button> -->
@@ -249,7 +258,7 @@
       el-dialog-side-sm    width:420px;
       el-dialog-side-xs    width:360px;
       -->
-      <el-dialog
+    <el-dialog
       :visible.sync="dialogVisible"
       class="el-dialog-side">
       <div>Content</div>

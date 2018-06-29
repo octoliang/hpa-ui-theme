@@ -13,8 +13,9 @@
   width: 100%;
   max-width: 100%;
   background-color: $--color-white;
-  font-size: 14px;
+  font-size: inherit;
   color: $--table-text-color;
+  margin-bottom: $margin-base;
 
   // 数据为空
   @include e(empty-block) {
