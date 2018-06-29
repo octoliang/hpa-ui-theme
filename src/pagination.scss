@@ -210,7 +210,7 @@
     .el-pager li {
       min-width: $pagenation-size-base;
       height: $pagenation-size-base;
-      line-height: $pagenation-size-base;
+      line-height: $pagenation-size-base - 2;
       margin: 0 $margin-xs / 2;
       background: $--color-white;
       color: $--color-text-regular;
