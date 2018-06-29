@@ -76,13 +76,13 @@
                 prop="pCode"
                 label="P-code"
                 sortable
-                min-width="120">
+                min-width="100">
               </el-table-column>
               <el-table-column
                 prop="address"
                 label="Address"
                 sortable
-                min-width="120">
+                min-width="200">
               </el-table-column>
               <el-table-column
                 prop="city"
@@ -94,43 +94,52 @@
                 prop="state"
                 label="State"
                 sortable
-                min-width="300">
+                min-width="100">
               </el-table-column>
               <el-table-column
                 prop="leaseName"
                 label="Lease Name"
                 sortable
-                min-width="120">
+                min-width="130">
               </el-table-column>
               <el-table-column
                 prop="leaseStatus"
                 label="Lease Status"
                 sortable
-                min-width="120">
+                min-width="140">
               </el-table-column>
               <el-table-column
                 prop="leaseEndDate"
                 label="Lease End Date"
                 sortable
-                min-width="120">
+                min-width="150">
               </el-table-column>
               <el-table-column
                 prop="currentRent"
                 label="Current Rent"
                 sortable
-                min-width="120">
+                min-width="140">
+                <template slot-scope="scope">
+                  <span>$3000</span>
+                </template>
               </el-table-column>
               <el-table-column
                 prop="renewalOffer"
                 label="Renewal Offer"
                 sortable
-                min-width="120">
+                min-width="140">
+                <template slot-scope="scope">
+                  <span>$3000</span>
+                </template>
               </el-table-column>
               <el-table-column
                 prop="renewalFloor"
                 label="Renewal Floor"
                 sortable
-                min-width="120">
+                min-width="140">
+                <template slot-scope="scope">
+                  <span>$3000</span>
+                </template>
               </el-table-column>
               <el-table-column
                 prop="emailDate"
@@ -138,9 +147,7 @@
                 sortable
                 min-width="120">
                 <template slot-scope="scope">
-                  <a href="javascript:void(null)">
-                    <i class="el-icon-message"></i>
-                  </a>
+                  <el-button icon="el-icon-message" circle></el-button>
                 </template>
               </el-table-column>
               <el-table-column
@@ -149,28 +156,24 @@
                 sortable
                 min-width="120">
                 <template slot-scope="scope">
-                  <a href="javascript:void(null)">
-                    <i class="el-icon-phone"></i>
-                  </a>
+                  <el-button icon="el-icon-phone" circle></el-button>
                 </template>
               </el-table-column>
               <el-table-column
                 prop="renewalDecision"
                 label="Renewal Decision"
                 sortable
-                min-width="120">
+                min-width="240">
                 <template slot-scope="scope">
-                  <a href="javascript:void(null)">
-                    Request for Initial DocuSign
-                    <i class="el-icon-edit-outline"></i>
-                  </a>
+                  Request for Initial DocuSign
+                  <el-button icon="el-icon-edit-outline" circle></el-button>
                 </template>
               </el-table-column>
               <el-table-column
                 prop="revisionCall"
                 label="Revision Call"
                 sortable
-                min-width="120">
+                min-width="140">
                 <template slot-scope="scope">
                   <template>
                     <el-checkbox></el-checkbox> Called
@@ -181,16 +184,16 @@
                 prop="ResidentCounterOffer"
                 label="Resident Counter Offer"
                 sortable
-                min-width="120">
+                min-width="210">
                 <template slot-scope="scope">
-                  <a href="javascript:void(null)"><i class="el-icon-edit-outline"></i></a>
+                  <el-button icon="el-icon-edit-outline" circle></el-button>
                 </template>
               </el-table-column>
               <el-table-column
                 prop="hpaFloor"
                 label="HPA Floor"
                 sortable
-                min-width="120">
+                min-width="130">
                 <template slot-scope="scope">
                   <span>$3000</span>
                 </template>
@@ -199,39 +202,42 @@
                 prop="agreedUponPrice"
                 label="Agreed Upon Price"
                 sortable
-                min-width="120">
+                min-width="180">
                 <template slot-scope="scope">
-                  <a href="javascript:void(null)"><i class="el-icon-edit-outline"></i></a>
+                  <el-button icon="el-icon-edit-outline" circle></el-button>
                 </template>
               </el-table-column>
               <el-table-column
                 prop="agreedUponMonths"
                 label="Agreed Upon Months"
                 sortable
-                min-width="120">
+                min-width="190">
                 <template slot-scope="scope">
-                  <a href="javascript:void(null)"><i class="el-icon-edit-outline"></i></a>
+                  <el-button icon="el-icon-edit-outline" circle></el-button>
                 </template>
               </el-table-column>
               <el-table-column
                 prop="status"
                 label="Status"
                 sortable
-                min-width="120">
+                min-width="220">
                 <template slot-scope="scope">
                   <el-tag type="danger">Need to Contact</el-tag>
                 </template>
               </el-table-column>
               <el-table-column
                 fixed="right"
-                label="Note"
+                label="Action"
                 min-width="100">
                 <template slot-scope="scope">
-                  <el-button icon="el-icon-edit-outline" circle></el-button>
+                  <el-tooltip class="item" effect="dark" content="Rent Price Calculator" placement="bottom">
+                    <el-button icon="el-icon-printer" circle></el-button>
+                  </el-tooltip>
                 </template>
               </el-table-column>
             </el-table>
           </el-card>
+
           <!-- <el-button @click="dialogVisible = true">点击打开 Dialog</el-button> -->
         </el-main>
       </el-container>
@@ -272,10 +278,34 @@
             state: 'CA',
             leaseName: 'Bell, M.',
             leaseStatus: 'Active',
-            leaseEndDate: '5/11/2018',
-            currentRent: '$3000',
-            renewalOffer: '$3000',
-            renewalFloor: '$3000'
+            leaseEndDate: '5/11/2018'
+          },{
+            team: 'East Team',
+            pCode: 'p00-0002',
+            address: '4684 Badlona Drive',
+            city: 'Westminster',
+            state: 'CA',
+            leaseName: 'Bell, M.',
+            leaseStatus: 'Active',
+            leaseEndDate: '5/11/2018'
+          },{
+            team: 'East Team',
+            pCode: 'p00-0003',
+            address: '4684 Badlona Drive',
+            city: 'Westminster',
+            state: 'CA',
+            leaseName: 'Bell, M.',
+            leaseStatus: 'Active',
+            leaseEndDate: '5/11/2018'
+          },{
+            team: 'East Team',
+            pCode: 'p00-0004',
+            address: '4684 Badlona Drive',
+            city: 'Westminster',
+            state: 'CA',
+            leaseName: 'Bell, M.',
+            leaseStatus: 'Active',
+            leaseEndDate: '5/11/2018'
           }]
         };
       }

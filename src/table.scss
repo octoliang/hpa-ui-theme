@@ -1,4 +1,5 @@
 @import "mixins/mixins";
+@import "mixins/utils";
 @import "checkbox";
 @import "tag";
 @import "tooltip";
@@ -101,17 +102,19 @@
 
     &.is-group {
       th {
-        background: $--background-color-base;
+        // background: $--background-color-base;
+        background: $table-header-bg;
       }
     }
   }
 
   th, td {
-    padding: 12px 0;
+    // padding: 12px 0;
+    padding: $padding-xs $padding-sm;
     min-width: 0;
     box-sizing: border-box;
-    text-overflow: ellipsis;
-    vertical-align: middle;
+    // text-overflow: ellipsis;
+    // vertical-align: middle;
     position: relative;
 
     @include when(center) {
@@ -161,16 +164,33 @@
   }
 
   tr {
-    background-color: $--color-white;
+    // background-color: $--color-white;
+
+    &:nth-child(2n+1){
+        background: $--color-white;
+    }
+
+    &:nth-child(2n+2){
+        background: lighten($table-header-bg,1.2%); //#f5f7f9
+    }
+
+    // &:hover {
+    //     background: $table-hover-bg;
+    // }
+
 
     input[type="checkbox"] {
       margin: 0;
     }
   }
 
-  th.is-leaf, td {
-    border-bottom: $--table-border;
-  }
+  // th.is-leaf, td {
+  //   border-bottom: $--table-border;
+  // }
+
+  // th.is-leaf{
+  //   background: $table-header-bg;
+  // }
 
   th.is-sortable {
     cursor: pointer;
@@ -181,23 +201,27 @@
     overflow: hidden;
     user-select: none;
     text-align: left;
-    background-color: $--table-header-background;
+    // background-color: $--table-header-background;
+    background: $table-header-bg;
+    color: $--color-text-regular;
+    font-weight: 400;
 
     div {
       display: inline-block;
-      padding-left: 10px;
-      padding-right: 10px;
-      line-height: 40px;
+      // padding-left: 10px;
+      // padding-right: 10px;
+      // line-height: 40px;
       box-sizing: border-box;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
+      // overflow: hidden;
+      // white-space: nowrap;
+      // text-overflow: ellipsis;
+      @include utils-ellipsis;
     }
 
     > .cell {
       position: relative;
-      word-wrap: normal;
-      text-overflow: ellipsis;
+      // word-wrap: normal;
+      // text-overflow: ellipsis;
       display: inline-block;
       vertical-align: middle;
       width: 100%;
@@ -221,6 +245,8 @@
   }
 
   td {
+    color: $title-color;
+
     div {
       box-sizing: border-box;
     }
@@ -236,9 +262,9 @@
     text-overflow: ellipsis;
     white-space: normal;
     word-break: break-all;
-    line-height: 23px;
-    padding-left: 10px;
-    padding-right: 10px;
+    // line-height: 23px;
+    // padding-left: 10px;
+    // padding-right: 10px;
 
     &.el-tooltip {
       white-space: nowrap;
@@ -363,7 +389,8 @@
 
     & tbody td {
       border-top: $--table-border;
-      background-color: $--table-row-hover-background;
+      // background-color: $--table-row-hover-background;
+      background: $table-hover-bg;
       color: $--table-text-color;
     }
   }
@@ -396,7 +423,8 @@
     overflow: hidden;
 
     & tbody td {
-      background-color: $--table-row-hover-background;
+      // background-color: $--table-row-hover-background;
+      background: $table-hover-bg;
       color: $--table-text-color;
     }
   }
@@ -502,14 +530,16 @@
       &, &.el-table__row--striped {
         &, &.current-row {
           > td {
-            background-color: $--table-current-row-background;
+            // background-color: $--table-current-row-background;
+            background: $table-hover-bg;
           }
         }
       }
     }
 
     tr.current-row > td {
-      background-color: $--table-current-row-background;
+      // background-color: $--table-current-row-background;
+      background: $table-hover-bg;
     }
   }
 
@@ -543,7 +573,8 @@
 
   @include m(enable-row-hover) {
     .el-table__body tr:hover > td {
-      background-color: $--table-row-hover-background;
+      // background-color: $--table-row-hover-background;
+      background: $table-hover-bg;
     }
   }
 
