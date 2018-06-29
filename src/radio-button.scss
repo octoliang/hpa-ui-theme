@@ -45,7 +45,7 @@
     .el-radio-button__inner {
       border-left: $--border-base;
       border-radius: $--border-radius-base 0 0 $--border-radius-base;
-      box-shadow: none !important;
+      // box-shadow: none !important;
     }
   }
 
@@ -112,12 +112,14 @@
   }
 
   //by txk
+  &-ellipse{
+    display: inline-block;
+    min-width:33px;
+  }
   &-ellipse .el-radio-button__inner{
     background-color: #f8f8f8;
     color: #8391A0;
     border-color: #f8f8f8;
     // border-radius: 9px;
   }
-
-
 }
