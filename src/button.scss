@@ -192,10 +192,6 @@
   & .el-button {
     float: left;
     position: relative;
-    border:none;
-    color:#8391A0;
-    border-radius:6px;
-    background-color: #F8F8FB;
     & + .el-button {
       margin-left: 0;
     }
@@ -203,14 +199,9 @@
     &:first-child {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
-      border-top-left-radius: 20px;
-      border-bottom-left-radius: 20px;
-
     }
     &:last-child {
       border-top-left-radius: 0px;
-      border-top-right-radius: 20px;
-      border-bottom-right-radius: 20px;
       border-bottom-left-radius: 0px;
     }
     &:first-child:last-child {
@@ -221,11 +212,6 @@
     }
     &:not(:first-child):not(:last-child) {
       border-radius: 0;
-      &:hover,
-      &:focus,
-      &:active{
-         border-radius: 20px;
-      }
     }
     &:not(:last-child) {
       margin-right: -1px;
@@ -235,11 +221,7 @@
     &:focus,
     &:active {
       z-index: 1;
-      background-color: #4CA8FD;
-      color:#fff;
-      border-radius: 20px;
     }
-
     @include when(active) {
       z-index: 1;
     }

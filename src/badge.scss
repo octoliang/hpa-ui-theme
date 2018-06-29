@@ -21,9 +21,9 @@
 
     @include when(fixed) {
       position: absolute;
-      top: 0;
-      right: #{1 + $--badge-size / 2};
-      transform: translateY(-50%) translateX(100%);
+      top: 50%;
+      left:-#{3+$--badge-size/2};
+      transform: translateY(-50%);
 
       @include when(dot) {
         right: 5px;
@@ -36,6 +36,45 @@
       padding: 0;
       right: 0;
       border-radius: 50%;
+    }
+  }
+
+  &-blue{
+    .el-badge__content{
+       background-color:#0f7ae6;
+    }
+  }
+
+  &-cyan{
+   .el-badge__content{
+      background-color:#87e8de;
+   }
+  }
+
+  &-green{
+    .el-badge__content{
+      background-color:#3fae2a;
+    }
+  }
+
+  &-orange{
+    .el-badge__content{
+      background-color: #ffa300;
+    }
+  }
+  &-pink{
+    .el-badge__content{
+      background-color: #ffadd2;
+    }
+  }
+  &-purpl{
+    .el-badge__content{
+      background-color: #d3adf7;
+    }
+  }
+  &-red{
+    .el-badge__content{
+      background-color:#ff5347;
     }
   }
 }

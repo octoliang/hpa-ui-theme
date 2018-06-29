@@ -6,7 +6,7 @@
   position: relative;
   display: inline-block;
   outline: none;
-
+  
   @include e(inner) {
     display: inline-block;
     line-height: 1;
@@ -60,7 +60,7 @@
         color: $--radio-button-checked-color;
         background-color: $--radio-button-checked-fill;
         border-color: $--radio-button-checked-border-color;
-        box-shadow: -1px 0 0 0 $--radio-button-checked-border-color;
+        // box-shadow: -1px 0 0 0 $--radio-button-checked-border-color;
       }
     }
 
@@ -110,4 +110,14 @@
   &:focus:not(.is-focus):not(:active){ /*获得焦点时 样式提醒*/
     box-shadow: 0 0 2px 2px $--radio-button-checked-border-color;
   }
+
+  //by txk
+  &-ellipse .el-radio-button__inner{
+    background-color: #f8f8f8;
+    color: #8391A0;
+    border-color: #f8f8f8;
+    // border-radius: 9px;
+  }
+
+
 }

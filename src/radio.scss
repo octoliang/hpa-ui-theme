@@ -197,4 +197,23 @@
     font-size: $--radio-font-size;
     padding-left: 10px;
   }
+
+  // by txk
+
+  &-group .el-radio-button-ellipse:first-child .el-radio-button__inner{
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+        border-color: #f8f8f8;
+  }
+
+  &-group .el-radio-button-ellipse:last-child .el-radio-button__inner{
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-color: #f8f8f8;
+  }
 }
+
+.el-radio-button-ellipse .el-radio-button__orig-radio:checked + .el-radio-button__inner{
+  border-radius: 20px;
+  border-color: #4CA8FD;
+} 
