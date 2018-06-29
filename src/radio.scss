@@ -201,19 +201,19 @@
   // by txk
 
   &-group .el-radio-button-ellipse:first-child .el-radio-button__inner{
-        border-top-left-radius: 12px;
-        border-bottom-left-radius: 12px;
-        border-color: #f8f8f8;
+        border-top-left-radius: $border-fl-radius;
+        border-bottom-left-radius: $border-fl-radius;
+        border-color: $rp-bd-color;
   }
 
   &-group .el-radio-button-ellipse:last-child .el-radio-button__inner{
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
-    border-color: #f8f8f8;
+    border-top-right-radius:$border-fl-radius;
+    border-bottom-right-radius:$border-fl-radius;
+    border-color: $rp-bd-color;
   }
 }
 .el-radio-button-ellipse .el-radio-button__orig-radio:checked + .el-radio-button__inner{
-  border-radius: 20px;
-  border-color: #4CA8FD;
-  box-shadow: -2px 0px 2px 6px #f8f8f8;
+  border-radius: $border-checkd-radius;
+  border-color: $primary-color-main;
+  box-shadow: -2px 0px 2px 6px $rp-bd-color;
 } 
