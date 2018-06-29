@@ -2,26 +2,29 @@
 @import "common/var";
 
 @include b(card) {
-  border-radius: $--card-border-radius;
+  // border-radius: $--card-border-radius;
   border: 1px solid $--card-border-color;
   background-color: $--color-white;
-  overflow: hidden;
-  color: $--color-text-primary;
+  color: $--color-text-regular;
   transition: 0.3s;
+  overflow: hidden;
 
   @include when(always-shadow) {
-    box-shadow: $--box-shadow-light;
+    box-shadow: $card-box-shadow;
   }
 
   @include when(hover-shadow) {
     &:hover,
     &:focus {
-      box-shadow: $--box-shadow-light;
+      box-shadow: $card-box-shadow;
     }
   }
 
   @include e(header) {
+    color: $title-color;
     padding: #{$--card-padding - 2 $--card-padding};
+    font-size: $--font-size-large;
+    font-weight: 500;
     border-bottom: 1px solid $--card-border-color;
     box-sizing: border-box;
   }

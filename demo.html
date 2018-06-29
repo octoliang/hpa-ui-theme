@@ -57,7 +57,182 @@
             <el-breadcrumb-item><a href="/">Home</a></el-breadcrumb-item>
             <el-breadcrumb-item>Property Management</el-breadcrumb-item>
           </el-breadcrumb>
-          <el-button @click="dialogVisible = true">点击打开 Dialog</el-button>
+          <el-card class="box-card">
+            <div slot="header" class="clearfix">
+              <span>NRTP Renewal Price Review</span>
+              <!-- <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button> -->
+            </div>
+            <el-table
+              :data="tableData">
+              <el-table-column
+                fixed
+                prop="team"
+                label="Team"
+                sortable
+                min-width="100">
+              </el-table-column>
+              <el-table-column
+                fixed
+                prop="pCode"
+                label="P-code"
+                sortable
+                min-width="120">
+              </el-table-column>
+              <el-table-column
+                prop="address"
+                label="Address"
+                sortable
+                min-width="120">
+              </el-table-column>
+              <el-table-column
+                prop="city"
+                label="City"
+                sortable
+                min-width="120">
+              </el-table-column>
+              <el-table-column
+                prop="state"
+                label="State"
+                sortable
+                min-width="300">
+              </el-table-column>
+              <el-table-column
+                prop="leaseName"
+                label="Lease Name"
+                sortable
+                min-width="120">
+              </el-table-column>
+              <el-table-column
+                prop="leaseStatus"
+                label="Lease Status"
+                sortable
+                min-width="120">
+              </el-table-column>
+              <el-table-column
+                prop="leaseEndDate"
+                label="Lease End Date"
+                sortable
+                min-width="120">
+              </el-table-column>
+              <el-table-column
+                prop="currentRent"
+                label="Current Rent"
+                sortable
+                min-width="120">
+              </el-table-column>
+              <el-table-column
+                prop="renewalOffer"
+                label="Renewal Offer"
+                sortable
+                min-width="120">
+              </el-table-column>
+              <el-table-column
+                prop="renewalFloor"
+                label="Renewal Floor"
+                sortable
+                min-width="120">
+              </el-table-column>
+              <el-table-column
+                prop="emailDate"
+                label="Email Date"
+                sortable
+                min-width="120">
+                <template slot-scope="scope">
+                  <a href="javascript:void(null)">
+                    <i class="el-icon-message"></i>
+                  </a>
+                </template>
+              </el-table-column>
+              <el-table-column
+                prop="callDate"
+                label="Call Date"
+                sortable
+                min-width="120">
+                <template slot-scope="scope">
+                  <a href="javascript:void(null)">
+                    <i class="el-icon-phone"></i>
+                  </a>
+                </template>
+              </el-table-column>
+              <el-table-column
+                prop="renewalDecision"
+                label="Renewal Decision"
+                sortable
+                min-width="120">
+                <template slot-scope="scope">
+                  <a href="javascript:void(null)">
+                    Request for Initial DocuSign
+                    <i class="el-icon-edit-outline"></i>
+                  </a>
+                </template>
+              </el-table-column>
+              <el-table-column
+                prop="revisionCall"
+                label="Revision Call"
+                sortable
+                min-width="120">
+                <template slot-scope="scope">
+                  <template>
+                    <el-checkbox></el-checkbox> Called
+                  </template>
+                </template>
+              </el-table-column>
+              <el-table-column
+                prop="ResidentCounterOffer"
+                label="Resident Counter Offer"
+                sortable
+                min-width="120">
+                <template slot-scope="scope">
+                  <a href="javascript:void(null)"><i class="el-icon-edit-outline"></i></a>
+                </template>
+              </el-table-column>
+              <el-table-column
+                prop="hpaFloor"
+                label="HPA Floor"
+                sortable
+                min-width="120">
+                <template slot-scope="scope">
+                  <span>$3000</span>
+                </template>
+              </el-table-column>
+              <el-table-column
+                prop="agreedUponPrice"
+                label="Agreed Upon Price"
+                sortable
+                min-width="120">
+                <template slot-scope="scope">
+                  <a href="javascript:void(null)"><i class="el-icon-edit-outline"></i></a>
+                </template>
+              </el-table-column>
+              <el-table-column
+                prop="agreedUponMonths"
+                label="Agreed Upon Months"
+                sortable
+                min-width="120">
+                <template slot-scope="scope">
+                  <a href="javascript:void(null)"><i class="el-icon-edit-outline"></i></a>
+                </template>
+              </el-table-column>
+              <el-table-column
+                prop="status"
+                label="Status"
+                sortable
+                min-width="120">
+                <template slot-scope="scope">
+                  <el-tag type="danger">Need to Contact</el-tag>
+                </template>
+              </el-table-column>
+              <el-table-column
+                fixed="right"
+                label="Note"
+                min-width="100">
+                <template slot-scope="scope">
+                  <el-button icon="el-icon-edit-outline" circle></el-button>
+                </template>
+              </el-table-column>
+            </el-table>
+          </el-card>
+          <!-- <el-button @click="dialogVisible = true">点击打开 Dialog</el-button> -->
         </el-main>
       </el-container>
     </el-container>
@@ -88,7 +263,20 @@
       el: '#app',
       data: function() {
         return { 
-          dialogVisible: false
+          dialogVisible: false,
+          tableData: [{
+            team: 'East Team',
+            pCode: 'p00-0001',
+            address: '4684 Badlona Drive',
+            city: 'Westminster',
+            state: 'CA',
+            leaseName: 'Bell, M.',
+            leaseStatus: 'Active',
+            leaseEndDate: '5/11/2018',
+            currentRent: '$3000',
+            renewalOffer: '$3000',
+            renewalFloor: '$3000'
+          }]
         };
       }
     })
