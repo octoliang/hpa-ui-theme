@@ -1,6 +1,6 @@
 {
   "name": "hpa-ui-theme",
-  "version": "1.0.5",
+  "version": "1.1.6",
   "description": "Element component hpa-ui-theme",
   "main": "lib/index.css",
   "style": "lib/index.css",
