@@ -160,7 +160,7 @@
       .el-switch__core::before{
           content: "Off";
           position:absolute;
-          top: 0px;
+          top: -1px;
           right: 4px;
           font-size: 12px;
           color:#fff;
@@ -170,7 +170,7 @@
     .el-switch__core::before{
           content:"X";
           position:absolute;
-          top: 0px;
+          top: -1px;
           right: 9px;
           font-size: 12px;
           color:#fff;
@@ -181,7 +181,7 @@
 .el-switch-text.is-checked .el-switch__core::before{
       content:"No";
       position:absolute;
-      top: 0px;
+      top: -1px;
       left: 4px;
       font-size: 12px;
       color:#fff;
@@ -193,7 +193,7 @@
 .el-switch-icon.is-checked .el-switch__core::before{
   content:"√";
   position:absolute;
-  top: 0px;
+  top: -1px;
   left:9px;
   font-size: 12px;
   color:#fff;

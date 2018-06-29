@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <!-- import CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800" rel="stylesheet">
   <link rel="stylesheet" href="lib/index.css">
 </head>
 <body>
@@ -133,31 +134,47 @@
 
 
 
-        <!-- button-group -->
-        <h2>button-group</h2>
-        <div class="Btn-group-Box">
-            <el-button-group>
-                <el-button>To Do</el-button>
-                <el-button>Pending</el-button>
-                <el-button>Completed</el-button>
-                <el-button>Hold Over</el-button>
-            </el-button-group> 
+        <!--radio-group -->
+        <h2>radio-group</h2>
+        <div class="radio-group-Box">
+            <el-radio-group v-model="radioStatusVal">
+                <el-radio-button label="To Do"  class="el-radio-button-ellipse"></el-radio-button>
+                <el-radio-button label="Pending" class="el-radio-button-ellipse"></el-radio-button>
+                <el-radio-button label="Completed" class="el-radio-button-ellipse"></el-radio-button>
+                <el-radio-button label="Hold Over" class="el-radio-button-ellipse"></el-radio-button>
+            </el-radio-group> 
         </div>
         <!-- button-group -->
         
         <!-- Tag -->
         <h2>Tag</h2>
         <div class="Tag-Box">
-            <el-tag  class="el-tag-blue">blue</el-tag>
-            <el-tag class="el-tag-cyan">cyan</el-tag>
-            <el-tag class="el-tag-green">green</el-tag>
-            <el-tag class="el-tag-orange">orange</el-tag>
-            <el-tag class="el-tag-pink">pink</el-tag>
-            <el-tag class="el-tag-purpl">purpl</el-tag>
-            <el-tag class="el-tag-red">red</el-tag>
+            <el-tag size ="mini"class="el-tag-blue">blue pending for LM MGR Approval</el-tag>
+            <el-tag size="mini" class="el-tag-cyan">cyan</el-tag>
+            <el-tag size="mini" class="el-tag-green">green</el-tag>
+            <el-tag size="mini" class="el-tag-orange">orange</el-tag>
+            <el-tag size="mini" class="el-tag-pink">pink</el-tag>
+            <el-tag size="mini" class="el-tag-purpl">purpl</el-tag>
+            <el-tag size="mini" class="el-tag-red">red</el-tag>
         </div>
 
         <!-- Tag -->
+
+
+        <!-- Badge -->
+        <h2>Badge</h2>
+        <div class="Badge-Box">
+            <div><el-badge is-dot class="el-badge-blue">Pending for LM MGR Approval</el-badge></div>
+            <div><el-badge is-dot class="el-badge-cyan">LM MGR Approved</el-badge></div>
+            <div><el-badge is-dot class="el-badge-green">LM Mrg Suggested New price</el-badge></div>
+            <div><el-badge is-dot class="el-badge-orange">Orange</el-badge></div>
+            <div><el-badge is-dot class="el-badge-pink">Pink</el-badge></div>
+            <div><el-badge is-dot class="el-badge-purpl">Purpl</el-badge></div>
+            <div><el-badge is-dot class="el-badge-red">Red</el-badge></div>
+        </div>
+
+
+        <!-- Badge -->
         
   </div>
 </body>
@@ -186,6 +203,7 @@
           switchvalue3:"",
           switchvalue4:"",
           switchvalue5:"",
+          radioStatusVal:"To Do",
           options: [{
             value: '选项1',
             label: '黄金糕'
@@ -217,7 +235,7 @@
         padding-top: 20px;
     }
 
-    .pd-box,.Dropdown-box, .DatePicker-Box,.Select-Box,.Switch-Box,.Btn-group-Box,.Tag-Box{
+    .pd-box,.Dropdown-box, .DatePicker-Box,.Select-Box,.Switch-Box,.radio-group-Box,.Tag-Box,.Badge-Box{
         padding:0px 20px 20px 20px;
     }
 
@@ -237,5 +255,10 @@
 
     .no-border{
        border:none;
+    }
+
+    .Badge-Box > div{
+       margin-top: 10px;
+       padding-left: 20px;
     }
 </style> 

@@ -143,4 +143,40 @@
       transform: scale(.7);
     }
   }
+  // by  txk
+  &-blue{
+    background-color:#e6f7ff;
+    border:solid 1px #91d5ff;
+    color:#91d5ff;
+  }
+  &-cyan{
+    background-color: #e6fffb;
+    border: solid 1px #87e8de;
+    color:#87e8de;
+  }
+  &-green{
+    background-color: #f6ffed;
+    border: solid 1px #b7eb8f;
+    color:#b7eb8f;
+  }
+  &-orange{
+    background-color: #fff2e8;
+    border: solid 1px #ffbb96;
+    color:#ffbb96;
+  }
+  &-pink{
+    background-color: #fff0f6;
+    border: solid 1px #ffadd2;
+    color:#ffadd2;
+  }
+  &-purpl{
+    background-color: #f9f0ff;
+    border: solid 1px #d3adf7;
+    color:#d3adf7;
+  }
+  &-red{
+    background-color: #fff1f0;
+    border: solid 1px #ffa39e;
+    color:#ffa39e;
+  }
 }
