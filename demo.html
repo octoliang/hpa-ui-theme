@@ -60,6 +60,14 @@
           <el-card>
             <div slot="header" class="clearfix">
               <span>NRTP Renewal Price Review</span>
+              <div style="float: right;">
+                <el-radio-group v-model="radioStatusVal">
+                  <el-radio-button label="To Do"  class="el-radio-button-ellipse"></el-radio-button>
+                  <el-radio-button label="Pending" class="el-radio-button-ellipse"></el-radio-button>
+                  <el-radio-button label="Completed" class="el-radio-button-ellipse"></el-radio-button>
+                  <el-radio-button label="Hold Over" class="el-radio-button-ellipse"></el-radio-button>
+                </el-radio-group> 
+              </div>
             </div>
             <!-- Start Form -->
             <el-form :inline="true" :model="formInline">
@@ -333,6 +341,7 @@
             label: 'Renewal Not Offered'
           }],
           value: '',
+          radioStatusVal:"To Do",
           tableData: [{
             team: 'East Team',
             pCode: 'p00-0001',

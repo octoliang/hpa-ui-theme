@@ -64,9 +64,9 @@
   }
 
   @include e(body) {
-    padding: 30px 20px;
+    padding: $padding-sm $padding-lg;
     color: $text-color;
-    font-size: $--dialog-font-size;
+    // font-size: $--dialog-font-size;
   }
 
   @include e(footer) {

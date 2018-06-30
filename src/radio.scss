@@ -199,11 +199,10 @@
   }
 
   // by txk
-
   &-group .el-radio-button-ellipse:first-child .el-radio-button__inner{
-        border-top-left-radius: $border-fl-radius;
-        border-bottom-left-radius: $border-fl-radius;
-        border-color: $rp-bd-color;
+    border-top-left-radius: $border-fl-radius;
+    border-bottom-left-radius: $border-fl-radius;
+    border-color: $rp-bd-color;
   }
 
   &-group .el-radio-button-ellipse:last-child .el-radio-button__inner{
