@@ -12,7 +12,7 @@
     bottom: 0;
     left: 0;
     height: 2px;
-    background-color: $--color-primary;
+    background-color: $primary-color;
     z-index: 1;
     transition: transform .3s cubic-bezier(.645,.045,.355,1);
     list-style: none;
@@ -36,7 +36,7 @@
     }
 
     &:hover {
-      color: $--color-primary;
+      color: $primary-color;
     }
   }
   @include e(nav-wrap) {
@@ -51,8 +51,8 @@
       bottom: 0;
       width: 100%;
       height: 2px;
-      background-color: $--border-color-light;
-      z-index: $--index-normal;
+      background-color: $border-color-split;
+      z-index: $index-normal;
     }
 
     @include when(scrollable) {
@@ -68,7 +68,7 @@
     cursor: pointer;
     line-height: 44px;
     font-size: 12px;
-    color: $--color-text-secondary;
+    color: $text-color-sub;
   }
   @include e(nav-next) {
     right: 0;
@@ -81,7 +81,7 @@
     position: relative;
     transition: transform .3s;
     float: left;
-    z-index: #{$--index-normal + 1};
+    z-index: #{$index-normal + 1};
 
     @include when(stretch) {
       min-width: 100%;
@@ -101,7 +101,7 @@
     list-style: none;
     font-size: 14px;
     font-weight: 500;
-    color: $--color-text-primary;
+    color: $title-color;
     position: relative;
 
     &:focus, &:focus:active {
@@ -124,22 +124,22 @@
       }
 
       &:hover {
-        background-color: $--color-text-placeholder;
-        color: $--color-white;
+        background-color: $text-color-disabled;
+        color: $white-color;
       }
     }
 
     @include when(active) {
-      color: $--color-primary;
+      color: $primary-color;
     }
 
     &:hover {
-      color: $--color-primary;
+      color: $primary-color;
       cursor: pointer;
     }
 
     @include when(disabled) {
-      color: $--disabled-color-base;
+      color: $disabled-color-base;
       cursor: default;
     }
   }
@@ -149,13 +149,13 @@
   }
   @include m(card) {
     > .el-tabs__header {
-      border-bottom: 1px solid $--border-color-light;
+      border-bottom: 1px solid $border-color-split;
     }
     > .el-tabs__header .el-tabs__nav-wrap::after {
       content: none;
     }
     > .el-tabs__header .el-tabs__nav {
-      border: 1px solid $--border-color-light;
+      border: 1px solid $border-color-split;
       border-bottom: none;
       border-radius: 4px 4px 0 0;
       box-sizing: border-box;
@@ -177,7 +177,7 @@
     }
     > .el-tabs__header .el-tabs__item {
       border-bottom: 1px solid transparent;
-      border-left: 1px solid $--border-color-light;
+      border-left: 1px solid $border-color-split;
       transition: color .3s cubic-bezier(.645,.045,.355,1), padding .3s cubic-bezier(.645,.045,.355,1);
       &:first-child {
         border-left: none;
@@ -193,7 +193,7 @@
         }
       }
       &.is-active {
-        border-bottom-color: $--color-white;
+        border-bottom-color: $white-color;
 
         &.is-closable {
           padding-left: 20px;
@@ -207,16 +207,16 @@
     }
   }
   @include m(border-card) {
-    background: $--color-white;
-    border: 1px solid $--border-color-base;
+    background: $white-color;
+    border: 1px solid $border-color-base;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.12), 0 0 6px 0 rgba(0,0,0,0.04);
 
     >.el-tabs__content {
       padding: 15px;
     }
     >.el-tabs__header {
-      background-color: $--background-color-base;
-      border-bottom: 1px solid $--border-color-light;
+      background-color: $background-color-base;
+      border-bottom: 1px solid $border-color-split;
       margin: 0;
     }
     > .el-tabs__header .el-tabs__nav-wrap::after {
@@ -226,19 +226,19 @@
       transition: all .3s cubic-bezier(.645,.045,.355,1);
       border: 1px solid transparent;
       margin: -1px -1px 0;
-      color: $--color-text-secondary;
+      color: $text-color-sub;
 
       &.is-active {
-        color: $--color-primary;
-        background-color: $--color-white;
-        border-right-color: $--border-color-base;
-        border-left-color: $--border-color-base;
+        color: $primary-color;
+        background-color: $white-color;
+        border-right-color: $border-color-base;
+        border-left-color: $border-color-base;
       }
       &:not(.is-disabled):hover {
-        color: $--color-primary;
+        color: $primary-color;
       }
       &.is-disabled {
-        color: $--disabled-color-base;
+        color: $disabled-color-base;
       }
     }
   }
@@ -270,7 +270,7 @@
     &.el-tabs--border-card {
       .el-tabs__header.is-bottom {
         border-bottom: 0;
-        border-top: 1px solid $--border-color-base;
+        border-top: 1px solid $border-color-base;
       }
       .el-tabs__nav-wrap.is-bottom {
         margin-top: -1px;
@@ -375,16 +375,16 @@
       }
       .el-tabs__item.is-left {
         border-left: none;
-        border-right: 1px solid $--border-color-light;
+        border-right: 1px solid $border-color-split;
         border-bottom: none;
-        border-top: 1px solid $--border-color-light;
+        border-top: 1px solid $border-color-split;
       }
       .el-tabs__item.is-left:first-child {
-        border-right: 1px solid $--border-color-light;
+        border-right: 1px solid $border-color-split;
         border-top: none;
       }
       .el-tabs__item.is-left.is-active {
-        border: 1px solid $--border-color-light;
+        border: 1px solid $border-color-split;
         border-right-color: #fff;
         border-left: none;
         border-bottom: none;
@@ -399,7 +399,7 @@
 
       .el-tabs__nav {
         border-radius: 4px 0 0 4px;
-        border-bottom: 1px solid $--border-color-light;
+        border-bottom: 1px solid $border-color-split;
         border-right: none;
       }
 
@@ -449,14 +449,14 @@
       }
       .el-tabs__item.is-right {
         border-bottom: none;
-        border-top: 1px solid $--border-color-light;
+        border-top: 1px solid $border-color-split;
       }
       .el-tabs__item.is-right:first-child {
-        border-left: 1px solid $--border-color-light;
+        border-left: 1px solid $border-color-split;
         border-top: none;
       }
       .el-tabs__item.is-right.is-active {
-        border: 1px solid $--border-color-light;
+        border: 1px solid $border-color-split;
         border-left-color: #fff;
         border-right: none;
         border-bottom: none;
@@ -471,7 +471,7 @@
 
       .el-tabs__nav {
         border-radius: 0 4px 4px 0;
-        border-bottom: 1px solid $--border-color-light;
+        border-bottom: 1px solid $border-color-split;
         border-left: none;
       }
     }

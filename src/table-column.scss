@@ -13,9 +13,9 @@
 }
 
 @include b(table-filter) {
-  border: solid 1px $--border-color-lighter;
+  border: solid 1px $border-color-sub;
   border-radius: 2px;
-  background-color: $--color-white;
+  background-color: $white-color;
   box-shadow: $--dropdown-menu-box-shadow;
   box-sizing: border-box;
   margin: 2px 0;
@@ -32,7 +32,7 @@
     line-height: 36px;
     padding: 0 10px;
     cursor: pointer;
-    font-size: $--font-size-base;
+    font-size: $font-size-base;
 
     &:hover {
       background-color: $--dropdown-menuItem-hover-fill;
@@ -40,8 +40,8 @@
     }
 
     @include when(active) {
-      background-color: $--color-primary;
-      color: $--color-white;
+      background-color: $primary-color;
+      color: $white-color;
     }
   }
 
@@ -50,19 +50,19 @@
   }
 
   @include e(bottom) {
-    border-top: 1px solid $--border-color-lighter;
+    border-top: 1px solid $border-color-sub;
     padding: 8px;
 
     button {
       background: transparent;
       border: none;
-      color: $--color-text-regular;
+      color: $text-color;
       cursor: pointer;
-      font-size: $--font-size-small;
+      font-size: $font-size-sm;
       padding: 0 3px;
 
       &:hover {
-        color: $--color-primary;
+        color: $primary-color;
       }
 
       &:focus {
@@ -70,7 +70,7 @@
       }
 
       &.is-disabled {
-        color: $--disabled-color-base;
+        color: $disabled-color-base;
         cursor: not-allowed;
       }
     }

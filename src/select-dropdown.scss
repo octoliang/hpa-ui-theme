@@ -4,21 +4,21 @@
 
 @include b(select-dropdown) {
   position: absolute;
-  z-index: #{$--index-top + 1};
-  border: $--select-dropdown-border;
-  border-radius: $--border-radius-base;
-  background-color: $--select-dropdown-background;
-  box-shadow: $--select-dropdown-shadow;
+  z-index: #{$index-top + 1};
+  border: $border-base;
+  border-radius: $border-radius-base;
+  background-color: $white-color;
+  box-shadow: $box-shadow-light;
   box-sizing: border-box;
-  margin: 5px 0;
+  margin: $margin-xs 0;
 
   @include when(multiple) {
     & .el-select-dropdown__item.selected {
-      color: $--select-option-selected;
-      background-color: $--select-dropdown-background;
+      color: $white-color;
+      background-color: $primary-color-main;
 
       &.hover {
-        background-color: $--select-option-hover-background;
+        background: $primary-color-main;
       }
 
       &::after {
@@ -40,20 +40,20 @@
 }
 
 @include b(select-dropdown__empty) {
-  padding: $--select-dropdown-empty-padding;
+  padding: $padding-sm 0;
   margin: 0;
   text-align: center;
-  color: $--select-dropdown-empty-color;
-  font-size: $--select-font-size;
+  color: $text-color-grey;
+  font-size: $font-size-base;
 }
 
 @include b(select-dropdown__wrap) {
-  max-height: $--select-dropdown-max-height;
+  max-height: $select-dropdown-max-height;
 }
 
 @include b(select-dropdown__list) {
   list-style: none;
-  padding: $--select-dropdown-padding;
+  padding: $padding-xs 0;
   margin: 0;
   box-sizing: border-box;
 }

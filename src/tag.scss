@@ -34,7 +34,7 @@
 
     &:hover {
       background-color: $--tag-color;
-      color: $--color-white;
+      color: $white-color;
     }
   }
 
@@ -53,7 +53,7 @@
 
     .el-tag__close:hover {
       background-color: $--tag-info-color;
-      color: $--color-white;
+      color: $white-color;
     }
   }
 
@@ -72,7 +72,7 @@
 
     .el-tag__close:hover {
       background-color: $--tag-success-color;
-      color: $--color-white;
+      color: $white-color;
     }
   }
 
@@ -91,7 +91,7 @@
 
     .el-tag__close:hover {
       background-color: $--tag-warning-color;
-      color: $--color-white;
+      color: $white-color;
     }
   }
 
@@ -110,7 +110,7 @@
 
     .el-tag__close:hover {
       background-color: $--tag-danger-color;
-      color: $--color-white;
+      color: $white-color;
     }
   }
 
@@ -169,7 +169,7 @@
     border: solid 1px #ffadd2;
     color:#ffadd2;
   }
-  &-purpl{
+  &-purple{
     background-color: #f9f0ff;
     border: solid 1px #d3adf7;
     color:#d3adf7;

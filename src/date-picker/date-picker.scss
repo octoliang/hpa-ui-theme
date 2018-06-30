@@ -49,7 +49,7 @@
     @include m(bordered) {
       margin-bottom: 0;
       padding-bottom: 12px;
-      border-bottom: solid 1px $--border-color-lighter;
+      border-bottom: solid 1px $border-color-sub;
 
       & + .el-picker-panel__content {
         margin-top: 0;
@@ -64,7 +64,7 @@
     line-height: 22px;
     text-align: center;
     cursor: pointer;
-    color: $--color-text-regular;
+    color: $text-color;
 
     &:hover {
       color: $--datepicker-text-hover-color;

@@ -9,12 +9,12 @@
   border-radius: 4px;
   border: 1px solid $--popover-border-color;
   padding: $--popover-padding;
-  z-index: $--index-popper;
-  color: $--color-text-regular;
+  z-index: $index-popper;
+  color: $text-color;
   line-height: 1.4;
   text-align: justify;
   font-size: $--popover-font-size;
-  box-shadow: $--box-shadow-light;
+  box-shadow: $box-shadow-light;
 
   @include m(plain) {
     padding: $--popover-padding-large;

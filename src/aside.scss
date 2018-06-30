@@ -27,7 +27,7 @@
     width: 100%;
     height: $header-height;
     padding: $padding-xs $padding-sm;
-    background: darken(saturate($--color-primary,15%),29%);
+    background: darken(saturate($primary-color,15%),29%);
 
     >a{
       display: block;

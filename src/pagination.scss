@@ -6,7 +6,7 @@
 @include b(pagination) {
   white-space: nowrap;
   // padding: 2px 5px;
-  color: $--color-text-regular;
+  color: $text-color;
   // font-weight: bold;
   @include utils-clearfix;
 
@@ -103,7 +103,7 @@
   }
 
   .el-pager li.disabled {
-    color: $--color-text-placeholder;
+    color: $text-color-disabled;
     cursor: not-allowed;
   }
 
@@ -147,7 +147,7 @@
   @include e(sizes) {
     margin: 0 10px 0 0;
     font-weight: normal;
-    color: $--color-text-regular;
+    color: $text-color;
 
     .el-input .el-input__inner {
       font-size: inherit;
@@ -162,13 +162,13 @@
   @include e(total) {
     margin-right: 10px;
     font-weight: normal;
-    color: $--color-text-regular;
+    color: $text-color;
   }
 
   @include e(jump) {
     margin-left: 24px;
     font-weight: normal;
-    color: $--color-text-regular;
+    color: $text-color;
 
     .el-input__inner {
       padding: 0 3px;
@@ -212,15 +212,15 @@
       height: $pagenation-size-base;
       line-height: $pagenation-size-base - 2;
       margin: 0 $margin-xs / 2;
-      background: $--color-white;
-      color: $--color-text-regular;
-      border: $--border-base;
-      border-radius: $--border-radius-base;
+      background: $white-color;
+      color: $text-color;
+      border: $border-base;
+      border-radius: $border-radius-base;
 
       &.disabled {
-        background: $disabled-color-base;
-        color: $--color-text-placeholder;
-        border-color: $--border-color-lighter;
+        background: $disabled-color;
+        color: $text-color-disabled;
+        border-color: $border-color-sub;
       }
     }
 
@@ -228,9 +228,9 @@
       padding: 0;
 
       &:disabled {
-        background: $disabled-color-base;
-        color: $--color-text-placeholder;
-        border-color: $--border-color-lighter;
+        background: $disabled-color;
+        color: $text-color-disabled;
+        border-color: $border-color-sub;
       }
     }
     
@@ -249,7 +249,7 @@
 
       &.active {
         background-color: $primary-color-main;
-        color: $--color-white;
+        color: $white-color;
         border-color: transparent;
       }
     }
@@ -298,7 +298,7 @@
       color: $--pagination-button-color;
 
       &.disabled {
-        color: $--color-text-placeholder;
+        color: $text-color-disabled;
       }
     }
 

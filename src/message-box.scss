@@ -9,11 +9,11 @@
   width: $--msgbox-width;
   padding-bottom: 10px;
   vertical-align: middle;
-  background-color: $--color-white;
+  background-color: $white-color;
   border-radius: $--msgbox-border-radius;
-  border: 1px solid $--border-color-lighter;
+  border: 1px solid $border-color-sub;
   font-size: $--msgbox-font-size;
-  box-shadow: $--box-shadow-light;
+  box-shadow: $box-shadow-light;
   text-align: left;
   overflow: hidden;
   backface-visibility: hidden;
@@ -46,7 +46,7 @@
     margin-bottom: 0;
     font-size: $--msgbox-font-size;
     line-height: 1;
-    color: $--color-text-primary;
+    color: $title-color;
   }
 
   @include e(headerbtn) {
@@ -61,12 +61,12 @@
     cursor: pointer;
 
     .el-message-box__close {
-      color: $--color-info;
+      color: $info-color;
     }
 
     &:focus, &:hover {
       .el-message-box__close {
-        color: $--color-primary;
+        color: $primary-color;
       }
     }
 
@@ -83,9 +83,9 @@
     padding-top: 15px;
 
     & input.invalid {
-      border-color: $--color-danger;
+      border-color: $danger-color;
       &:focus {
-        border-color: $--color-danger;
+        border-color: $danger-color;
       }
     }
   }
@@ -133,7 +133,7 @@
   }
 
   @include e(errormsg) {
-    color: $--color-danger;
+    color: $danger-color;
     font-size: $--msgbox-error-font-size;
     min-height: 18px;
     margin-top: 2px;

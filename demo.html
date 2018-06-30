@@ -60,9 +60,8 @@
           <el-card>
             <div slot="header" class="clearfix">
               <span>NRTP Renewal Price Review</span>
-              <!-- <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button> -->
             </div>
-
+            <!-- Start Form -->
             <el-form :inline="true" :model="formInline">
               <el-form-item label="Search">
                 <el-input v-model="formInline.search" placeholder="P-Code/Address/Lease"></el-input>
@@ -85,8 +84,9 @@
                   <el-option label="Item2" value="item2"></el-option>
                 </el-select>
               </el-form-item>
-            </el-form>
+            </el-form><!-- End Form -->
 
+            <!-- Start Table -->
             <el-table
               :data="tableData">
               <el-table-column
@@ -172,7 +172,7 @@
                 sortable
                 min-width="120">
                 <template slot-scope="scope">
-                  <el-button icon="el-icon-message" circle></el-button>
+                  <el-button icon="el-icon-message" circle class="el-button-nb-blue"></el-button>
                 </template>
               </el-table-column>
               <el-table-column
@@ -181,7 +181,7 @@
                 sortable
                 min-width="120">
                 <template slot-scope="scope">
-                  <el-button icon="el-icon-phone" circle></el-button>
+                  <el-button icon="el-icon-phone" circle class="el-button-nb-blue"></el-button>
                 </template>
               </el-table-column>
               <el-table-column
@@ -191,7 +191,20 @@
                 min-width="240">
                 <template slot-scope="scope">
                   Request for Initial DocuSign
-                  <el-button icon="el-icon-edit-outline" circle></el-button>
+                  <el-popover
+                    placement="bottom"
+                    width="240"
+                    trigger="click">
+                    <el-select v-model="value" placeholder="">
+                      <el-option
+                        v-for="item in options"
+                        :key="item.value"
+                        :label="item.label"
+                        :value="item.value">
+                      </el-option>
+                    </el-select>
+                    <el-button icon="el-icon-edit-outline" circle slot="reference" class="el-button-nb-blue"></el-button>
+                  </el-popover>
                 </template>
               </el-table-column>
               <el-table-column
@@ -211,7 +224,7 @@
                 sortable
                 min-width="210">
                 <template slot-scope="scope">
-                  <el-button icon="el-icon-edit-outline" circle></el-button>
+                  <el-button icon="el-icon-edit-outline" circle class="el-button-nb-blue"></el-button>
                 </template>
               </el-table-column>
               <el-table-column
@@ -229,7 +242,7 @@
                 sortable
                 min-width="180">
                 <template slot-scope="scope">
-                  <el-button icon="el-icon-edit-outline" circle></el-button>
+                  <el-button icon="el-icon-edit-outline" circle class="el-button-nb-blue"></el-button>
                 </template>
               </el-table-column>
               <el-table-column
@@ -238,7 +251,7 @@
                 sortable
                 min-width="190">
                 <template slot-scope="scope">
-                  <el-button icon="el-icon-edit-outline" circle></el-button>
+                  <el-button icon="el-icon-edit-outline" circle class="el-button-nb-blue"></el-button>
                 </template>
               </el-table-column>
               <el-table-column
@@ -247,7 +260,7 @@
                 sortable
                 min-width="220">
                 <template slot-scope="scope">
-                  <el-tag type="danger">Need to Contact</el-tag>
+                  <el-badge is-dot class="el-badge-purple">Need to Contact</el-badge>
                 </template>
               </el-table-column>
               <el-table-column
@@ -256,12 +269,13 @@
                 min-width="100">
                 <template slot-scope="scope">
                   <el-tooltip class="item" effect="dark" content="Rent Price Calculator" placement="bottom">
-                    <el-button icon="el-icon-printer" circle></el-button>
+                    <el-button icon="el-icon-printer" circle class="el-button-nb-blue" @click="dialogVisible = true"></el-button>
                   </el-tooltip>
                 </template>
               </el-table-column>
-            </el-table>
+            </el-table><!-- End Table -->
 
+            <!-- Start Pagination -->
             <div class="el-pagination-wrap">
               <span class="el-pagination-text">Showing 10 of 100 entries</span>
               <el-pagination
@@ -269,10 +283,8 @@
                 layout="prev, pager, next"
                 :total="1000">
               </el-pagination>
-            </div>
+            </div><!-- End Pagination -->
           </el-card>
-
-          <!-- <el-button @click="dialogVisible = true">点击打开 Dialog</el-button> -->
         </el-main>
       </el-container>
     </el-container>
@@ -310,6 +322,17 @@
             state: '',
             team: ''
           },
+          options: [{
+            value: '1',
+            label: 'Request for Initial DocuSign'
+          },{
+            value: '2',
+            label: 'Intend to Vacate'
+          },{
+            value: '3',
+            label: 'Renewal Not Offered'
+          }],
+          value: '',
           tableData: [{
             team: 'East Team',
             pCode: 'p00-0001',

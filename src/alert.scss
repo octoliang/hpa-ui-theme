@@ -8,7 +8,7 @@
   box-sizing: border-box;
   border-radius: $--alert-border-radius;
   position: relative;
-  background-color: $--color-white;
+  background-color: $white-color;
   overflow: hidden;
   opacity: 1;
   display: flex;
@@ -21,37 +21,37 @@
 
   @include m(success) {
     background-color: $--alert-success-color;
-    color: $--color-success;
+    color: $success-color;
 
     .el-alert__description {
-      color: $--color-success;
+      color: $success-color;
     }
   }
 
   @include m(info) {
     background-color: $--alert-info-color;
-    color: $--color-info;
+    color: $info-color;
 
     .el-alert__description {
-      color: $--color-info;
+      color: $info-color;
     }
   }
 
   @include m(warning) {
     background-color: $--alert-warning-color;
-    color: $--color-warning;
+    color: $warning-color;
 
     .el-alert__description {
-      color: $--color-warning;
+      color: $warning-color;
     }
   }
 
   @include m(error) {
     background-color: $--alert-danger-color;
-    color: $--color-danger;
+    color: $danger-color;
 
     .el-alert__description {
-      color: $--color-danger;
+      color: $danger-color;
     }
   }
 
@@ -84,7 +84,7 @@
 
   @include e(closebtn) {
     font-size: $--alert-close-font-size;
-    color: $--color-text-placeholder;
+    color: $text-color-disabled;
     opacity: 1;
     position: absolute;
     top: 12px;

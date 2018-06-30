@@ -5,11 +5,12 @@
   position: relative;
   vertical-align: middle;
   display: inline-block;
+  padding-left: $padding-sm;
 
   @include e(content) {
     background-color: $--badge-fill;
     border-radius: $--badge-radius;
-    color: $--color-white;
+    color: $white-color;
     display: inline-block;
     font-size: $--badge-font-size;
     height: $--badge-size;
@@ -17,12 +18,13 @@
     padding: 0 $--badge-padding;
     text-align: center;
     white-space: nowrap;
-    border: 1px solid $--color-white;
+    border: 1px solid $white-color;
 
     @include when(fixed) {
       position: absolute;
+      left: 0;
       top: 50%;
-      left:-#{3+$--badge-size/2};
+      // left:-#{3+$--badge-size/2};
       transform: translateY(-50%);
 
       @include when(dot) {
@@ -72,7 +74,7 @@
       background-color: #ffadd2;
     }
   }
-  &-purpl{
+  &-purple{
     color: #d3adf7;
     .el-badge__content{
       background-color: #d3adf7;

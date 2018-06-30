@@ -27,28 +27,28 @@
     width: 100%;
 
     @include when(process) {
-      color: $--color-text-primary;
-      border-color: $--color-text-primary;
+      color: $title-color;
+      border-color: $title-color;
     }
 
     @include when(wait) {
-      color: $--color-text-placeholder;
-      border-color: $--color-text-placeholder;
+      color: $text-color-disabled;
+      border-color: $text-color-disabled;
     }
 
     @include when(success) {
-      color: $--color-success;
-      border-color: $--color-success;
+      color: $success-color;
+      border-color: $success-color;
     }
 
     @include when(error) {
-      color: $--color-danger;
-      border-color: $--color-danger;
+      color: $danger-color;
+      border-color: $danger-color;
     }
 
     @include when(finish) {
-      color: $--color-primary;
-      border-color: $--color-primary;
+      color: $primary-color;
+      border-color: $primary-color;
     }
   }
 
@@ -62,7 +62,7 @@
     height: 24px;
     font-size: 14px;
     box-sizing: border-box;
-    background: $--color-white;
+    background: $white-color;
     transition: .15s ease-out;
 
     @include when(text) {
@@ -98,7 +98,7 @@
   @include e(line) {
     position: absolute;
     border-color: inherit;
-    background-color: $--color-text-placeholder;
+    background-color: $text-color-disabled;
   }
 
   @include e(line-inner) {
@@ -123,23 +123,23 @@
 
     @include when(process) {
       font-weight: bold;
-      color: $--color-text-primary;
+      color: $title-color;
     }
 
     @include when(wait) {
-      color: $--color-text-placeholder;
+      color: $text-color-disabled;
     }
 
     @include when(success) {
-      color: $--color-success;
+      color: $success-color;
     }
 
     @include when(error) {
-      color: $--color-danger;
+      color: $danger-color;
     }
 
     @include when(finish) {
-      color: $--color-primary;
+      color: $primary-color;
     }
   }
 
@@ -151,23 +151,23 @@
     font-weight: normal;
 
     @include when(process) {
-      color: $--color-text-primary;
+      color: $title-color;
     }
 
     @include when(wait) {
-      color: $--color-text-placeholder;
+      color: $text-color-disabled;
     }
 
     @include when(success) {
-      color: $--color-success;
+      color: $success-color;
     }
 
     @include when(error) {
-      color: $--color-danger;
+      color: $danger-color;
     }
 
     @include when(finish) {
-      color: $--color-primary;
+      color: $primary-color;
     }
   }
 
@@ -294,7 +294,7 @@
         position: absolute;
         height: 15px;
         width: 1px;
-        background: $--color-text-placeholder;
+        background: $text-color-disabled;
       }
 
       &::before {

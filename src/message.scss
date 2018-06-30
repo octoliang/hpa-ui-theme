@@ -4,10 +4,10 @@
 @include b(message) {
   min-width: $--message-min-width;
   box-sizing: border-box;
-  border-radius: $--border-radius-base;
-  border-width: $--border-width-base;
-  border-style: $--border-style-base;
-  border-color: $--border-color-lighter;
+  border-radius: $border-radius-base;
+  border-width: $border-width-base;
+  border-style: $border-style-base;
+  border-color: $border-color-sub;
   position: fixed;
   left: 50%;
   top: 20px;
@@ -40,8 +40,8 @@
   }
 
   @include m(success) {
-    background-color: $--color-success-lighter;
-    border-color: $--color-success-light;
+    background-color: $success-color-lighter;
+    border-color: $success-color-light;
 
     .el-message__content {
       color: $--message-success-color;
@@ -49,8 +49,8 @@
   }
 
   @include m(warning) {
-    background-color: $--color-warning-lighter;
-    border-color: $--color-warning-light;
+    background-color: $warning-color-lighter;
+    border-color: $warning-color-light;
 
     .el-message__content {
       color: $--message-warning-color;
@@ -58,8 +58,8 @@
   }
 
   @include m(error) {
-    background-color: $--color-danger-lighter;
-    border-color: $--color-danger-light;
+    background-color: $danger-color-lighter;
+    border-color: $danger-color-light;
 
     .el-message__content {
       color: $--message-danger-color;

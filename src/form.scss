@@ -89,7 +89,7 @@
     vertical-align: middle;
     float: left;
     font-size: inherit;
-    color: $--color-text-regular;
+    color: $text-color;
     line-height: 40px;
     padding: 0 12px 0 0;
     box-sizing: border-box;
@@ -105,7 +105,7 @@
     }
   }
   @include e(error) {
-    color: $--color-danger;
+    color: $danger-color;
     font-size: 12px;
     line-height: 1;
     padding-top: 4px;
@@ -125,7 +125,7 @@
   @include when(required) {
     .el-form-item__label:before {
       content: '*';
-      color: $--color-danger;
+      color: $danger-color;
       margin-right: 4px;
     }
   }
@@ -134,7 +134,7 @@
     & .el-input__inner,
     & .el-textarea__inner {
       &, &:focus {
-        border-color: $--color-danger;
+        border-color: $danger-color;
       }
     }
     & .el-input-group__append,
@@ -144,14 +144,14 @@
       }
     }
     .el-input__validateIcon {
-      color: $--color-danger;
+      color: $danger-color;
     }
   }
   @include when(success) {
     & .el-input__inner,
     & .el-textarea__inner {
       &, &:focus {
-        border-color: $--color-success;
+        border-color: $success-color;
       }
     }
     & .el-input-group__append,
@@ -161,7 +161,7 @@
       }
     }
     .el-input__validateIcon {
-      color: $--color-success;
+      color: $success-color;
     }
   }
   @include m(feedback) {

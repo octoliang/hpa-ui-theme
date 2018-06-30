@@ -12,7 +12,7 @@
   flex: 1;
   width: 100%;
   max-width: 100%;
-  background-color: $--color-white;
+  background-color: $white-color;
   font-size: inherit;
   color: $--table-text-color;
   margin-bottom: $margin-base;
@@ -31,7 +31,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    color: $--color-text-secondary;
+    color: $text-color-sub;
   }
 
   // 展开行
@@ -64,7 +64,7 @@
   }
 
   @include e(expanded-cell) {
-    background-color: $--color-white;
+    background-color: $white-color;
 
     // 纯属为了增加权重
     &[class*=cell] {
@@ -103,7 +103,7 @@
 
     &.is-group {
       th {
-        // background: $--background-color-base;
+        // background: $background-color-base;
         background: $table-header-bg;
       }
     }
@@ -165,10 +165,10 @@
   }
 
   tr {
-    // background-color: $--color-white;
+    // background-color: $white-color;
 
     &:nth-child(2n+1){
-        background: $--color-white;
+        background: $white-color;
     }
 
     &:nth-child(2n+2){
@@ -204,7 +204,7 @@
     text-align: left;
     // background-color: $--table-header-background;
     background: $table-header-bg;
-    color: $--color-text-regular;
+    color: $text-color;
     font-weight: 400;
 
     div {
@@ -229,7 +229,7 @@
       box-sizing: border-box;
 
       &.highlight {
-        color: $--color-primary;
+        color: $primary-color;
       }
     }
 
@@ -349,7 +349,7 @@
       bottom: 0;
       width: 100%;
       height: 1px;
-      background-color: $--border-color-lighter;
+      background-color: $border-color-sub;
       z-index: 4;
     }
   }
@@ -358,7 +358,7 @@
     position: absolute;
     top: -1px;
     right: 0;
-    background-color: $--color-white;
+    background-color: $white-color;
     border-bottom: $--table-border;
   }
 
@@ -488,22 +488,22 @@
     left: 7px;
 
     &.ascending {
-      border-bottom-color: $--color-text-placeholder;
+      border-bottom-color: $text-color-disabled;
       top: 5px;
     }
 
     &.descending {
-      border-top-color: $--color-text-placeholder;
+      border-top-color: $text-color-disabled;
       bottom: 7px;
     }
   }
 
   .ascending .sort-caret.ascending {
-    border-bottom-color: $--color-primary;
+    border-bottom-color: $primary-color;
   }
 
   .descending .sort-caret.descending {
-    border-top-color: $--color-primary;
+    border-top-color: $primary-color;
   }
 
   .hidden-columns {
@@ -560,7 +560,7 @@
     cursor: pointer;
 
     & i {
-      color: $--color-info;
+      color: $info-color;
       font-size: 12px;
       transform: scale(.75);
     }

@@ -245,12 +245,12 @@
   }
 
   @include e((append, prepend)) {
-    background-color: $--background-color-base;
-    color: $--color-info;
+    background-color: $background-color-base;
+    color: $info-color;
     vertical-align: middle;
     display: table-cell;
     position: relative;
-    border: $--border-base;
+    border: $border-base;
     border-radius: $--input-border-radius;
     padding: 0 20px;
     width: 1px;

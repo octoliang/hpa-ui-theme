@@ -6,8 +6,8 @@
 @include b(dialog) {
   position: relative;
   margin: 0 auto 50px;
-  background: $--color-white;
-  border-radius: $--border-radius-small;
+  background: $white-color;
+  border-radius: $border-radius-sm;
   box-shadow: $--dialog-box-shadow;
   box-sizing: border-box;
   width: 50%;
@@ -47,12 +47,12 @@
     font-size: $--message-close-size;
 
     .el-dialog__close {
-      color: $--color-info;
+      color: $info-color;
     }
 
     &:focus, &:hover {
       .el-dialog__close {
-        color: $--color-primary;
+        color: $primary-color;
       }
     }
   }
@@ -60,12 +60,12 @@
   @include e(title) {
     line-height: $--dialog-line-height;
     font-size: $--dialog-title-font-size;
-    color: $--color-text-primary;
+    color: $title-color;
   }
 
   @include e(body) {
     padding: 30px 20px;
-    color: $--color-text-regular;
+    color: $text-color;
     font-size: $--dialog-font-size;
   }
 

@@ -8,7 +8,7 @@
   height: 36px;
   line-height: 36px;
   margin: 0 0 $margin-base;
-  color: $--color-text-regular;
+  color: $text-color;
   font-size: inherit;
   @include utils-clearfix;
 
@@ -16,7 +16,7 @@
     display: none;
     // margin: 0 9px;
     // font-weight: bold;
-    // color: $--color-text-placeholder;
+    // color: $text-color-disabled;
 
     // &[class*=icon] {
     //   margin: 0 6px;
@@ -37,13 +37,13 @@
       top: 50%;
       width: 6px;
       height: 1px;
-      background: $--color-text-regular;
+      background: $text-color;
     }
 
     &:first-child {
       margin: 0 $margin-sm 0 0;
       padding: 0 $padding-base 0 0;
-      font-size: $--font-size-large;
+      font-size: $font-size-lg;
       font-weight: 500;
   
       &:after{
@@ -52,7 +52,7 @@
         right: 0;
         width: 1px;
         height: 100%;
-        background: lighten($--border-color-base,2.2%);
+        background: lighten($border-color-base,2.2%);
       }
     }
 
@@ -63,16 +63,16 @@
     }
 
     @include e(inner) {
-      // color: $--color-text-regular;
+      // color: $text-color;
 
       &.is-link, & a {
         // font-weight: bold;
         text-decoration: none;
         transition: $--color-transition-base;
-        color: $--color-text-regular;
+        color: $text-color;
 
         &:hover {
-          color: $--color-primary;
+          color: $primary-color;
           cursor: pointer;
         }
       }
@@ -83,7 +83,7 @@
       .el-breadcrumb__inner a {
         &, &:hover {
           font-weight: normal;
-          color: $--color-text-regular;
+          color: $text-color;
           cursor: text;
         }
       }

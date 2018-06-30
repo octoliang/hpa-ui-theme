@@ -7,7 +7,7 @@
 @import "checkbox-group";
 
 @include b(transfer) {
-  font-size: $--font-size-base;
+  font-size: $font-size-base;
 
   @include e(buttons) {
     display: inline-block;
@@ -20,23 +20,23 @@
     margin: 0 auto;
     padding: 10px;
     border-radius: 50%;
-    color: $--color-white;
-    background-color: $--color-primary;
+    color: $white-color;
+    background-color: $primary-color;
     font-size: 0;
 
     @include when(with-texts) {
-      border-radius: $--border-radius-base;
+      border-radius: $border-radius-base;
     }
 
     @include when(disabled) {
-      border: $--border-base;
-      background-color: $--background-color-base;
-      color: $--color-text-placeholder;
+      border: $border-base;
+      background-color: $background-color-base;
+      color: $text-color-disabled;
 
       &:hover {
-        border: $--border-base;
-        background-color: $--background-color-base;
-        color: $--color-text-placeholder;
+        border: $border-base;
+        background-color: $background-color-base;
+        color: $text-color-disabled;
       }
     }
 
@@ -62,7 +62,7 @@
   border: 1px solid $--transfer-border-color;
   border-radius: $--transfer-border-radius;
   overflow: hidden;
-  background: $--color-white;
+  background: $white-color;
   display: inline-block;
   vertical-align: middle;
   width: $--transfer-panel-width;
@@ -103,11 +103,11 @@
     }
 
     &.el-checkbox {
-      color: $--color-text-regular;
+      color: $text-color;
     }
 
     &:hover {
-      color: $--color-primary;
+      color: $primary-color;
     }
 
     &.el-checkbox .el-checkbox__label {
@@ -160,7 +160,7 @@
     padding-left: 15px;
     border-bottom: 1px solid $--transfer-border-color;
     box-sizing: border-box;
-    color: $--color-black;
+    color: $black-color;
 
     .el-checkbox {
       display: block;
@@ -168,13 +168,13 @@
 
       .el-checkbox__label {
         font-size: 16px;
-        color: $--color-text-primary;
+        color: $title-color;
         font-weight: normal;
 
         span {
           position: absolute;
           right: 15px;
-          color: $--color-text-secondary;
+          color: $text-color-sub;
           font-size: 12px;
           font-weight: normal;
         }
@@ -184,7 +184,7 @@
 
   .el-transfer-panel__footer {
     height: $--transfer-panel-footer-height;
-    background: $--color-white;
+    background: $white-color;
     margin: 0;
     padding: 0;
     border-top: 1px solid $--transfer-border-color;
@@ -192,12 +192,12 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    z-index: $--index-normal;
+    z-index: $index-normal;
     @include utils-vertical-center;
 
     .el-checkbox {
       padding-left: 20px;
-      color: $--color-text-regular;
+      color: $text-color;
     }
   }
 
@@ -206,7 +206,7 @@
     height: $--transfer-item-height;
     line-height: $--transfer-item-height;
     padding: 6px 15px 0;
-    color: $--color-text-secondary;
+    color: $text-color-sub;
     text-align: center;
   }
 

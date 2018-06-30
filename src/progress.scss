@@ -8,7 +8,7 @@
 
   @include e(text) {
     font-size:14px;
-    color: $--color-text-regular;
+    color: $text-color;
     display: inline-block;
     vertical-align: middle;
     margin-left: 10px;
@@ -60,21 +60,21 @@
 
   @include when(success) {
     .el-progress-bar__inner {
-      background-color: $--color-success;
+      background-color: $success-color;
     }
 
     .el-progress__text {
-      color: $--color-success;
+      color: $success-color;
     }
   }
 
   @include when(exception) {
     .el-progress-bar__inner {
-      background-color: $--color-danger;
+      background-color: $danger-color;
     }
 
     .el-progress__text {
-      color: $--color-danger;
+      color: $danger-color;
     }
   }
 }
@@ -90,7 +90,7 @@
   @include e(outer) {
     height: 6px;
     border-radius: 100px;
-    background-color: $--border-color-lighter;
+    background-color: $border-color-sub;
     overflow: hidden;
     position: relative;
     vertical-align: middle;
@@ -100,7 +100,7 @@
     left: 0;
     top: 0;
     height: 100%;
-    background-color: $--color-primary;
+    background-color: $primary-color;
     text-align: right;
     border-radius: 100px;
     line-height: 1;
@@ -112,7 +112,7 @@
   @include e(innerText) {
     display: inline-block;
     vertical-align: middle;
-    color: $--color-white;
+    color: $white-color;
     font-size: 12px;
     margin: 0 5px;
   }

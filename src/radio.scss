@@ -4,31 +4,31 @@
 @import "common/var";
 
 @include b(radio) {
-  color: $--radio-color;
-  font-weight: $--radio-font-weight;
+  color: $text-color;
+  font-weight: $font-weight-base;
   line-height: 1;
   position: relative;
   cursor: pointer;
   display: inline-block;
   white-space: nowrap;
   outline: none;
-  font-size: $--font-size-base;
+  font-size: $font-size-base;
   @include utils-user-select(none);
 
   @include when(bordered) {
-    padding: $--radio-bordered-padding;
-    border-radius: $--border-radius-base;
-    border: $--border-base;
+    padding: $radio-bordered-pad;
+    border-radius: $border-radius-base;
+    border: $border-base;
     box-sizing: border-box;
-    height: $--radio-bordered-height;
+    height: $radio-bordered-height;
 
     &.is-checked {
-      border-color: $--color-primary;
+      border-color: $primary-color;
     }
 
     &.is-disabled {
       cursor: not-allowed;
-      border-color: $--border-color-lighter;
+      border-color: $border-color-sub;
     }
 
     & + .el-radio.is-bordered {
@@ -38,43 +38,43 @@
 
   @include m(medium) {
     &.is-bordered {
-      padding: $--radio-bordered-medium-padding;
+      padding: $radio-bordered-md-pad;
       border-radius: $--button-medium-border-radius;
-      height: $--radio-bordered-medium-height;
+      height: $radio-bordered-md-height;
       .el-radio__label {
         font-size: $--button-medium-font-size;
       }
       .el-radio__inner {
-        height: $--radio-bordered-medium-input-height;
-        width: $--radio-bordered-medium-input-width;
+        height: $radio-bordered-md-input-height;
+        width: $radio-bordered-md-input-width;
       }
     }
   }
   @include m(small) {
     &.is-bordered {
-      padding: $--radio-bordered-small-padding;
+      padding: $radio-bordered-sm-pad;
       border-radius: $--button-small-border-radius;
-      height: $--radio-bordered-small-height;
+      height: $radio-bordered-sm-height;
       .el-radio__label {
         font-size: $--button-small-font-size;
       }
       .el-radio__inner {
-        height: $--radio-bordered-small-input-height;
-        width: $--radio-bordered-small-input-width;
+        height: $radio-bordered-sm-input-height;
+        width: $radio-bordered-sm-input-width;
       }
     }
   }
   @include m(mini) {
     &.is-bordered {
-      padding: $--radio-bordered-mini-padding;
+      padding: $radio-bordered-mini-pad;
       border-radius: $--button-mini-border-radius;
-      height: $--radio-bordered-mini-height;
+      height: $radio-bordered-mini-height;
       .el-radio__label {
         font-size: $--button-mini-font-size;
       }
       .el-radio__inner {
-        height: $--radio-bordered-mini-input-height;
-        width: $--radio-bordered-mini-input-width;
+        height: $radio-bordered-mini-input-height;
+        width: $radio-bordered-mini-input-width;
       }
     }
   }
@@ -94,13 +94,13 @@
 
     @include when(disabled) {
       .el-radio__inner {
-        background-color: $--radio-disabled-input-fill;
-        border-color: $--radio-disabled-input-border-color;
+        background-color: $disabled-color;
+        border-color: $disabled-border-base;
         cursor: not-allowed;
 
         &::after {
           cursor: not-allowed;
-          background-color: $--radio-disabled-icon-color;
+          background-color: $disabled-color;
         }
 
         & + .el-radio__label {
@@ -109,25 +109,25 @@
       }
       &.is-checked {
         .el-radio__inner {
-          background-color: $--radio-disabled-checked-input-fill;
-          border-color: $--radio-disabled-checked-input-border-color;
+          background-color: $disabled-color;
+          border-color: $disabled-border-base;
 
           &::after {
-            background-color: $--radio-disabled-checked-icon-color;
+            background-color: $text-color-disabled;
           }
         }
       }
       & + span.el-radio__label {
-        color: $--color-text-placeholder;
+        color: $text-color-disabled;
         cursor: not-allowed;
       }
     }
 
     @include when(checked) {
       .el-radio__inner {
-        border-color: $--radio-checked-input-border-color;
-        // background: $--radio-checked-icon-color;
-        background: $--color-white;
+        border-color: $primary-color-main;
+        // background: $primary-color-main;
+        background: $white-color;
 
         &::after {
           transform: translate(-50%, -50%) scale(1);
@@ -135,37 +135,37 @@
       }
 
       & + .el-radio__label {
-        color: $--radio-checked-text-color;
+        color: $primary-color-main;
       }
     }
 
     @include when(focus) {
       .el-radio__inner {
-        border-color: $--radio-input-border-color-hover;
+        border-color: $primary-color-main;
       }
     }
   }
   @include e(inner) {
-    border: $--radio-input-border;
-    border-radius: $--radio-input-border-radius;
-    width: $--radio-input-width;
-    height: $--radio-input-height;
-    background-color: $--radio-input-fill;
+    border: $border-base;
+    border-radius: $border-radius-circle;
+    width: $radio-width;
+    height: $radio-height;
+    background-color: $white-color;
     position: relative;
     cursor: pointer;
     display: inline-block;
     box-sizing: border-box;
 
     &:hover {
-      border-color: $--radio-input-border-color-hover;
+      border-color: $primary-color-main;
     }
 
     &::after {
       width: 8px;
       height: 8px;
-      border-radius: $--radio-input-border-radius;
-      // background-color: $--color-white;
-      background-color: $--color-primary;
+      border-radius: $border-radius-circle;
+      // background-color: $white-color;
+      background-color: $primary-color;
       content: "";
       position: absolute;
       left: 50%;
@@ -189,12 +189,12 @@
 
   &:focus:not(.is-focus):not(:active):not(.is-disabled) { /*获得焦点时 样式提醒*/
     .el-radio__inner {
-      box-shadow: 0 0 2px 2px $--radio-input-border-color-hover;
+      box-shadow: 0 0 2px 2px $primary-color-main;
     }
   }
 
   @include e(label) {
-    font-size: $--radio-font-size;
+    font-size: $font-size-base;
     padding-left: 10px;
   }
 

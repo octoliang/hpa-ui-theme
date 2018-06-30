@@ -15,12 +15,12 @@
     cursor: pointer;
 
     &.disabled .cell {
-      background-color: $--background-color-base;
+      background-color: $background-color-base;
       cursor: not-allowed;
-      color: $--color-text-placeholder;
+      color: $text-color-disabled;
 
       &:hover {
-        color: $--color-text-placeholder;
+        color: $text-color-disabled;
       }
     }
 

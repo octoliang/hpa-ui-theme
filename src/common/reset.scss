@@ -62,29 +62,29 @@ body{
 body {
   font-family: Poppins;
   font-weight: 400;
-  font-size: $--font-size-tiny;
+  font-size: $font-size-tiny;
   background: $body-default-bg;
-  color: $--color-text-regular;
+  color: $text-color;
   -webkit-font-smoothing: antialiased;
   // overflow: hidden;
 }
 
 a {
-  color: $--color-primary;
+  color: $primary-color;
   text-decoration: none;
 
   &:hover,
   &:focus {
-    color: mix($--color-white, $--color-primary, $--button-hover-tint-percent);
+    color: mix($white-color, $primary-color, $--button-hover-tint-percent);
   }
 
   &:active {
-    color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    color: mix($black-color, $primary-color, $--button-active-shade-percent);
   }
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $--color-text-regular;
+  color: $text-color;
   font-weight: inherit;
 
   &:first-child {
@@ -97,15 +97,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: #{$--font-size-base + 6px};
+  font-size: #{$font-size-base + 6px};
 }
 
 h2 {
-  font-size: #{$--font-size-base + 4px};
+  font-size: #{$font-size-base + 4px};
 }
 
 h3 {
-  font-size: #{$--font-size-base + 2px};
+  font-size: #{$font-size-base + 2px};
 }
 
 h4, h5, h6, p {
@@ -125,11 +125,11 @@ p {
 }
 
 sup, sub {
-  font-size: #{$--font-size-base - 1px};
+  font-size: #{$font-size-base - 1px};
 }
 
 small {
-  font-size: #{$--font-size-base - 2px};
+  font-size: #{$font-size-base - 2px};
 }
 
 hr {

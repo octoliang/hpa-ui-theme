@@ -13,7 +13,7 @@
 
   @include e(tip) {
     font-size: 12px;
-    color: $--color-text-regular;
+    color: $text-color;
     margin-top: 7px;
   }
 
@@ -44,16 +44,16 @@
     }
 
     &:hover {
-      border-color: $--color-primary;
-      color: $--color-primary;
+      border-color: $primary-color;
+      color: $primary-color;
     }
   }
   &:focus {
-    border-color: $--color-primary;
-    color: $--color-primary;
+    border-color: $primary-color;
+    color: $primary-color;
 
     .el-upload-dragger {
-      border-color: $--color-primary;
+      border-color: $primary-color;
     }
   }
 }
@@ -72,7 +72,7 @@
 
   .el-icon-upload {
     font-size: 67px;
-    color: $--color-text-placeholder;
+    color: $text-color-disabled;
     margin: 40px 0 16px;
     line-height: 50px;
   }
@@ -82,29 +82,29 @@
   }
 
   ~ .el-upload__files {
-    border-top: $--border-base;
+    border-top: $border-base;
     margin-top: 7px;
     padding-top: 5px;
   }
 
   .el-upload__text {
-    color: $--color-text-regular;
+    color: $text-color;
     font-size: 14px;
     text-align: center;
 
     em {
-      color: $--color-primary;
+      color: $primary-color;
       font-style: normal;
     }
   }
 
   &:hover {
-    border-color: $--color-primary;
+    border-color: $primary-color;
   }
 
   @include when(dragover) {
     background-color: rgba(32, 159, 255, .06);
-    border: 2px dashed $--color-primary;
+    border: 2px dashed $primary-color;
   }
 }
 
@@ -116,7 +116,7 @@
   @include e(item) {
     transition: all .5s cubic-bezier(.55,0,.1,1);
     font-size: 14px;
-    color: $--color-text-regular;
+    color: $text-color;
     line-height: 1.8;
     margin-top: 5px;
     position: relative;
@@ -146,7 +146,7 @@
     }
 
     & .el-icon-upload-success {
-      color: $--color-success;
+      color: $success-color;
     }
 
     .el-icon-close {
@@ -156,7 +156,7 @@
       right: 5px;
       cursor: pointer;
       opacity: .75;
-      color: $--color-text-regular;
+      color: $text-color;
       //transform: scale(.7);
 
       &:hover {
@@ -172,11 +172,11 @@
       font-size: 12px;
       cursor: pointer;
       opacity: 1;
-      color: $--color-primary;
+      color: $primary-color;
     }
     
     &:hover {
-      background-color: $--background-color-base;
+      background-color: $background-color-base;
 
       .el-icon-close {
         display: inline-block;
@@ -193,7 +193,7 @@
       }
 
       .el-upload-list__item-name:hover, .el-upload-list__item-name:focus {
-        color: $--link-hover-color;
+        color: $link-color-hover;
         cursor: pointer;
       }
 
@@ -225,7 +225,7 @@
   }
 
   @include e(item-name) {
-    color: $--color-text-regular;
+    color: $text-color;
     display: block;
     margin-right: 40px;
     overflow: hidden;
@@ -237,7 +237,7 @@
     [class^="el-icon"] {
       height: 100%;
       margin-right: 7px;
-      color: $--color-text-secondary;
+      color: $text-color-sub;
       line-height: inherit;
     }
   }
@@ -255,11 +255,11 @@
     right: 10px;
     top: 0;
     font-size: 12px;
-    color: $--color-text-regular;
+    color: $text-color;
     display: none;
 
     &:hover {
-      color: $--color-primary;
+      color: $primary-color;
     }
   }
 
@@ -281,7 +281,7 @@
 
       .el-icon-check,
       .el-icon-circle-check {
-        color: $--color-white;
+        color: $white-color;
       }
 
       .el-icon-close {
@@ -395,7 +395,7 @@
 
       .el-icon-check,
       .el-icon-circle-check {
-        color: $--color-white;
+        color: $white-color;
       }
 
       &:hover {
@@ -537,7 +537,7 @@
 
     .btn {
       display: inline-block;
-      color: $--color-white;
+      color: $white-color;
       font-size: 14px;
       cursor: pointer;
       vertical-align: middle;
@@ -566,7 +566,7 @@
       }
 
       i {
-        color: $--color-white;
+        color: $white-color;
         display: block;
         font-size: 24px;
         line-height: inherit;
@@ -579,7 +579,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: $--color-white;
+    background-color: $white-color;
     height: 36px;
     width: 100%;
     overflow: hidden;
@@ -591,7 +591,7 @@
     margin: 0;
     line-height: 36px;
     font-size: 14px;
-    color: $--color-text-primary;
+    color: $title-color;
   }
 
   + .el-upload__inner {
