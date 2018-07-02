@@ -5,5 +5,35 @@
   display: inline-block;
   line-height: 1;
   vertical-align: middle;
-  font-size: 0;
+  // font-size: 0;
+
+  &-circle{
+    background: $radio-group-circle-bg;
+    border-radius: $radio-group-circle-radius;
+
+    .el-radio-button{
+      display: inline-block;
+      min-width:34px;
+  
+      .el-radio-button__inner{
+        background: transparent;
+        color: $text-color;
+        border-color: transparent;
+        border-radius: $radio-group-circle-radius;
+      }
+  
+      &:first-child,
+      &:last-child {
+        .el-radio-button__inner {
+          border-radius: $radio-group-circle-radius;
+        }
+      }
+  
+      &:first-child{
+        .el-radio-button__inner {
+          border-left-color: transparent;
+        }
+      }
+    }
+  }
 }
