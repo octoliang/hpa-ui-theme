@@ -305,7 +305,28 @@
     <el-dialog
       :visible.sync="dialogVisible"
       class="el-dialog-side">
-      <div>Content</div>
+      <div>
+        <el-alert
+          title="Needs LM Manager Approval"
+          type="warning"
+          show-icon>
+        </el-alert>
+        <el-alert
+          title="Error text"
+          type="error"
+          show-icon>
+        </el-alert>
+        <el-alert
+          title="Success Text"
+          type="success"
+          show-icon>
+        </el-alert>
+        <el-alert
+          title="Info Text"
+          type="info"
+          show-icon>
+        </el-alert>
+      </div>
       <span slot="footer" class="dialog-footer">
         <el-button @click="dialogVisible = false">Cancel</el-button>
         <el-button type="primary" @click="dialogVisible = false">Submit</el-button>

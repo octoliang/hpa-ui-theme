@@ -248,20 +248,25 @@ $select-dropdown-max-height: 274px !default;
 
 /* Alert
 -------------------------- */
-$--alert-padding: 8px 16px !default;
-$--alert-border-radius: $border-radius-base !default;
-$--alert-title-font-size: 13px !default;
-$--alert-description-font-size: 12px !default;
-$--alert-close-font-size: 12px !default;
-$--alert-close-customed-font-size: 13px !default;
+$alert-padding: 8px 16px !default;
+// $--alert-border-radius: $border-radius-base !default;
+// $--alert-title-font-size: 13px !default;
+// $--alert-description-font-size: 12px !default;
+$alert-close-font-size: 12px !default;
+$alert-close-customed-font-size: 13px !default;
 
-$--alert-success-color: $success-color-lighter !default;
-$--alert-info-color: $info-color-lighter !default;
-$--alert-warning-color: $warning-color-lighter !default;
-$--alert-danger-color: $danger-color-lighter !default;
+// $--alert-success-color: $success-color-lighter !default;
+// $--alert-info-color: $info-color-lighter !default;
+// $--alert-warning-color: $warning-color-lighter !default;
+// $--alert-danger-color: $danger-color-lighter !default;
+$alert-info-color: mix($white-color, $primary-color, 90%) !default;
+$alert-success-border-color: mix($white-color, $success-color, 43%) !default;
+$alert-warning-border-color: mix($white-color, $warning-color, 43%) !default;
+$alert-info-border-color: mix($white-color, $primary-color, 43%) !default;
+$alert-danger-border-color: mix($white-color, $danger-color, 43%) !default;
 
-$--alert-icon-size: 16px !default;
-$--alert-icon-large-size: 28px !default;
+$alert-icon-size: 16px !default;
+$alert-icon-large-size: 28px !default;
 
 /* Message Box
 -------------------------- */
