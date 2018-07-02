@@ -8,178 +8,195 @@
 </head>
 <body>
   <div id="app" style="background-color: #fff">
-        <!-- button -->
-        <h2 class="first-h2">button</h2>
-        <div style="padding: 20px;">
-            <el-button  size="huge">huge button</el-button>
-            <el-button  size="large">large button</el-button>
-            <el-button>default button</el-button>
-            <el-button  size="small">small button</el-button>
-            <el-button  size="tiny">tiny button</el-button>
-            <div style="padding:20px 20px 0px 0;">
-              <el-button  type="primary">primary</el-button>
-              <el-button  type="success">success</el-button>   
-              <el-button  type="warning">warning</el-button>   
-              <el-button  type="danger">danger</el-button>
-              <el-button  class="secondary">secondary</el-button>   
-              <el-button  disabled>disabled</el-button>
-              <el-button  icon="el-icon-delete" circle  class="el-button-nb-green"></el-button>
-              <el-button  icon="el-icon-delete" circle  class="el-button-nb-blue"></el-button>
-              <el-button  icon="el-icon-delete" circle  type="primary"></el-button>    
-              <el-button  icon="el-icon-delete" circle  type="warning"></el-button>       
-            </div>
-            <div style="padding:20px 20px 0px 0;">
-              <el-button class="el-button--btnBlock" type="primary">save</el-button> 
-            </div>
+    <!-- button -->
+    <h2 class="first-h2">button</h2>
+    <div style="padding: 20px;">
+        <el-button  size="huge">huge button</el-button>
+        <el-button  size="large">large button</el-button>
+        <el-button>default button</el-button>
+        <el-button  size="small">small button</el-button>
+        <el-button  size="tiny">tiny button</el-button>
+        <div style="padding:20px 20px 0px 0;">
+          <el-button  type="primary">primary</el-button>
+          <el-button  type="success">success</el-button>   
+          <el-button  type="warning">warning</el-button>   
+          <el-button  type="danger">danger</el-button>
+          <el-button  class="secondary">secondary</el-button>   
+          <el-button  disabled>disabled</el-button>
+          <el-button  icon="el-icon-delete" circle  class="el-button-nb-green"></el-button>
+          <el-button  icon="el-icon-delete" circle  class="el-button-nb-blue"></el-button>
+          <el-button  icon="el-icon-delete" circle  type="primary"></el-button>    
+          <el-button  icon="el-icon-delete" circle  type="warning"></el-button>       
         </div>
-        <!-- button -->
+        <div style="padding:20px 20px 0px 0;">
+          <el-button class="el-button-btnblock" type="primary">save</el-button> 
+        </div>
+    </div>
+    <!-- button -->
 
-        <!-- check -->
-        <h2>check</h2>
-        <div class="pd-box">
-            <el-checkbox  v-model="check">备选项</el-checkbox>
-            <el-checkbox  v-model="check" disabled>禁用项</el-checkbox>
-        </div>  
-        <!-- check -->
+    <!-- check -->
+    <h2>check</h2>
+    <div class="check-box">
+        <el-checkbox  v-model="check">备选项</el-checkbox>
+        <el-checkbox  v-model="check" disabled>禁用项</el-checkbox>
+    </div>  
+    <!-- check -->
 
-        <!--radio-->
-        <h2>radio</h2>
-        <div class="pd-box">
-          <el-radio v-model="radio" label="1">备选项1</el-radio>
-          <el-radio v-model="radio" label="2">备选项2</el-radio>
-        </div>  
-        <!-- radio -->
+    <!--radio-->
+    <h2>radio</h2>
+    <div class="radio-box">
+      <el-radio v-model="radio" label="1">备选项1</el-radio>
+      <el-radio v-model="radio" label="2">备选项2</el-radio>
+    </div>  
+    <!-- radio -->
 
-        <!-- input -->
-        <h2>input</h2>
-        <div class="pd-box">
-          <div class="demo-input-box">
-            <el-input v-model="inputvalue4" placeholder="禁用输入框" disabled></el-input>
-            <el-input v-model="inputvalue1" placeholder="large" size="large"></el-input>
-            <el-input v-model="inputvalue2" placeholder="默认"></el-input>
-            <el-input v-model="inputvalue3" placeholder="small" size="small"></el-input>
+    <!-- input -->
+    <h2>input</h2>
+    <div class="input-box">
+      <div class="demo-input-box">
+        <el-input v-model="inputvalue4" placeholder="禁用输入框" disabled></el-input>
+        <el-input v-model="inputvalue1" placeholder="large" size="large"></el-input>
+        <el-input v-model="inputvalue2" placeholder="默认"></el-input>
+        <el-input v-model="inputvalue3" placeholder="small" size="small"></el-input>
+      </div>
+    </div>  
+    <!-- input -->
+
+    <!-- Dropdown -->
+    <h2>Dropdown</h2>
+    <div class="Dropdown-box">
+      <el-dropdown size="large" split-button type="primary">
+        large
+        <el-dropdown-menu slot="dropdown">
+          <el-dropdown-item>黄金糕</el-dropdown-item>
+          <el-dropdown-item>狮子头</el-dropdown-item>
+          <el-dropdown-item>螺蛳粉</el-dropdown-item>
+          <el-dropdown-item>双皮奶</el-dropdown-item>
+          <el-dropdown-item>蚵仔煎</el-dropdown-item>
+        </el-dropdown-menu>
+      </el-dropdown>
+      
+      <el-dropdown  split-button type="primary">
+        default
+        <el-dropdown-menu slot="dropdown">
+          <el-dropdown-item>黄金糕</el-dropdown-item>
+          <el-dropdown-item>狮子头</el-dropdown-item>
+          <el-dropdown-item>螺蛳粉</el-dropdown-item>
+          <el-dropdown-item>双皮奶</el-dropdown-item>
+          <el-dropdown-item>蚵仔煎</el-dropdown-item>
+        </el-dropdown-menu>
+      </el-dropdown>
+      
+      <el-dropdown size="small" split-button type="primary">
+        small
+        <el-dropdown-menu slot="dropdown">
+          <el-dropdown-item>黄金糕</el-dropdown-item>
+          <el-dropdown-item>狮子头</el-dropdown-item>
+          <el-dropdown-item>螺蛳粉</el-dropdown-item>
+          <el-dropdown-item>双皮奶</el-dropdown-item>
+          <el-dropdown-item>蚵仔煎</el-dropdown-item>
+        </el-dropdown-menu>
+      </el-dropdown>
+    </div>
+    <!-- Dropdown -->
+
+    <!-- Date  Picker -->
+    <h2>Data Picker</h2>
+    <div class="DatePicker-Box">
+      <el-date-picker v-model="datevalue1" type="datetime" placeholder="选择日期时间(large)" size="large" class="iconRight"></el-date-picker>
+      <el-date-picker v-model="datevalue1" type="datetime" placeholder="选择日期时间(default)" class="iconRight"></el-date-picker>
+      <el-date-picker v-model="datevalue1" type="datetime" placeholder="选择日期时间(small)" size="small" class="iconRight"></el-date-picker>
+    </div>
+
+    <!-- Date  Picker -->
+
+    <!-- Select -->
+    <h2>Select</h2>
+    <div class="Select-Box">
+      <el-select v-model="selectvalue1" placeholder="请选择" size="large">
+          <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+      </el-select>
+      <el-select v-model="selectvalue2" placeholder="请选择">
+        <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+      </el-select>
+      <el-select v-model="selectvalue3" placeholder="请选择" size="small">
+          <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+      </el-select>
+    </div> 
+    <!-- Select -->
+
+    <!-- switch -->
+    <h2>switch</h2>
+    <div class="Switch-Box">
+      <!-- 默认值改为44 -->
+      <el-switch v-model="switchvalue1" active-value="#1890ff" ></el-switch>
+      <el-switch v-model="switchvalue2"  active-value="#1890ff" class="el-switch-small"></el-switch> 
+      <el-switch v-model="switchvalue3"  active-value="#1890ff" class="el-switch-text"></el-switch>
+      <el-switch v-model="switchvalue4"  active-value="#1890ff" class="el-switch-icon"></el-switch>
+    </div>
+    <!-- switch -->
+
+
+
+    <!--radio-group -->
+    <h2>radio-group</h2>
+    <div class="radio-group-Box">
+      <el-radio-group v-model="radioStatusVal">
+        <el-radio-button label="To Do"  class="el-radio-button-ellipse"></el-radio-button>
+        <el-radio-button label="Pending" class="el-radio-button-ellipse"></el-radio-button>
+        <el-radio-button label="Completed" class="el-radio-button-ellipse"></el-radio-button>
+        <el-radio-button label="Hold Over" class="el-radio-button-ellipse"></el-radio-button>
+      </el-radio-group> 
+    </div>
+    <!-- button-group -->
+        
+    <!-- Tag -->
+    <h2>Tag</h2>
+    <div class="Tag-Box">
+      <el-tag size ="mini" class="el-tag-blue">blue pending for LM MGR Approval</el-tag>
+      <el-tag size="mini" class="el-tag-cyan">cyan</el-tag>
+      <el-tag size="mini" class="el-tag-green">green</el-tag>
+      <el-tag size="mini" class="el-tag-orange">orange</el-tag>
+      <el-tag size="mini" class="el-tag-pink">pink</el-tag>
+      <el-tag size="mini" class="el-tag-purple">purple</el-tag>
+      <el-tag size="mini" class="el-tag-red">red</el-tag>
+    </div>
+
+    <!-- Tag -->
+
+
+    <!-- Badge -->
+    <h2>Badge</h2>
+    <div class="Badge-Box">
+      <div><el-badge is-dot class="el-badge-blue">Pending for LM MGR Approval</el-badge></div>
+      <div><el-badge is-dot class="el-badge-cyan">LM MGR Approved</el-badge></div>
+      <div><el-badge is-dot class="el-badge-green">LM Mrg Suggested New price</el-badge></div>
+      <div><el-badge is-dot class="el-badge-orange">Orange</el-badge></div>
+      <div><el-badge is-dot class="el-badge-pink">Pink</el-badge></div>
+      <div><el-badge is-dot class="el-badge-purple">Purple</el-badge></div>
+      <div><el-badge is-dot class="el-badge-red">Red</el-badge></div>
+    </div>
+    <!-- Badge -->
+
+    <!-- tabs -->
+    <h2>Tabs</h2>
+    <div class="Tab-Box">
+      <el-tabs v-model="activeName">
+        <el-tab-pane label="Send Email" name="first">Send Email</el-tab-pane>
+        <el-tab-pane label="Email History" name="second">
+          <h2 style="padding-left: 0;">Timeline</h2>
+          <div style="height:300px;">
+            <el-steps direction="vertical" :active="1">
+              <el-step title="步骤 1">4/28/2018</el-step>
+              <el-step title="步骤 2"></el-step>
+              <el-step title="步骤 3" description=""></el-step>
+            </el-steps>
           </div>
-        </div>  
-        <!-- input -->
+        </el-tab-pane>
+      </el-tabs>
+    </div>
+    <!-- tabs -->
 
-        <!-- Dropdown -->
-        <h2>Dropdown</h2>
-        <div class="Dropdown-box">
-           <el-dropdown size="large" split-button type="primary">
-            large
-            <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>黄金糕</el-dropdown-item>
-              <el-dropdown-item>狮子头</el-dropdown-item>
-              <el-dropdown-item>螺蛳粉</el-dropdown-item>
-              <el-dropdown-item>双皮奶</el-dropdown-item>
-              <el-dropdown-item>蚵仔煎</el-dropdown-item>
-            </el-dropdown-menu>
-          </el-dropdown>
-          
-          <el-dropdown  split-button type="primary">
-            default
-            <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>黄金糕</el-dropdown-item>
-              <el-dropdown-item>狮子头</el-dropdown-item>
-              <el-dropdown-item>螺蛳粉</el-dropdown-item>
-              <el-dropdown-item>双皮奶</el-dropdown-item>
-              <el-dropdown-item>蚵仔煎</el-dropdown-item>
-            </el-dropdown-menu>
-          </el-dropdown>
-          
-          <el-dropdown size="small" split-button type="primary">
-            small
-            <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>黄金糕</el-dropdown-item>
-              <el-dropdown-item>狮子头</el-dropdown-item>
-              <el-dropdown-item>螺蛳粉</el-dropdown-item>
-              <el-dropdown-item>双皮奶</el-dropdown-item>
-              <el-dropdown-item>蚵仔煎</el-dropdown-item>
-            </el-dropdown-menu>
-          </el-dropdown>
-        </div>
-        <!-- Dropdown -->
-
-        <!-- Date  Picker -->
-        <h2>Data Picker</h2>
-        <div class="DatePicker-Box">
-            <el-date-picker v-model="datevalue1" type="datetime" placeholder="选择日期时间(large)" size="large" class="iconRight"></el-date-picker>
-            <el-date-picker v-model="datevalue1" type="datetime" placeholder="选择日期时间(default)" class="iconRight"></el-date-picker>
-            <el-date-picker v-model="datevalue1" type="datetime" placeholder="选择日期时间(small)" size="small" class="iconRight"></el-date-picker>
-        </div>
-
-        <!-- Date  Picker -->
-
-        <!-- Select -->
-        <h2>Select</h2>
-        <div class="Select-Box">
-            <el-select v-model="selectvalue1" placeholder="请选择" size="large">
-                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
-            </el-select>
-            <el-select v-model="selectvalue2" placeholder="请选择">
-              <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
-            </el-select>
-            <el-select v-model="selectvalue3" placeholder="请选择" size="small">
-                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
-            </el-select>
-        </div> 
-        <!-- Select -->
-
-        <!-- switch -->
-        <h2>switch</h2>
-        <div class="Switch-Box">
-          <!-- 默认值改为44 -->
-          <el-switch v-model="switchvalue1" active-value="#1890ff" ></el-switch>
-          <el-switch v-model="switchvalue2"  active-value="#1890ff" class="el-switch-small"></el-switch> 
-          <el-switch v-model="switchvalue3"  active-value="#1890ff" class="el-switch-text"></el-switch>
-          <el-switch v-model="switchvalue4"  active-value="#1890ff" class="el-switch-icon"></el-switch>
-        </div>
-        <!-- switch -->
-
-
-
-        <!--radio-group -->
-        <h2>radio-group</h2>
-        <div class="radio-group-Box">
-            <el-radio-group v-model="radioStatusVal">
-                <el-radio-button label="To Do"  class="el-radio-button-ellipse"></el-radio-button>
-                <el-radio-button label="Pending" class="el-radio-button-ellipse"></el-radio-button>
-                <el-radio-button label="Completed" class="el-radio-button-ellipse"></el-radio-button>
-                <el-radio-button label="Hold Over" class="el-radio-button-ellipse"></el-radio-button>
-            </el-radio-group> 
-        </div>
-        <!-- button-group -->
-        
-        <!-- Tag -->
-        <h2>Tag</h2>
-        <div class="Tag-Box">
-            <el-tag size ="mini" class="el-tag-blue">blue pending for LM MGR Approval</el-tag>
-            <el-tag size="mini" class="el-tag-cyan">cyan</el-tag>
-            <el-tag size="mini" class="el-tag-green">green</el-tag>
-            <el-tag size="mini" class="el-tag-orange">orange</el-tag>
-            <el-tag size="mini" class="el-tag-pink">pink</el-tag>
-            <el-tag size="mini" class="el-tag-purple">purple</el-tag>
-            <el-tag size="mini" class="el-tag-red">red</el-tag>
-        </div>
-
-        <!-- Tag -->
-
-
-        <!-- Badge -->
-        <h2>Badge</h2>
-        <div class="Badge-Box">
-            <div><el-badge is-dot class="el-badge-blue">Pending for LM MGR Approval</el-badge></div>
-            <div><el-badge is-dot class="el-badge-cyan">LM MGR Approved</el-badge></div>
-            <div><el-badge is-dot class="el-badge-green">LM Mrg Suggested New price</el-badge></div>
-            <div><el-badge is-dot class="el-badge-orange">Orange</el-badge></div>
-            <div><el-badge is-dot class="el-badge-pink">Pink</el-badge></div>
-            <div><el-badge is-dot class="el-badge-purple">Purple</el-badge></div>
-            <div><el-badge is-dot class="el-badge-red">Red</el-badge></div>
-        </div>
-
-
-        <!-- Badge -->
-        
   </div>
 </body>
   <!-- import Vue before Element -->
@@ -208,6 +225,7 @@
           switchvalue4:"",
           switchvalue5:"",
           radioStatusVal:"To Do",
+          activeName:"second",
           options: [{
             value: '选项1',
             label: '黄金糕'
@@ -239,7 +257,7 @@
         padding-top: 20px;
     }
 
-    .pd-box,.Dropdown-box, .DatePicker-Box,.Select-Box,.Switch-Box,.radio-group-Box,.Tag-Box,.Badge-Box{
+    .pd-box,.radio-box,.input-box,.check-box,.Dropdown-box, .DatePicker-Box,.Select-Box,.Switch-Box,.radio-group-Box,.Tag-Box,.Badge-Box,.Tab-Box{
         padding:0px 20px 20px 20px;
     }
 

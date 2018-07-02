@@ -189,37 +189,36 @@
     }
   }
   //by txk
-  &-nb-green{
-    background: transparent;
-    color: $primary-color-main;
-    border-color: transparent;
-    &:focus,
-    &:hover{
-      @include new-Btn($success-color);
-      i{
-        color:$white-color;
+    &-nb-green{
+      background: transparent;
+      color: $primary-color-main;
+      border-color: transparent;
+      &:focus,
+      &:hover{
+        @include new-Btn($success-color);
+        i{
+          color:$white-color;
+        }
       }
     }
-  }
 
-  &-nb-blue{
-    background: transparent;
-    color: $primary-color-main;
-    border-color: transparent;
-    &:focus,
-    &:hover{
-      @include new-Btn($primary-color-main);
-      i{ 
-        color:$white-color;
+    &-nb-blue{
+      background: transparent;
+      color: $primary-color-main;
+      border-color: transparent;
+      &:focus,
+      &:hover{
+        @include new-Btn($primary-color-main);
+        i{ 
+          color:$white-color;
+        }
       }
     }
-  }
-
-  @include m(btnBlock){
-       width:100%;
+    &-btnblock{
+      width:100%;
       //  padding: 10px 20px;
-       display: block;
-  }
+      display: block;
+    }
   //by txk
 }
 

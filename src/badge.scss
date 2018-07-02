@@ -42,48 +42,48 @@
   }
 
   &-blue{
-    color: #0f7ae6;
+    color: $primary-color;
     .el-badge__content{
-       background-color:#0f7ae6;
+       background-color:$primary-color;
     }
   }
 
   &-cyan{
-    color: #87e8de;
+    color: $cyan-color;
    .el-badge__content{
-      background-color:#87e8de;
+      background-color:$cyan-color;
    }
   }
 
   &-green{
-    color: #3fae2a;
+    color: $success-color;
     .el-badge__content{
-      background-color:#3fae2a;
+      background-color:$success-color;
     }
   }
 
   &-orange{
-    color: #ffa300;
+    color: $warning-color;
     .el-badge__content{
-      background-color: #ffa300;
+      background-color: $warning-color;
     }
   }
   &-pink{
-    color: #ffadd2;
+    color: $pink-color;
     .el-badge__content{
-      background-color: #ffadd2;
+      background-color: $pink-color;
     }
   }
   &-purple{
-    color: #d3adf7;
+    color: $purple-color;
     .el-badge__content{
-      background-color: #d3adf7;
+      background-color: $purple-color;
     }
   }
   &-red{
-    color: #ff5347;
+    color: $danger-color;
     .el-badge__content{
-      background-color:#ff5347;
+      background-color: $danger-color;
     }
   }
 }
