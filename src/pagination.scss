@@ -58,9 +58,12 @@
   }
 
   button {
-    border: none;
-    padding: 0 6px;
-    background: transparent;
+    // border: none;
+    // padding: 0 6px;
+    background: $white-color;
+    color: $text-color;
+    border: $border-base;
+    border-radius: $border-radius-base;
 
     &:focus {
       outline: none;
@@ -71,21 +74,25 @@
     }
 
     &:disabled {
-      color: $--pagination-button-disabled-color;
-      // background-color: $--pagination-button-disabled-fill;
-      background: $disabled-color-base;
+      // color: $--pagination-button-disabled-color;
+      // // background-color: $--pagination-button-disabled-fill;
+      // background: $disabled-color-base;
       cursor: not-allowed;
+
+      background: $disabled-color;
+      color: $text-color-disabled;
+      border-color: $border-color-sub;
     }
   }
 
   .btn-prev,
   .btn-next {
-    background: center center no-repeat;
-    background-size: 16px;
-    background-color: $--pagination-fill;
-    cursor: pointer;
-    margin: 0;
-    color: $--pagination-button-color;
+    // background: center center no-repeat;
+    // background-size: 16px;
+    // background-color: $--pagination-fill;
+    // cursor: pointer;
+    // margin: 0;
+    // color: $--pagination-button-color;
 
     .el-icon {
       display: block;
@@ -94,13 +101,21 @@
     }
   }
 
-  .btn-prev {
-    padding-right: 12px;
+  .btn-prev{
+    margin: 0 $margin-xs / 2 0 0;
   }
 
-  .btn-next {
-    padding-left: 12px;    
+  .btn-next{
+    margin: 0 0 0 $margin-xs / 2;
   }
+
+  // .btn-prev {
+  //   padding-right: 12px;
+  // }
+
+  // .btn-next {
+  //   padding-left: 12px;    
+  // }
 
   .el-pager li.disabled {
     color: $text-color-disabled;
@@ -280,46 +295,51 @@
 
   li {
     display: inline-block;
-    margin: 0;
-    padding: 0 $padding-xs;
+    // margin: 0;
+    // padding: 0 $padding-xs;
     font-size: inherit;
     min-width: $pagenation-size-base;
     height: $pagenation-size-base;
-    line-height: $pagenation-size-base;
-    background: $--pagination-fill;
+    line-height: $pagenation-size-base - 2;
+    margin: 0 $margin-xs / 2;
+    // background: $--pagination-fill;
+    background: $white-color;
+    color: $text-color;
+    border: $border-base;
+    border-radius: $border-radius-base;
     text-align: center;
     vertical-align: top;
     cursor: pointer;
     box-sizing: border-box;
 
-    &.btn-quicknext,
-    &.btn-quickprev {
-      line-height: 28px;
-      color: $--pagination-button-color;
+    // &.btn-quicknext,
+    // &.btn-quickprev {
+    //   line-height: 28px;
+    //   color: $--pagination-button-color;
 
-      &.disabled {
-        color: $text-color-disabled;
-      }
-    }
+    //   &.disabled {
+    //     color: $text-color-disabled;
+    //   }
+    // }
 
-    &.btn-quickprev:hover {
-      cursor: pointer;
-    }
-
+    &.btn-quickprev:hover,
     &.btn-quicknext:hover {
       cursor: pointer;
     }
 
-    &.active + li {
-      border-left: 0;
-    }
+    // &.active + li {
+    //   border-left: 0;
+    // }
 
     &:hover {
       color: $primary-color-main;
     }
 
     &.active {
-      color: $primary-color-main;
+      // color: $primary-color-main;
+      background: $primary-color-main;
+      color: $white-color;
+      border-color: transparent;
       cursor: default;
     }
   }
