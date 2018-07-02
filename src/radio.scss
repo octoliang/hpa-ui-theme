@@ -216,3 +216,7 @@
   border-color: $primary-color-main;
   box-shadow: -2px 0px 2px 6px $rp-bd-color;
 } 
+
+.el-radio-button-ellipse  .el-radio-button__inner{
+    transition: none;
+}
