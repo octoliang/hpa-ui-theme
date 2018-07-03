@@ -141,11 +141,11 @@
     <!--radio-group -->
     <h2>radio-group</h2>
     <div class="radio-group-Box">
-      <el-radio-group v-model="radioStatusVal">
-        <el-radio-button label="To Do"  class="el-radio-button-ellipse"></el-radio-button>
-        <el-radio-button label="Pending" class="el-radio-button-ellipse"></el-radio-button>
-        <el-radio-button label="Completed" class="el-radio-button-ellipse"></el-radio-button>
-        <el-radio-button label="Hold Over" class="el-radio-button-ellipse"></el-radio-button>
+      <el-radio-group class="el-radio-group-circle" v-model="radioStatusVal">
+        <el-radio-button label="To Do"></el-radio-button>
+        <el-radio-button label="Pending"></el-radio-button>
+        <el-radio-button label="Completed"></el-radio-button>
+        <el-radio-button label="Hold Over"></el-radio-button>
       </el-radio-group> 
     </div>
     <!-- button-group -->
@@ -184,15 +184,23 @@
       <el-tabs v-model="activeName">
         <el-tab-pane label="Send Email" name="first">Send Email</el-tab-pane>
         <el-tab-pane label="Email History" name="second">
+          <!-- tab content -->
           <h2 style="padding-left: 0;">Timeline</h2>
-          <div style="height:300px;">
+          <div style="height:509px;padding-left:80px;position: relative;">
             <el-steps direction="vertical" :active="1">
-              <el-step title="步骤 1">4/28/2018</el-step>
-              <el-step title="步骤 2"></el-step>
-              <el-step title="步骤 3" description=""></el-step>
+              <div class="time-describe-box">
+                <div v-for="item in TimeData">
+                  <p>{{item.date}}</p>
+                  <p>{{item.time}}</p>
+                </div>    
+              </div>
+              <div v-for="item  in  TcArrayData">
+                  <el-step :title="item.title" :description="item.description" class="el-step-timeline" :class="item.color"></el-step>
+              </div>
             </el-steps>
           </div>
         </el-tab-pane>
+        <!-- tab content -->
       </el-tabs>
     </div>
     <!-- tabs -->
@@ -226,6 +234,73 @@
           switchvalue5:"",
           radioStatusVal:"To Do",
           activeName:"second",
+          TcArrayData:[
+              {
+                title:"NRTP Renewal Price Offer Letter",
+                description:"noreply@homepartners.com to shunping.liu@shareworks",
+                color:"el-step-DeepOrange"
+              },
+              {
+                title:"NRTP Renewal Price Offer Letter",
+                description:"noreply@homepartners.com to shunping.liu@shareworks",
+                color:"el-step-green"
+              },
+              {
+                title:"NRTP Renewal Price Offer Letter",
+                description:"noreply@homepartners.com to shunping.liu@shareworks",
+                color:"el-step-primary"
+              },
+              {
+                title:"NRTP Renewal Price Offer Letter",
+                description:"noreply@homepartners.com to shunping.liu@shareworks",
+                color:"el-step-LightOrange"
+              },
+              {
+                title:"NRTP Renewal Price Offer Letter",
+                description:"noreply@homepartners.com to shunping.liu@shareworks",
+                color:"el-step-blue"
+              },
+              {
+                title:"NRTP Renewal Price Offer Letter",
+                description:"noreply@homepartners.com to shunping.liu@shareworks",
+                color:"el-step-DeepOrange"
+              },
+              {
+                title:"NRTP Renewal Price Offer Letter",
+                description:"noreply@homepartners.com to shunping.liu@shareworks",
+                color:"el-step-green"
+              }
+          ],
+          TimeData:[
+             {
+                date:"4/28/2018",
+                time:"22:55:36"
+             },
+             {
+                date:"4/28/2018",
+                time:"22:55:36"
+             },
+             {
+                date:"4/28/2018",
+                time:"22:55:36"
+             },
+             {
+                date:"4/28/2018",
+                time:"22:55:36"
+             },
+             {
+                date:"4/28/2018",
+                time:"22:55:36"
+             },
+             {
+                date:"4/28/2018",
+                time:"22:55:36"
+             },
+             {
+                date:"4/28/2018",
+                time:"22:55:36"
+             }
+          ],
           options: [{
             value: '选项1',
             label: '黄金糕'
@@ -282,5 +357,11 @@
     .Badge-Box > div{
        margin-top: 10px;
        padding-left: 20px;
+    }
+
+
+    .time-describe-box{
+       position:absolute;
+       left: 0;
     }
 </style> 
