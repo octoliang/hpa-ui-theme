@@ -186,8 +186,9 @@
         <el-tab-pane label="Email History" name="second">
           <!-- tab content -->
           <h2 style="padding-left: 0;">Timeline</h2>
-          <div style="height:509px;padding-left:80px;position: relative;">
-            <el-steps direction="vertical" :active="1">
+          <!-- step-timeline -->
+          <div style="height:509px;padding-left:90px;position: relative;">
+            <el-steps direction="vertical" :active="1" class="el-steps-box">
               <div class="time-describe-box">
                 <div v-for="item in TimeData">
                   <p>{{item.date}}</p>
@@ -199,8 +200,8 @@
               </div>
             </el-steps>
           </div>
+           <!-- step-timeline -->
         </el-tab-pane>
-        <!-- tab content -->
       </el-tabs>
     </div>
     <!-- tabs -->
@@ -349,19 +350,8 @@
        vertical-align: middle;
        margin-right: 5px;
     }
-
-    .no-border{
-       border:none;
-    }
-
     .Badge-Box > div{
        margin-top: 10px;
        padding-left: 20px;
-    }
-
-
-    .time-describe-box{
-       position:absolute;
-       left: 0;
     }
 </style> 
