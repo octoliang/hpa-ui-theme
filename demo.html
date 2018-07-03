@@ -311,7 +311,7 @@
           type="warning"
           show-icon>
         </el-alert>
-        <el-alert
+        <!-- <el-alert
           title="Error text"
           type="error"
           show-icon>
@@ -325,11 +325,11 @@
           title="Info Text"
           type="info"
           show-icon>
-        </el-alert>
+        </el-alert> -->
       </div>
       <span slot="footer" class="dialog-footer">
-        <el-button @click="dialogVisible = false">Cancel</el-button>
-        <el-button type="primary" @click="dialogVisible = false">Submit</el-button>
+        <el-button class="el-button-btnblock" @click="dialogVisible = false" disabled>Cancel</el-button>
+        <el-button class="el-button-btnblock" type="primary" @click="dialogVisible = false">Submit</el-button>
       </span>
     </el-dialog>
   </div>

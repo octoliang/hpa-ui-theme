@@ -31,14 +31,14 @@
   }
 
   @include e(header) {
-    padding: $--dialog-padding-primary;
+    padding: $padding-sm $padding-lg;
     padding-bottom: 10px;
   }
 
   @include e(headerbtn) {
     position: absolute;
-    top: $--dialog-padding-primary;
-    right: $--dialog-padding-primary;
+    top: $padding-sm;
+    right: $padding-lg;
     padding: 0;
     background: transparent;
     border: none;
@@ -70,7 +70,7 @@
   }
 
   @include e(footer) {
-    padding: $--dialog-padding-primary;
+    padding: $padding-sm $padding-lg;
     padding-top: 10px;
     text-align: right;
     box-sizing: border-box;

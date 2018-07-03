@@ -12,6 +12,8 @@ $--color-transition-base: color .2s cubic-bezier(.645,.045,.355,1) !default;
 /* Background
 -------------------------- */
 $background-color-base: #f5f7fa !default;
+$body-default-bg: #F4F6F9 !default;
+// $disabled-color-base: $body-default-bg !default;
 
 /* Colors
 -------------------------- */
@@ -772,9 +774,6 @@ $radio-group-circle-bg: #f8f8f8 !default;
 
 /* Base Style (By Lucinda)
 --------------------------------- */
-$body-default-bg: #F4F6F9 !default;
-$disabled-color-base: $body-default-bg !default;
-
 $padding-base: 24px !default;
 $padding-sm: 12px !default;
 $padding-xs: 6px !default;

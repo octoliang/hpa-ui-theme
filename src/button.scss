@@ -28,7 +28,7 @@
   font-weight: $--button-font-weight;
   @include utils-user-select(none);
   & + .el-button {
-    margin-left: 10px;
+    margin-left: $margin-xs;
   }
 
   @include button-size($--button-padding-vertical, $--button-padding-horizontal, $--button-font-size, $--button-border-radius);
@@ -85,7 +85,7 @@
       cursor: not-allowed;
       background-image: none;
       background-color: $--button-disabled-fill;
-      border-color: $--button-disabled-border;
+      border-color: transparent;
     }
 
     &.el-button--text {
@@ -188,38 +188,44 @@
       border-color: transparent;
     }
   }
-  //by txk
-    &-nb-green{
-      background: transparent;
-      color: $primary-color-main;
-      border-color: transparent;
-      &:focus,
-      &:hover{
-        @include new-Btn($success-color);
-        i{
-          color:$white-color;
-        }
-      }
-    }
 
-    &-nb-blue{
-      background: transparent;
-      color: $primary-color-main;
-      border-color: transparent;
-      &:focus,
-      &:hover{
-        @include new-Btn($primary-color-main);
-        i{ 
-          color:$white-color;
-        }
+  //by txk
+  &-nb-green{
+    background: transparent;
+    color: $primary-color-main;
+    border-color: transparent;
+    &:focus,
+    &:hover{
+      @include new-Btn($success-color);
+      i{
+        color:$white-color;
       }
     }
-    &-btnblock{
-      width:100%;
-      //  padding: 10px 20px;
-      display: block;
+  }
+
+  &-nb-blue{
+    background: transparent;
+    color: $primary-color-main;
+    border-color: transparent;
+    &:focus,
+    &:hover{
+      @include new-Btn($primary-color-main);
+      i{ 
+        color:$white-color;
+      }
     }
-  //by txk
+  }
+
+  &-btnblock{
+    width:100%;
+    //  padding: 10px 20px;
+    display: block;
+
+    & + .el-button-btnblock{
+      margin-left: 0;
+      margin-top: $margin-xs;
+    }
+  }
 }
 
 @include b(button-group) {
