@@ -200,11 +200,29 @@
               </div>
             </el-steps>
           </div>
-           <!-- step-timeline -->
+          <!-- step-timeline -->
         </el-tab-pane>
       </el-tabs>
     </div>
     <!-- tabs -->
+
+
+    <!-- log one -->
+    <!-- <h2>Log</h2>
+    <div class="Log-one-Box">
+      <el-tabs v-model="activeName1">
+        <el-tab-pane label="Call" name="first">Send Email</el-tab-pane>
+        <el-tab-pane label="CallHistory" name="second">
+          <div style="height: 403px;">
+              <el-steps direction="vertical" :active="1" class="el-step-bluecircle">
+                  <el-step v-for="item in  HistoryData" :title="item.time" :description="item.description":class="item.color"></el-step>
+              </el-steps>
+          </div>
+        </el-tab-pane>
+      </el-tabs>
+    </div> -->
+    <!-- log one -->
+
 
   </div>
 </body>
@@ -235,6 +253,7 @@
           switchvalue5:"",
           radioStatusVal:"To Do",
           activeName:"second",
+          activeName1:"second",
           TcArrayData:[
               {
                 title:"NRTP Renewal Price Offer Letter",
@@ -250,27 +269,27 @@
                 title:"NRTP Renewal Price Offer Letter",
                 description:"noreply@homepartners.com to shunping.liu@shareworks",
                 color:"el-step-primary"
-              },
-              {
-                title:"NRTP Renewal Price Offer Letter",
-                description:"noreply@homepartners.com to shunping.liu@shareworks",
-                color:"el-step-LightOrange"
-              },
-              {
-                title:"NRTP Renewal Price Offer Letter",
-                description:"noreply@homepartners.com to shunping.liu@shareworks",
-                color:"el-step-blue"
-              },
-              {
-                title:"NRTP Renewal Price Offer Letter",
-                description:"noreply@homepartners.com to shunping.liu@shareworks",
-                color:"el-step-DeepOrange"
-              },
-              {
-                title:"NRTP Renewal Price Offer Letter",
-                description:"noreply@homepartners.com to shunping.liu@shareworks",
-                color:"el-step-green"
               }
+              // {
+              //   title:"NRTP Renewal Price Offer Letter",
+              //   description:"noreply@homepartners.com to shunping.liu@shareworks",
+              //   color:"el-step-LightOrange"
+              // },
+              // {
+              //   title:"NRTP Renewal Price Offer Letter",
+              //   description:"noreply@homepartners.com to shunping.liu@shareworks",
+              //   color:"el-step-blue"
+              // },
+              // {
+              //   title:"NRTP Renewal Price Offer Letter",
+              //   description:"noreply@homepartners.com to shunping.liu@shareworks",
+              //   color:"el-step-DeepOrange"
+              // },
+              // {
+              //   title:"NRTP Renewal Price Offer Letter",
+              //   description:"noreply@homepartners.com to shunping.liu@shareworks",
+              //   color:"el-step-green"
+              // }
           ],
           TimeData:[
              {
@@ -284,23 +303,45 @@
              {
                 date:"4/28/2018",
                 time:"22:55:36"
-             },
-             {
-                date:"4/28/2018",
-                time:"22:55:36"
-             },
-             {
-                date:"4/28/2018",
-                time:"22:55:36"
-             },
-             {
-                date:"4/28/2018",
-                time:"22:55:36"
-             },
-             {
-                date:"4/28/2018",
-                time:"22:55:36"
              }
+            //  {
+            //     date:"4/28/2018",
+            //     time:"22:55:36"
+            //  },
+            //  {
+            //     date:"4/28/2018",
+            //     time:"22:55:36"
+            //  },
+            //  {
+            //     date:"4/28/2018",
+            //     time:"22:55:36"
+            //  },
+            //  {
+            //     date:"4/28/2018",
+            //     time:"22:55:36"
+            //  }
+          ],
+          HistoryData:[
+              {
+                time:"6/11/2017 13:44:56",
+                description:"judgment granted for $3.050.00 for past due rent for Dec and jan."
+              },
+              {
+                time:"6/11/2017 13:44:56",
+                description:"judgment granted for $3050.00 for due."
+              },
+              {
+                time:"6/14/2017 17:44:40",
+                description:"judgment granted for $3050.00 for past due rent for Dec and jan, $450.00 in attorney fees."
+              },
+              {
+                time:"6/16/2017 13:44:56",
+                description:"judgment granted for $3050.00 for past due rent for Dec and jan, $450.00 in attorney fees.juge did not grant the entire $500.00,and count costs.Writ is avaliable 1/17/18."
+              },
+              {
+                time:"6/16/2017 13:44:56",
+                description:"judgment granted for $3.050.00 for past due rent for Dec and jan.$450.00 in attorney fees"
+              }
           ],
           options: [{
             value: '选项1',
@@ -333,7 +374,7 @@
         padding-top: 20px;
     }
 
-    .pd-box,.radio-box,.input-box,.check-box,.Dropdown-box, .DatePicker-Box,.Select-Box,.Switch-Box,.radio-group-Box,.Tag-Box,.Badge-Box,.Tab-Box{
+    .pd-box,.radio-box,.input-box,.check-box,.Dropdown-box, .DatePicker-Box,.Select-Box,.Switch-Box,.radio-group-Box,.Tag-Box,.Badge-Box,.Tab-Box,.Log-one-Box{
         padding:0px 20px 20px 20px;
     }
 

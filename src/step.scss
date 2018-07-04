@@ -370,6 +370,33 @@
   &-blue{
     @include BdColor($blue-bcolor);
   }
+
+  &-bluecircle{
+    .el-step__icon{
+      width: 8px;
+      height: 8px;
+      color: transparent;
+      background-color: #4CA8FD;
+      border-radius: 100%;
+      border: none;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .el-step__title{
+      color:#38485A;
+      font-family: Montserrat;
+      font-size: 13px;
+      font-weight: 400;
+    }
+    .el-step__description {
+      color:#8391A0;
+      max-width: 390px;
+      font-family: Poppints;
+      font-size: 12px;
+      font-weight:400;
+      text-align: left;
+    }
+  } 
 }
 
 .el-step.el-step-timeline:last-of-type .el-step__line{
