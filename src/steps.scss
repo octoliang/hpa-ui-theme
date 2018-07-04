@@ -27,13 +27,13 @@
           margin-bottom:$mg-bottom-20;
       }
 
+      > div:last-child{
+        margin-top: $mg-top-26;
+      }
+
       > div:first-child{
         margin-top: $mg-top-6;
         margin-bottom: $mg-bottom-25;
-      }
-
-      > div:last-child{
-        margin-top: $mg-top-26;
       }
 
       > div p:first-child{
