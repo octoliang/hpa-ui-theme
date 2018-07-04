@@ -111,6 +111,11 @@
       top: 9px;
     }
   }
+  &-noclosebtn{
+     .el-alert__closebtn{
+        display: none;
+     }
+  }
 }
 
 .el-alert-fade-enter,
