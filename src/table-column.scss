@@ -16,7 +16,7 @@
   border: solid 1px $border-color-sub;
   border-radius: 2px;
   background-color: $white-color;
-  box-shadow: $--dropdown-menu-box-shadow;
+  box-shadow: $box-shadow-light;
   box-sizing: border-box;
   margin: 2px 0;
 
@@ -35,8 +35,8 @@
     font-size: $font-size-base;
 
     &:hover {
-      background-color: $--dropdown-menuItem-hover-fill;
-      color: $--dropdown-menuItem-hover-color;
+      background-color: $dropdown-menuItem-hover-bg;
+      color: $link-color;
     }
 
     @include when(active) {

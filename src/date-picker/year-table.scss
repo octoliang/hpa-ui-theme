@@ -6,7 +6,7 @@
   border-collapse: collapse;
 
   .el-icon {
-    color: $--datepicker-icon-color;
+    color: $title-color;
   }
 
   td {
@@ -29,16 +29,16 @@
       height: 32px;
       display: block;
       line-height: 32px;
-      color: $--datepicker-color;
+      color: $text-color ;
       margin: 0 auto;
 
       &:hover {
-        color: $--datepicker-text-hover-color;
+        color: $primary-color-main;
       }
     }
 
     &.current:not(.disabled) .cell {
-      color: $--datepicker-active-color;
+      color: $primary-color-main;
     }
   }
 }

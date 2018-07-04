@@ -2,7 +2,7 @@
 
 @include b(time-panel) {
   margin: 5px 0;
-  border: solid 1px $--datepicker-border-color;
+  border: solid 1px $border-color-disabled;
   background-color: $white-color;
   box-shadow: $box-shadow-light;
   border-radius: 2px;
@@ -57,7 +57,7 @@
   }
 
   @include e(footer) {
-    border-top: 1px solid $--datepicker-inner-border-color;
+    border-top: 1px solid $datepicker-inner-border-color;
     padding: 4px;
     height: 36px;
     line-height: 25px;
@@ -78,7 +78,7 @@
 
     &.confirm {
       font-weight: 800;
-      color: $--datepicker-active-color;
+      color: $primary-color-main;
     }
   }
 }

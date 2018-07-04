@@ -2,18 +2,18 @@
 @import "common/var";
 
 @include b(collapse) {
-  border-top: 1px solid $--collapse-border-color;
-  border-bottom: 1px solid $--collapse-border-color;
+  border-top: 1px solid $border-color-sub;
+  border-bottom: 1px solid $border-color-sub;
 }
 @include b(collapse-item) {
   @include e(header) {
-    height: $--collapse-header-height;
-    line-height: $--collapse-header-height;
-    background-color: $--collapse-header-fill;
-    color: $--collapse-header-color;
+    height: $collapse-header-height;
+    line-height: $collapse-header-height;
+    background-color: $white-color;
+    color: $title-color;
     cursor: pointer;
-    border-bottom: 1px solid $--collapse-border-color;
-    font-size: $--collapse-header-size;
+    border-bottom: 1px solid $border-color-sub;
+    font-size: $font-size-sm;
     font-weight: 500;
     transition: border-bottom-color .3s;
     outline: none;
@@ -37,16 +37,16 @@
 
   @include e(wrap) {
     will-change: height;
-    background-color: $--collapse-content-fill;
+    background-color: $white-color;
     overflow: hidden;
     box-sizing: border-box;
-    border-bottom: 1px solid $--collapse-border-color;
+    border-bottom: 1px solid $border-color-sub;
   }
 
   @include e(content) {
     padding-bottom: 25px;
-    font-size: $--collapse-content-size;
-    color: $--collapse-content-color;
+    font-size: $font-size-sm;
+    color: $title-color;
     line-height: 1.769230769230769;
   }
 

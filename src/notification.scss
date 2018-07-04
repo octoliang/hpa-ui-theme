@@ -3,14 +3,14 @@
 
 @include b(notification) {
   display: flex;
-  width: $--notification-width;
-  padding: $--notification-padding;
-  border-radius: $--notification-radius;
+  width: $notification-width;
+  padding: $notification-padding;
+  border-radius: $notification-radius;
   box-sizing: border-box;
-  border: 1px solid $--notification-border-color;
+  border: 1px solid $border-color-sub;
   position: fixed;
   background-color: $white-color;
-  box-shadow: $--notification-shadow;
+  box-shadow: $box-shadow-light;
   transition: opacity .3s, transform .3s, left .3s, right .3s, top 0.4s, bottom .3s;
   overflow: hidden;
 
@@ -23,21 +23,21 @@
   }
 
   @include e(group) {
-    margin-left: $--notification-group-margin;
+    margin-left: $notification-group-margin;
   }
 
   @include e(title) {
     font-weight: bold;
-    font-size: $--notification-title-font-size;
-    color: $--notification-title-color;
+    font-size: $font-size-md;
+    color: $title-color;
     margin: 0;
   }
 
   @include e(content) {
-    font-size: $--notification-font-size;
+    font-size: $font-size-base;
     line-height: 21px;
     margin: 6px 0 0 0;
-    color: $--notification-color;
+    color: $text-color;
     text-align: justify;
 
     p {
@@ -46,9 +46,9 @@
   }
 
   @include e(icon) {
-    height: $--notification-icon-size;
-    width: $--notification-icon-size;
-    font-size: $--notification-icon-size;
+    height: $notification-icon-size;
+    width: $notification-icon-size;
+    font-size: $notification-icon-size;
   }
 
   @include e(closeBtn) {
@@ -56,28 +56,28 @@
     top: 18px;
     right: 15px;
     cursor: pointer;
-    color: $--notification-close-color;
-    font-size: $--notification-close-font-size;
+    color: $text-color-sub;
+    font-size: $font-size-lg;
 
     &:hover {
-      color: $--notification-close-hover-color;
+      color: $text-color;
     }
   }
 
   .el-icon-success {
-    color: $--notification-success-color;
+    color: $success-color;
   }
 
   .el-icon-error {
-    color: $--notification-danger-color;
+    color: $danger-color;
   }
 
   .el-icon-info {
-    color: $--notification-info-color;
+    color: $gray-color;
   }
 
   .el-icon-warning {
-    color: $--notification-warning-color;
+    color: $warning-color;
   }
 }
 

@@ -68,7 +68,7 @@
       &.is-link, & a {
         // font-weight: bold;
         text-decoration: none;
-        transition: $--color-transition-base;
+        transition: $color-transition-base;
         color: $text-color;
 
         &:hover {

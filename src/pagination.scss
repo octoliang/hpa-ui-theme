@@ -52,7 +52,7 @@
 
     .el-input__inner {
       padding-right: 25px;
-      border-radius: $--pagination-border-radius;
+      border-radius: $border-radius-base;
       height: $pagenation-size-base;
     }
   }
@@ -74,8 +74,8 @@
     }
 
     &:disabled {
-      // color: $--pagination-button-disabled-color;
-      // // background-color: $--pagination-button-disabled-fill;
+      // color: $text-color-disabled;
+      // // background-color: $white-color;
       // background: $disabled-color-base;
       cursor: not-allowed;
 
@@ -89,10 +89,10 @@
   .btn-next {
     // background: center center no-repeat;
     // background-size: 16px;
-    // background-color: $--pagination-fill;
+    // background-color: $white-color ;
     // cursor: pointer;
     // margin: 0;
-    // color: $--pagination-button-color;
+    // color: $title-color;
 
     .el-icon {
       display: block;
@@ -202,7 +202,7 @@
     text-align: center;
     margin: 0 2px;
     box-sizing: border-box;
-    border-radius: $--pagination-border-radius;
+    border-radius: $border-radius-base;
 
     &.el-input {
       width: 50px;
@@ -302,7 +302,7 @@
     height: $pagenation-size-base;
     line-height: $pagenation-size-base - 2;
     margin: 0 $margin-xs / 2;
-    // background: $--pagination-fill;
+    // background: $white-color ;
     background: $white-color;
     color: $text-color;
     border: $border-base;
@@ -315,7 +315,7 @@
     // &.btn-quicknext,
     // &.btn-quickprev {
     //   line-height: 28px;
-    //   color: $--pagination-button-color;
+    //   color: $title-color;
 
     //   &.disabled {
     //     color: $text-color-disabled;

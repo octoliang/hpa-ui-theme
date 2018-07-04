@@ -2,12 +2,12 @@
 
 /* Transition
 -------------------------- */
-$--all-transition: all .3s cubic-bezier(.645,.045,.355,1) !default;
-$--fade-transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
-$--fade-linear-transition: opacity 200ms linear !default;
-$--md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1), opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
-$--border-transition-base: border-color .2s cubic-bezier(.645,.045,.355,1) !default;
-$--color-transition-base: color .2s cubic-bezier(.645,.045,.355,1) !default;
+$all-transition: all .3s cubic-bezier(.645,.045,.355,1) !default;
+$fade-transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
+$fade-linear-transition: opacity 200ms linear !default;
+$md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1), opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
+$border-transition-base: border-color .2s cubic-bezier(.645,.045,.355,1) !default;
+$color-transition-base: color .2s cubic-bezier(.645,.045,.355,1) !default;
 
 /* Background
 -------------------------- */
@@ -24,7 +24,7 @@ $primary-color-main: #4CA8FD !default;
 $success-color: #3fae2a !default;
 $warning-color: #ffa300 !default;
 $danger-color: #ff5347 !default;
-$info-color: #909399 !default;
+$gray-color: #909399 !default;
 $cyan-color:#87e8de !default;
 $pink-color:#ffadd2 !default;
 $purple-color:#d3adf7 !default;
@@ -42,12 +42,12 @@ $primary-color-light-9: mix($white-color, $primary-color, 90%) !default; /* ecf5
 $success-color-light: mix($white-color, $success-color, 80%) !default;
 $warning-color-light: mix($white-color, $warning-color, 80%) !default;
 $danger-color-light: mix($white-color, $danger-color, 80%) !default;
-$info-color-light: mix($white-color, $info-color, 80%) !default;
+$gray-color-light: mix($white-color, $gray-color, 80%) !default;
 
 $success-color-lighter: mix($white-color, $success-color, 90%) !default;
 $warning-color-lighter: mix($white-color, $warning-color, 90%) !default;
 $danger-color-lighter: mix($white-color, $danger-color, 90%) !default;
-$info-color-lighter: mix($white-color, $info-color, 90%) !default;
+$gray-color-lighter: mix($white-color, $gray-color, 90%) !default;
 
 /* Text
 ---------------------------- */
@@ -64,8 +64,9 @@ $border-style-base: solid !default;
 $border-color-base: #DFE3E9 !default;
 $border-color-sub: #EAECF0 !default;
 $border-color-split: $border-color-sub !default;
+$border-color-disabled: $border-color-sub !default;
 // $--border-color-extra-light: #f2f6fc !default;
-$border-color-hover: $text-color-disabled !default;
+$border-color-hover: $border-color-base!default;
 $border-base: $border-width-base $border-style-base $border-color-base !default;
 $border-radius-base: 4px !default;
 $border-radius-sm: 2px !default;
@@ -75,7 +76,7 @@ $border-radius-circle: 100% !default;
 -------------------------- */
 $disabled-color: $background-color-base !default;
 $disabled-color-base: $text-color-disabled !default;
-$disabled-border-base: $border-color-split !default;
+// $border-color-disabled: $border-color-split !default;
 
 /* Link;
 -------------------------- */
@@ -110,10 +111,6 @@ $line-height-base: 24px !default;
 $font-size-no:0px !default;
 $fir-step-top:-22px !default;
 
-/* Size
--------------------------- */
-// $size-base: 14px !default;
-
 /* z-index
 -------------------------- */
 $index-normal: 1 !default;
@@ -123,34 +120,12 @@ $index-popper: 2000 !default;
 /* Icon
 -------------------------- */
 $icon-color: #666 !default;
-$icon-color-base: $info-color !default;
+$icon-color-base: $gray-color !default;
 
 /* Checkbox
 -------------------------- */
-// $checkbox-font-size: 14px !default;
-// $checkbox-font-weight: $font-weight-base !default;
-// $checkbox-color: $text-color !default;
 $checkbox-height: 14px !default;
 $checkbox-width: 14px !default;
-// $checkbox-border-radius: $border-radius-sm !default;
-// $checkbox-bg: $white-color !default;
-// $checkbox-border: $border-base !default;
-// $checkbox-border-color: $border-color-base !default;
-// $checkbox-icon-color: $white-color !default;
-
-// $checkbox-border-color-disabled: $border-color-base !default;
-// $checkbox-border-color-hover: $primary-color !default;
-// $checkbox-bg-disabled: #edf2fc !default;
-// $checkbox-icon-color-disabled: $text-color-disabled !default;
-
-// $checkbox-checked-disabled: $border-color-split !default;
-// $checkbox-checked-border-color-disabled: $border-color-base !default;
-// $checkbox-checked-icon-color-disabled: $text-color-disabled !default;
-
-// $checkbox-checked-text-color: $primary-color !default;
-// $checkbox-checked-border-color: $primary-color !default;
-// $checkbox-checked-bg: $primary-color !default;
-// $checkbox-checked-icon-color: $fill-base !default;
 
 $checkbox-bordered-height: 40px !default;
 $checkbox-bordered-pad: 9px 20px 9px 10px !default;
@@ -167,38 +142,10 @@ $checkbox-bordered-mini-input-height: 12px !default;
 $checkbox-bordered-mini-input-width: 12px !default;
 $checkbox-bordered-mini-height: 28px !default;
 
-// $checkbox-button-font-size: $font-size-base !default;
-// $checkbox-button-checked-bg: $primary-color !default;
-// $checkbox-btn-checked-color: $white-color !default;
-// $checkbox-btn-checked-border-color: $primary-color !default;
-
 /* Radio
 -------------------------- */
-// $radio-font-size: 14px !default;
-// $radio-font-weight: $font-weight-base !default;
-// $radio-color: $text-color !default;
 $radio-height: 16px !default;
 $radio-width: 16px !default;
-// $radio-border-radius: $border-radius-circle !default;
-// $radio-bg: $white-color !default;
-// $radio-border: $border-base !default;
-// $radio-border-color: $border-color-base !default;
-// $radio-icon-color: $white-color !default;
-
-// $radio-border-color-disabled: $disabled-border-base !default;
-// $radio-disabledbg: $disabled-color !default;
-// $radio-icon-color-disabled: $disabled-color !default;
-
-// $radio-checked-border-color-disabled: $disabled-border-base !default;
-// $--radio-disabled-checked-input-fill: $disabled-color !default;
-// $--radio-disabled-checked-icon-color: $text-color-disabled !default;
-
-// $--radio-checked-text-color: $primary-color !default;
-// $--radio-checked-input-border-color: $primary-color !default;
-// $--radio-checked-input-fill: $white-color !default;
-// $--radio-checked-icon-color: $primary-color !default;
-
-// $radio-border-color-hover: $primary-color !default;
 
 $radio-bordered-height: 40px !default;
 $radio-bordered-pad: 12px 20px 0 10px !default;
@@ -215,57 +162,36 @@ $radio-bordered-mini-input-height: 12px !default;
 $radio-bordered-mini-input-width: 12px !default;
 $radio-bordered-mini-height: 28px !default;
 
-// $--radio-button-font-size: $font-size-base !default;
-// $--radio-button-checked-fill: #4ca8fd !default;
-// $--radio-button-checked-color: $white-color !default;
-// $--radio-button-checked-border-color: $primary-color !default;
-// $--radio-button-disabled-checked-fill: $border-color-split !default;
-
 /* Select
 -------------------------- */
-$--select-border-color-hover: $border-color-hover !default;
-$--select-disabled-border: $disabled-border-base !default;
-// $--select-font-size: $font-size-base !default;
-$--select-close-hover-color: $text-color-sub !default;
+// $--select-disabled-border: $border-color-disabled !default;
+// $--select-close-hover-color: $text-color-sub !default;
 
-$--select-input-color: $text-color-disabled !default;
-$--select-multiple-input-color: #666 !default;
-$--select-input-focus-background: $primary-color !default;
-$--select-input-font-size: 14px !default;
+// $--select-input-color: $text-color-disabled !default;
+$select-multiple-input-color: #666 !default;
+// $--select-input-focus-background: $primary-color-main !default;
+// $--select-input-font-size: 14px !default;
 
-$--select-option-color: $text-color !default;
-$--select-option-disabled-color: $text-color-disabled !default;
-$--select-option-disabled-background: $white-color !default;
-$--select-option-height: 34px !default;
-$--select-option-hover-background: $background-color-base !default;
-$--select-option-selected: $primary-color !default;
-$--select-option-selected-hover: $background-color-base !default;
+// $--select-option-color: $text-color !default;
+// $--select-option-disabled-color: $text-color-disabled !default;
+// $--select-option-disabled-background: $white-color !default;
+$select-option-height: 34px !default;
+// $--select-option-hover-background: $background-color-base !default;
+// $--select-option-selected: $primary-color !default;
+// $--select-option-selected-hover: $background-color-base !default;
 
-$--select-group-color: $info-color !default;
-$--select-group-height: 30px !default;
-$--select-group-font-size: 12px !default;
+// $--select-group-color: $gray-color !default;
+$select-group-height: 30px !default;
+// $--select-group-font-size: 12px !default;
 
-// $--select-dropdown-background: $white-color !default;
-// $--select-dropdown-shadow: $box-shadow-light !default;
-// $--select-dropdown-empty-color: #999 !default;
 $select-dropdown-max-height: 274px !default;
-// $--select-dropdown-padding: 6px 0 !default;
-// $--select-dropdown-empty-padding: 10px 0 !default;
-// $--select-dropdown-border: solid 1px $border-color-split !default;
 
 /* Alert
 -------------------------- */
 $alert-padding: 8px 16px !default;
-// $--alert-border-radius: $border-radius-base !default;
-// $--alert-title-font-size: 13px !default;
-// $--alert-description-font-size: 12px !default;
 $alert-close-font-size: 12px !default;
 $alert-close-customed-font-size: 13px !default;
 
-// $--alert-success-color: $success-color-lighter !default;
-// $--alert-info-color: $info-color-lighter !default;
-// $--alert-warning-color: $warning-color-lighter !default;
-// $--alert-danger-color: $danger-color-lighter !default;
 $alert-info-color: mix($white-color, $primary-color, 90%) !default;
 $alert-success-border-color: mix($white-color, $success-color, 43%) !default;
 $alert-warning-border-color: mix($white-color, $warning-color, 43%) !default;
@@ -277,432 +203,428 @@ $alert-icon-large-size: 28px !default;
 
 /* Message Box
 -------------------------- */
-$--msgbox-width: 420px !default;
-$--msgbox-border-radius: 4px !default;
-$--msgbox-font-size: $font-size-lg !default;
-$--msgbox-content-font-size: $font-size-base !default;
-$--msgbox-content-color: $text-color !default;
-$--msgbox-error-font-size: 12px !default;
-$--msgbox-padding-primary: 15px !default;
+$msgbox-width: 420px !default;
+// $--msgbox-border-radius: 4px !default;
+// $--msgbox-font-size: $font-size-lg !default;
+// $--msgbox-content-font-size: $font-size-base !default;
+// $--msgbox-content-color: $text-color !default;
+// $--msgbox-error-font-size: 12px !default;
+// $--msgbox-padding-primary: 15px !default;
 
-$--msgbox-success-color: $success-color !default;
-$--msgbox-info-color: $info-color !default;
-$--msgbox-warning-color: $warning-color !default;
-$--msgbox-danger-color: $danger-color !default;
+// $--msgbox-success-color: $success-color !default;
+// $--msgbox-info-color: $gray-color !default;
+// $--msgbox-warning-color: $warning-color !default;
+// $--msgbox-danger-color: $danger-color !default;
 
 /* Message
 -------------------------- */
-$--message-shadow: $box-shadow-base !default;
-$--message-min-width: 380px !default;
-$--message-background-color: #edf2fc !default;
-$--message-padding: 15px 15px 15px 20px !default;
-$--message-content-color: $text-color !default;
-$--message-close-color: $text-color-disabled !default;
-$--message-close-size: 16px !default;
-$--message-close-hover-color: $text-color-sub !default;
+// $--message-shadow: $box-shadow-base !default;
+$message-min-width: 380px !default;
+$message-background-color: #edf2fc !default;
+$message-padding: 15px 15px 15px 20px !default;
+// $--message-content-color: $text-color !default;
+// $--message-close-color: $text-color-disabled !default;
+// $--message-close-size: 16px !default;
+// $--message-close-hover-color: $text-color-sub !default;
 
-$--message-success-color: $success-color !default;
-$--message-info-color: $info-color !default;
-$--message-warning-color: $warning-color !default;
-$--message-danger-color: $danger-color !default;
+// $--message-success-color: $success-color !default;
+// $--message-info-color: $gray-color !default;
+// $--message-warning-color: $warning-color !default;
+// $--message-danger-color: $danger-color !default;
 
 /* Notification
 -------------------------- */
-$--notification-width: 330px !default;
-$--notification-padding: 14px 26px 14px 13px !default;
-$--notification-radius: 8px !default;
-$--notification-shadow: $box-shadow-light !default;
-$--notification-border-color: $border-color-sub !default;
-$--notification-icon-size: 24px !default;
-$--notification-close-font-size: $--message-close-size !default;
-$--notification-group-margin: 13px !default;
-$--notification-font-size: $font-size-base !default;
-$--notification-color: $text-color !default;
-$--notification-title-font-size: 16px !default;
-$--notification-title-color: $title-color !default;
+$notification-width: 330px !default;
+$notification-padding: 14px 26px 14px 13px !default;
+$notification-radius: 8px !default;
+// $--notification-shadow: $box-shadow-light !default;
+// $--notification-border-color: $border-color-sub !default;
+$notification-icon-size: 24px !default;
+// $--notification-close-font-size: $font-size-lg !default;
+$notification-group-margin: 13px !default;
+// $--notification-font-size: $font-size-base !default;
+// $--notification-color: $text-color !default;
+// $--notification-title-font-size: 16px !default;
+// $--notification-title-color: $title-color !default;
 
-$--notification-close-color: $text-color-sub !default;
-$--notification-close-hover-color: $text-color !default;
+// $--notification-close-color: $text-color-sub !default;
+// $--notification-close-hover-color: $text-color !default;
 
-$--notification-success-color: $success-color !default;
-$--notification-info-color: $info-color !default;
-$--notification-warning-color: $warning-color !default;
-$--notification-danger-color: $danger-color !default;
+// $--notification-success-color: $success-color !default;
+// $--notification-info-color: $gray-color !default;
+// $--notification-warning-color: $warning-color !default;
+// $--notification-danger-color: $danger-color !default;
 
 /* Input
 -------------------------- */
-$--input-font-size: $font-size-base !default;
-$--input-color: $text-color !default;
-$--input-width: 140px !default;
-$--input-height: 36px !default;
-$--input-border: $border-base !default;
-$--input-border-color: $border-color-base !default;
-$--input-border-radius: $border-radius-base !default;
-$--input-border-color-hover: $border-color-hover !default;
-$--input-fill: $white-color !default;
-$--input-fill-disabled: $disabled-color !default;
-$--input-color-disabled: $font-color-disabled-base !default;
-$--input-icon-color: $text-color-disabled !default;
-$--input-placeholder-color: $text-color-disabled !default;
-$--input-max-width: 314px !default;
+// $--input-font-size: $font-size-base !default;
+// $--input-color: $text-color !default;
+// $--input-width: 140px !default;
+$input-height: 36px !default;
+// $--input-border: $border-base !default;
+// $--input-border-color: $border-color-base !default;
+// $--input-border-radius: $border-radius-base !default;
+// $--input-border-color-hover: $border-color-hover !default;
+// $--input-fill: $white-color !default;
+// $--input-fill-disabled: $disabled-color !default;
+// $--input-color-disabled: $font-color-disabled-base !default;
+// $--input-icon-color: $text-color-disabled !default;
+// $--input-placeholder-color: $text-color-disabled !default;
+// $--input-max-width: 314px !default;
 
-$--input-hover-border: $border-color-hover !default;
-$--input-clear-hover-color: $text-color-sub !default;
+// $--input-hover-border: $border-color-hover !default;
+// $--input-clear-hover-color: $text-color-sub !default;
 
-$--input-focus-border: $primary-color !default;
-$--input-focus-fill: $white-color !default;
+// $--input-focus-border: $primary-color !default;
+// $--input-focus-fill: $white-color !default;
 
-$--input-disabled-fill: $disabled-color !default;
-$--input-disabled-border: $disabled-border-base !default;
-$--input-disabled-color: $disabled-color-base !default;
-$--input-disabled-placeholder-color: $text-color-disabled !default;
+// $--input-disabled-fill: $disabled-color !default;
+// $--input-disabled-border: $border-color-disabled !default;
+// $--input-disabled-color: $disabled-color-base !default;
+// $--input-disabled-placeholder-color: $text-color-disabled !default;
 
-$--input-medium-font-size: 14px !default;
-$--input-medium-height: 36px !default;
+// $--input-medium-font-size: 14px !default;
+$input-medium-height: 36px !default;
 
-$--input-small-font-size: 13px !default;
-$--input-small-height: 32px !default;
+// $--input-small-font-size: 13px !default;
+$input-small-height: 32px !default;
 
-$--input-mini-font-size: 12px !default;
-$--input-mini-height: 28px !default;
+// $--input-mini-font-size: 12px !default;
+$input-mini-height: 28px !default;
 
 /* Cascader
 -------------------------- */
-$--cascader-menu-fill: $fill-base !default;
-$--cascader-menu-font-size: $font-size-base !default;
-$--cascader-menu-radius: $border-radius-base !default;
-$--cascader-menu-border: $border-base !default;
-$--cascader-menu-border-color: $border-color-base !default;
-$--cascader-menu-border-width: $border-width-base !default;
-$--cascader-menu-color: $text-color !default;
-$--cascader-menu-option-color-active: $text-color-sub !default;
-$--cascader-menu-option-fill-active: rgba($text-color-sub, 0.12) !default;
-$--cascader-menu-option-color-hover: $text-color !default;
-$--cascader-menu-option-fill-hover: rgba($title-color, 0.06) !default;
-$--cascader-menu-option-color-disabled: #999 !default;
-$--cascader-menu-option-fill-disabled: rgba($black-color, 0.06) !default;
-$--cascader-menu-option-empty-color: #666 !default;
-$--cascader-menu-group-color: #999 !default;
-$--cascader-menu-shadow: 0 1px 2px rgba($black-color, 0.14), 0 0 3px rgba($black-color, 0.14) !default;
-$--cascader-menu-option-pinyin-color: #999 !default;
-$--cascader-menu-submenu-shadow: 1px 1px 2px rgba($black-color, 0.14), 1px 0 2px rgba($black-color, 0.14) !default;
+// $--cascader-menu-fill: $fill-base !default;
+// $--cascader-menu-font-size: $font-size-base !default;
+// $--cascader-menu-radius: $border-radius-base !default;
+// $--cascader-menu-border: $border-base !default;
+// $--cascader-menu-border-color: $border-color-base !default;
+// $--cascader-menu-border-width: $border-width-base !default;
+// $--cascader-menu-color: $text-color !default;
+// $--cascader-menu-option-color-active: $text-color-sub !default;
+// $--cascader-menu-option-fill-active: rgba($text-color-sub, 0.12) !default;
+// $--cascader-menu-option-color-hover: $text-color !default;
+// $--cascader-menu-option-fill-hover: rgba($title-color, 0.06) !default;
+// $--cascader-menu-option-color-disabled: #999 !default;
+// $--cascader-menu-option-fill-disabled: rgba($black-color, 0.06) !default;
+// $--cascader-menu-option-empty-color: #666 !default;
+// $--cascader-menu-group-color: #999 !default;
+// $--cascader-menu-shadow: 0 1px 2px rgba($black-color, 0.14), 0 0 3px rgba($black-color, 0.14) !default;
+// $--cascader-menu-option-pinyin-color: #999 !default;
+// $--cascader-menu-submenu-shadow: 1px 1px 2px rgba($black-color, 0.14), 1px 0 2px rgba($black-color, 0.14) !default;
+// $--cascader-height: 200px !default;
 
 /* Group
 -------------------------- */
-$--group-option-flex: 0 0 (1/5) * 100% !default;
-$--group-option-offset-bottom: 12px !default;
-$--group-option-fill-hover: rgba($black-color, 0.06) !default;
-$--group-title-color: $black-color !default;
-$--group-title-font-size: $font-size-base !default;
-$--group-title-width: 66px !default;
+// $--group-option-flex: 0 0 (1/5) * 100% !default;
+// $--group-option-offset-bottom: 12px !default;
+// $--group-option-fill-hover: rgba($black-color, 0.06) !default;
+// $--group-title-color: $black-color !default;
+// $--group-title-font-size: $font-size-base !default;
+// $--group-title-width: 66px !default;
 
 /* Tab
 -------------------------- */
-$--tab-font-size: $font-size-base !default;
-$--tab-border-line: 1px solid #e4e4e4 !default;
-$--tab-header-color-active: $text-color-sub !default;
-$--tab-header-color-hover: $text-color !default;
-$--tab-header-color: $text-color !default;
-$--tab-header-fill-active: rgba($black-color, 0.06) !default;
-$--tab-header-fill-hover: rgba($black-color, 0.06) !default;
-$--tab-vertical-header-width: 90px !default;
-$--tab-vertical-header-count-color: $white-color !default;
-$--tab-vertical-header-count-fill: $text-color-sub !default;
+// $--tab-font-size: $font-size-base !default;
+// $--tab-border-line: 1px solid #e4e4e4 !default;
+// $--tab-header-color-active: $text-color-sub !default;
+// $--tab-header-color-hover: $text-color !default;
+// $--tab-header-color: $text-color !default;
+// $--tab-header-fill-active: rgba($black-color, 0.06) !default;
+// $--tab-header-fill-hover: rgba($black-color, 0.06) !default;
+// $--tab-vertical-header-width: 90px !default;
+// $--tab-vertical-header-count-color: $white-color !default;
+// $--tab-vertical-header-count-fill: $text-color-sub !default;
 
 /* Button
 -------------------------- */
-$--button-font-size: 14px !default;
-$--button-font-weight: $font-weight-base !default;
-$--button-border-radius: $border-radius-base !default;
-$--button-padding-vertical: 8px !default;
-$--button-padding-horizontal: 20px !default;
+// $--button-font-size: 14px !default;
+// $--button-font-weight: $font-weight-base !default;
+// $--button-border-radius: $border-radius-base !default;
+$btn-padding-vertical: 8px !default;
+$btn-padding-horizontal: 20px !default;
 
-$--button-medium-font-size: 14px !default;
-$--button-medium-border-radius: $border-radius-base !default;
-$--button-medium-padding-vertical: 8px !default;
-$--button-medium-padding-horizontal: 20px !default;
+// $--button-medium-font-size: 14px !default;
+// $--button-medium-border-radius: $border-radius-base !default;
+// $--button-medium-padding-vertical: 8px !default;
+// $--button-medium-padding-horizontal: 20px !default;
 
-$--button-small-font-size: 14px !default;
-$--button-small-border-radius: #{$border-radius-base - 2} !default;
-$--button-small-padding-vertical: 5px !default;
-$--button-small-padding-horizontal: 15px !default;
+// $--button-small-font-size: 14px !default;
+// $--button-small-border-radius: #{$border-radius-base - 2} !default;
+$btn-small-padding-vertical: 5px !default;
+$btn-small-padding-horizontal: 15px !default;
 
-$--button-mini-font-size: 12px !default;
-$--button-mini-border-radius: #{$border-radius-base - 1} !default;
-$--button-mini-padding-vertical: 7px !default;
-$--button-mini-padding-horizontal: 15px !default;
+// $--button-mini-font-size: 12px !default;
+// $--button-mini-border-radius: #{$border-radius-base - 1} !default;
+$btn-mini-padding-vertical: 7px !default;
+$btn-mini-padding-horizontal: 15px !default;
 
-$--button-default-color: $text-color !default;
-$--button-default-fill: $white-color !default;
-$--button-default-border: $border-color-base !default;
+// $--button-default-color: $text-color !default;
+// $--button-default-fill: $white-color !default;
+// $--button-default-border: $border-color-base !default;
 
-$--button-disabled-color: $text-color-disabled !default;
-$--button-disabled-fill: #f5f5f5 !default;
-$--button-disabled-border: $border-color-sub !default;
+// $--button-disabled-color: $text-color-disabled !default;
+$btn-disabled-bg: #f5f5f5 !default;
+// $--button-disabled-border: $border-color-sub !default;
 
-$--button-primary-border: $primary-color !default;
-$--button-primary-color: $white-color !default;
-$--button-primary-fill: $primary-color !default;
+// $--button-primary-border: $primary-color !default;
+// $--button-primary-color: $white-color !default;
+// $--button-primary-fill: $primary-color !default;
 
-$--button-success-border: $success-color !default;
-$--button-success-color: $white-color !default;
-$--button-success-fill: $success-color !default;
+// $--button-success-border: $success-color !default;
+// $--button-success-color: $white-color !default;
+// $--button-success-fill: $success-color !default;
 
-$--button-warning-border: $warning-color !default;
-$--button-warning-color: $white-color !default;
-$--button-warning-fill: $warning-color !default;
+// $--button-warning-border: $warning-color !default;
+// $--button-warning-color: $white-color !default;
+// $--button-warning-fill: $warning-color !default;
 
-$--button-danger-border: $danger-color !default;
-$--button-danger-color: $white-color !default;
-$--button-danger-fill: $danger-color !default;
+// $--button-danger-border: $danger-color !default;
+// $--button-danger-color: $white-color !default;
+// $--button-danger-fill: $danger-color !default;
 
-$--button-info-border: $info-color !default;
-$--button-info-color: $white-color !default;
-$--button-info-fill: $info-color !default;
+// $--button-info-border: $gray-color !default;
+// $--button-info-color: $white-color !default;
+// $--button-info-fill: $gray-color !default;
 
-$--button-hover-tint-percent: 20% !default;
-$--button-active-shade-percent: 10% !default;
-
-
-/* cascader
--------------------------- */
-$--cascader-height: 200px !default;
+$btn-hover-tint-percent: 20% !default;
+$btn-active-shade-percent: 10% !default;
 
 /* Switch
 -------------------------- */
-$--switch-on-color: $primary-color !default;
-$--switch-off-color: $border-color-base !default;
-$--switch-disabled-color: $border-color-sub !default;
-$--switch-disabled-text-color: $text-color-disabled !default;
+// $--switch-on-color: $primary-color !default;
+// $--switch-off-color: $border-color-base !default;
+// $--switch-disabled-color: $border-color-sub !default;
+// $--switch-disabled-text-color: $text-color-disabled !default;
 
-$--switch-font-size: $font-size-base !default;
-$--switch-core-border-radius: 10px !default;
-$--switch-width: 44px !default;
-$--switch-height: 20px !default;
-$--switch-button-size: 16px !default;
+// $--switch-font-size: $font-size-base !default;
+$switch-core-border-radius: 10px !default;
+$switch-width: 44px !default;
+$switch-height: 20px !default;
+// $--switch-button-size: 16px !default;
 
 /* Dialog
 -------------------------- */
-$--dialog-background-color: $primary-color-light-4 !default;
-$--dialog-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !default;
-$--dialog-close-hover-color: $primary-color !default;
-$--dialog-title-font-size: $font-size-lg !default;
-$--dialog-font-size: 14px !default;
-$--dialog-line-height: $line-height-base !default;
-$--dialog-padding-primary: 20px !default;
+// $--dialog-background-color: $primary-color-light-4 !default;
+$dialog-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !default;
+// $--dialog-close-hover-color: $primary-color !default;
+// $--dialog-title-font-size: $font-size-lg !default;
+// $--dialog-font-size: 14px !default;
+// $--dialog-line-height: $line-height-base !default;
+$dialog-padding-primary: 20px !default;
 
 /* Table
 -------------------------- */
-$--table-border-color: $border-color-sub !default;
-$--table-border: 1px solid $--table-border-color !default;
-$--table-text-color: $text-color !default;
-$--table-header-color: $text-color-sub !default;
-$--table-row-hover-background: $background-color-base !default;
-$--table-current-row-background: $primary-color-light-9 !default;
-$--table-header-background: $white-color !default;
-$--table-footer-background: $text-color-disabled !default;
-$--table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, .12) !default;
+// $--table-border-color: $border-color-sub !default;
+$table-border: 1px solid $border-color-sub !default;
+// $--table-text-color: $text-color !default;
+// $--table-header-color: $text-color-sub !default;
+// $--table-row-hover-background: $background-color-base !default;
+$table-current-row-background: $primary-color-light-9 !default;
+// $--table-header-background: $white-color !default;
+// $--table-footer-background: $text-color-disabled !default;
+$table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, .12) !default;
 $table-header-bg: #F5F7F9 !default;
 $table-hover-bg: rgba(255,163,0,0.1) !default;
 
 /* Pagination
 -------------------------- */
-$--pagination-font-size: 13px !default;
-$--pagination-fill: $white-color !default;
-$--pagination-color: $title-color !default;
-$--pagination-border-radius: 3px !default;
-$--pagination-button-color: $title-color !default;
-$--pagination-button-width: 35.5px !default;
-$--pagination-button-height: 28px !default;
-$--pagination-button-disabled-color: $text-color-disabled !default;
-$--pagination-button-disabled-fill: $white-color !default;
-$--pagination-hover-fill: $primary-color !default;
-$--pagination-hover-color: $white-color !default;
+// $--pagination-font-size: 13px !default;
+// $--pagination-fill: $white-color !default;
+// $--pagination-color: $title-color !default;
+// $--pagination-border-radius: 3px !default;
+// $--pagination-button-color: $title-color !default;
+// $--pagination-button-width: 35.5px !default;
+// $--pagination-button-height: 28px !default;
+// $--pagination-button-disabled-color: $text-color-disabled !default;
+// $--pagination-button-disabled-fill: $white-color !default;
+// $--pagination-hover-fill: $primary-color !default;
+// $--pagination-hover-color: $white-color !default;
 $pagenation-size-base: 32px !default;
 
 /* Popover
 -------------------------- */
-$--popover-fill: $white-color !default;
-$--popover-font-size: $font-size-base !default;
-$--popover-border-color: $border-color-sub !default;
-$--popover-arrow-size: 6px !default;
-$--popover-padding: 12px !default;
-$--popover-padding-large: 18px 20px !default;
-$--popover-title-font-size: 16px !default;
-$--popover-title-color: $title-color !default;
+// $--popover-fill: $white-color !default;
+// $--popover-font-size: $font-size-base !default;
+// $--popover-border-color: $border-color-sub !default;
+$popover-arrow-size: 6px !default;
+// $--popover-padding: 12px !default;
+// $--popover-padding-large: 18px 20px !default;
+// $--popover-title-font-size: 16px !default;
+// $--popover-title-color: $title-color !default;
 
 /* Tooltip
 -------------------------- */
-$--tooltip-fill: $title-color !default;
-$--tooltip-color: $white-color !default;
-$--tooltip-font-size: 12px !default;
-$--tooltip-border-color: $title-color !default;
-$--tooltip-arrow-size: 6px !default;
-$--tooltip-padding: 10px !default;
+// $--tooltip-fill: $title-color !default;
+// $--tooltip-color: $white-color !default;
+// $--tooltip-font-size: 12px !default;
+// $--tooltip-border-color: $title-color !default;
+$tooltip-arrow-size: 6px !default;
+// $--tooltip-padding: 10px !default;
 
 /* Tag
 -------------------------- */
-$--tag-padding: 0 10px !default;
-$--tag-fill: rgba($primary-color, 0.10) !default;
-$--tag-color: $primary-color !default;
-$--tag-border: rgba($primary-color, 0.20) !default;
-$--tag-font-size: 12px !default;
-$--tag-border-radius: 4px !default;
+// $--tag-padding: 0 10px !default;
+$tag-bg: rgba($primary-color, 0.10) !default;
+// $--tag-color: $primary-color !default;
+$tag-border: rgba($primary-color, 0.20) !default;
+// $--tag-font-size: 12px !default;
+// $--tag-border-radius: 4px !default;
 
-$--tag-info-fill: rgba($info-color, 0.10) !default;
-$--tag-info-border: rgba($info-color, 0.20) !default;
-$--tag-info-color: $info-color !default;
+$tag-info-bg: rgba($gray-color, 0.10) !default;
+$tag-info-border: rgba($gray-color, 0.20) !default;
+$tag-info-color: $gray-color !default;
 
-$--tag-primary-fill: rgba($primary-color, 0.10) !default;
-$--tag-primary-border: rgba($primary-color, 0.20) !default;
-$--tag-primary-color: $primary-color !default;
+// $--tag-primary-fill: rgba($primary-color, 0.10) !default;
+// $--tag-primary-border: rgba($primary-color, 0.20) !default;
+// $--tag-primary-color: $primary-color !default;
 
-$--tag-success-fill: rgba($success-color, 0.10) !default;
-$--tag-success-border: rgba($success-color, 0.20) !default;
-$--tag-success-color: $success-color !default;
+$tag-success-bg: rgba($success-color, 0.10) !default;
+$tag-success-border: rgba($success-color, 0.20) !default;
+$tag-success-color: $success-color !default;
 
-$--tag-warning-fill: rgba($warning-color, 0.10) !default;
-$--tag-warning-border: rgba($warning-color, 0.20) !default;
-$--tag-warning-color: $warning-color !default;
+$tag-warning-bg: rgba($warning-color, 0.10) !default;
+$tag-warning-border: rgba($warning-color, 0.20) !default;
+$tag-warning-color: $warning-color !default;
 
-$--tag-danger-fill: rgba($danger-color, 0.10) !default;
-$--tag-danger-border: rgba($danger-color, 0.20) !default;
-$--tag-danger-color: $danger-color !default;
+$tag-danger-fill: rgba($danger-color, 0.10) !default;
+$tag-danger-border: rgba($danger-color, 0.20) !default;
+$tag-danger-color: $danger-color !default;
 
 /* Tree
 -------------------------- */
-$--tree-node-hover-color: $background-color-base !default;
-$--tree-text-color: $text-color !default;
-$--tree-expand-icon-color: $text-color-disabled !default;
+// $--tree-node-hover-color: $background-color-base !default;
+// $--tree-text-color: $text-color !default;
+// $--tree-expand-icon-color: $text-color-disabled !default;
 
 /* Dropdown
 -------------------------- */
-$--dropdown-menu-box-shadow: $box-shadow-light !default;
-$--dropdown-menuItem-hover-fill: $primary-color-light-9 !default;
-$--dropdown-menuItem-hover-color: $link-color !default;
+// $--dropdown-menu-box-shadow: $box-shadow-light !default;
+$dropdown-menuItem-hover-bg: $primary-color-light-9 !default;
+// $--dropdown-menuItem-hover-color: $link-color !default;
 
 /* Badge
 -------------------------- */
-$--badge-fill: $danger-color !default;
-$--badge-radius: 10px !default;
-$--badge-font-size: 12px !default;
-$--badge-padding: 6px !default;
-$--badge-size: 18px !default;
+// $--badge-fill: $danger-color !default;
+$badge-radius: 10px !default;
+// $--badge-font-size: 12px !default;
+// $--badge-padding: 6px !default;
+// $--badge-size: 18px !default;
 
 /* Card
 --------------------------*/
-$--card-border-color: $border-color-sub !default;
-$--card-border-radius: 4px !default;
-$--card-padding: 20px !default;
+// $--card-border-color: $border-color-sub !default;
+// $--card-border-radius: 4px !default;
+$card-padding: 20px !default;
 
 /* Slider
 --------------------------*/
-$--slider-main-background-color: $primary-color !default;
-$--slider-runway-background-color: $border-color-split !default;
-$--slider-button-hover-color: mix($primary-color, black, 97%) !default;
-$--slider-stop-background-color: $white-color !default;
-$--slider-disable-color: $text-color-disabled !default;
+// $--slider-main-background-color: $primary-color !default;
+// $--slider-runway-background-color: $border-color-split !default;
+// $--slider-button-hover-color: mix($primary-color, black, 97%) !default;
+// $--slider-stop-background-color: $white-color !default;
+// $--slider-disable-color: $text-color-disabled !default;
 
-$--slider-margin: 16px 0 !default;
-$--slider-border-radius: 3px !default;
-$--slider-height: 6px !default;
-$--slider-button-size: 16px !default;
-$--slider-button-wrapper-size: 36px !default;
-$--slider-button-wrapper-offset: -15px !default;
+$slider-margin: 16px 0 !default;
+$slider-border-radius: 3px !default;
+$slider-height: 6px !default;
+$slider-button-size: 16px !default;
+$slider-button-wrapper-size: 36px !default;
+$slider-button-wrapper-offset: -15px !default;
 
 /* Steps
 --------------------------*/
-$--steps-border-color: $disabled-border-base !default;
-$--steps-border-radius: 4px !default;
-$--steps-padding: 20px !default;
+// $--steps-border-color: $border-color-disabled !default;
+// $--steps-border-radius: 4px !default;
+// $--steps-padding: 20px !default;
 
 /* Menu
 --------------------------*/
 $sidebar-bg: darken(saturate($primary-color,20%),16%) !default;
-$--menu-item-color: $title-color !default;
+// $--menu-item-color: $title-color !default;
 $menu-item-hover: lighten($primary-color,3.8%) !default;
 
 /* Rate
 --------------------------*/
-$--rate-height: 20px !default;
-$--rate-font-size: $font-size-base !default;
-$--rate-icon-size: 18px !default;
-$--rate-icon-margin: 6px !default;
-$--rate-icon-color: $text-color-disabled !default;
+$rate-height: 20px !default;
+// $--rate-font-size: $font-size-base !default;
+$rate-icon-size: 18px !default;
+$rate-icon-margin: 6px !default;
+// $--rate-icon-color: $text-color-disabled !default;
 
 /* DatePicker
 --------------------------*/
-$--datepicker-color: $text-color !default;
-$--datepicker-off-color: $text-color-disabled !default;
-$--datepicker-header-color: $text-color !default;
-$--datepicker-icon-color: $title-color !default;
-$--datepicker-border-color: $disabled-border-base !default;
-$--datepicker-inner-border-color: #e4e4e4 !default;
-$--datepicker-inrange-color: $border-color-split !default;
-$--datepicker-inrange-hover-color: $border-color-split !default;
-$--datepicker-active-color: $primary-color !default;
-$--datepicker-text-hover-color: $primary-color !default;
-$--datepicker-cell-hover-color: #fff !default;
+// $--datepicker-color: $text-color !default;
+// $--datepicker-off-color: $text-color-disabled !default;
+// $--datepicker-header-color: $text-color !default;
+// $--datepicker-icon-color: $title-color !default;
+// $--datepicker-border-color: $border-color-disabled !default;
+$datepicker-inner-border-color: #e4e4e4 !default;
+// $--datepicker-inrange-color: $border-color-split !default;
+// $--datepicker-inrange-hover-color: $border-color-split !default;
+// $--datepicker-active-color: $primary-color !default;
+// $--datepicker-text-hover-color: $primary-color !default;
+// $--datepicker-cell-hover-color: #fff !default;
 
 /* Loading
 --------------------------*/
-$--loading-spinner-size: 42px !default;
-$--loading-fullscreen-spinner-size: 50px !default;
+$loading-spinner-size: 42px !default;
+$loading-fullscreen-spinner-size: 50px !default;
 
 /* Scrollbar
 --------------------------*/
-$--scrollbar-background-color: rgba($text-color-sub, .3) !default;
-$--scrollbar-hover-background-color: rgba($text-color-sub, .5) !default;
+$scrollbar-bg: rgba($text-color-sub, .3) !default;
+$scrollbar-hover-bg: rgba($text-color-sub, .5) !default;
 
 /* Carousel
 --------------------------*/
-$--carousel-arrow-font-size: 12px !default;
-$--carousel-arrow-size: 36px !default;
-$--carousel-arrow-background: rgba(31, 45, 61, 0.11) !default;
-$--carousel-arrow-hover-background: rgba(31, 45, 61, 0.23) !default;
-$--carousel-indicator-width: 30px !default;
-$--carousel-indicator-height: 2px !default;
-$--carousel-indicator-padding-horizontal: 4px !default;
-$--carousel-indicator-padding-vertical: 12px !default;
-$--carousel-indicator-out-color: $border-color-hover !default;
+// $--carousel-arrow-font-size: 12px !default;
+$carousel-arrow-size: 36px !default;
+$carousel-arrow-bg: rgba(31, 45, 61, 0.11) !default;
+$carousel-arrow-hover-bg: rgba(31, 45, 61, 0.23) !default;
+$carousel-indicator-width: 30px !default;
+$carousel-indicator-height: 2px !default;
+$carousel-indicator-padding-horizontal: 4px !default;
+$carousel-indicator-padding-vertical: 12px !default;
+// $--carousel-indicator-out-color: $border-color-hover !default;
 
 /* Collapse
 --------------------------*/
-$--collapse-border-color: $border-color-sub !default;
-$--collapse-header-height: 48px !default;
-$--collapse-header-padding: 20px !default;
-$--collapse-header-fill: $white-color !default;
-$--collapse-header-color: $title-color !default;
-$--collapse-header-size: 13px !default;
-$--collapse-content-fill: $white-color !default;
-$--collapse-content-size: 13px !default;
-$--collapse-content-color: $title-color !default;
+// $--collapse-border-color: $border-color-sub !default;
+$collapse-header-height: 48px !default;
+// $--collapse-header-padding: 20px !default;
+// $--collapse-header-fill: $white-color !default;
+// $--collapse-header-color: $title-color !default;
+// $--collapse-header-size: 13px !default;
+// $--collapse-content-fill: $white-color !default;
+// $--collapse-content-size: 13px !default;
+// $--collapse-content-color: $title-color !default;
 
 /* Transfer
 --------------------------*/
-$--transfer-border-color: $border-color-sub !default;
-$--transfer-border-radius: $border-radius-base !default;
-$--transfer-panel-width: 200px !default;
-$--transfer-panel-header-height: 40px !default;
-$--transfer-panel-header-background: $background-color-base !default;
-$--transfer-panel-footer-height: 40px !default;
-$--transfer-panel-body-height: 246px !default;
-$--transfer-item-height: 30px !default;
-$--transfer-item-hover-background: $text-color-sub !default;
-$--transfer-filter-height: 32px !default;
+// $--transfer-border-color: $border-color-sub !default;
+// $--transfer-border-radius: $border-radius-base !default;
+$transfer-panel-width: 200px !default;
+$transfer-panel-header-height: 40px !default;
+// $--transfer-panel-header-background: $background-color-base !default;
+$transfer-panel-footer-height: 40px !default;
+$transfer-panel-body-height: 246px !default;
+$transfer-item-height: 30px !default;
+// $--transfer-item-hover-background: $text-color-sub !default;
+$transfer-filter-height: 32px !default;
 
 /* Header
   --------------------------*/
-$--header-padding: 0 20px !default;
+$header-padding: 0 20px !default;
 $header-height: 60px !default;
 
 /* Footer
 --------------------------*/
-$--footer-padding: 0 20px !default;
+$footer-padding: 0 20px !default;
 
 /* Main
 --------------------------*/
-$--main-padding: 20px !default;
+$main-padding: 20px !default;
 
 /* Break-point
 --------------------------*/

@@ -10,6 +10,7 @@
   &-circle{
     background: $radio-group-circle-bg;
     border-radius: $radio-group-circle-radius;
+    white-space: nowrap;
 
     .el-radio-button{
       display: inline-block;

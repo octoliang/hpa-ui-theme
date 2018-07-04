@@ -14,7 +14,7 @@
   max-width: 100%;
   background-color: $white-color;
   font-size: inherit;
-  color: $--table-text-color;
+  color: $text-color;
   margin-bottom: $margin-base;
 
   // 数据为空
@@ -102,7 +102,7 @@
   }
 
   thead {
-    color: $--table-header-color;
+    color: $text-color-sub;
     font-weight: 500;
 
     &.is-group {
@@ -190,7 +190,7 @@
   }
 
   // th.is-leaf, td {
-  //   border-bottom: $--table-border;
+  //   border-bottom: $table-border;
   // }
 
   // th.is-leaf{
@@ -206,7 +206,7 @@
     overflow: hidden;
     user-select: none;
     text-align: left;
-    // background-color: $--table-header-background;
+    // background-color: $white-color;
     background: $table-header-bg;
     color: $text-color;
     font-weight: 400;
@@ -279,12 +279,12 @@
 
   // 拥有多级表头
   @include m((group, border)) {
-    border: $--table-border;
+    border: $table-border;
 
     @include share-rule(border-pseudo) {
       content: '';
       position: absolute;
-      background-color: $--table-border-color;
+      background-color: $border-color-sub;
       z-index: 1;
     }
 
@@ -317,7 +317,7 @@
     }
 
     th, td {
-      border-right: $--table-border;
+      border-right: $table-border;
 
       &:first-child .cell {
         padding-left: 10px;
@@ -325,12 +325,12 @@
     }
 
     th.gutter:last-of-type {
-      border-bottom: $--table-border;
+      border-bottom: $table-border;
       border-bottom-width: 1px;
     }
 
     & th {
-      border-bottom: $--table-border;
+      border-bottom: $table-border;
     }
   }
 
@@ -344,7 +344,7 @@
     left: 0;
     overflow-x: hidden;
     overflow-y: hidden;
-    box-shadow: $--table-fixed-box-shadow;
+    box-shadow: $table-fixed-box-shadow;
 
     &::before {
       content: '';
@@ -363,7 +363,7 @@
     top: -1px;
     right: 0;
     background-color: $white-color;
-    border-bottom: $--table-border;
+    border-bottom: $table-border;
   }
 
   @include e(fixed-right) {
@@ -393,10 +393,10 @@
     z-index: 3;
 
     & tbody td {
-      border-top: $--table-border;
-      // background-color: $--table-row-hover-background;
+      border-top: $table-border;
+      // background-color: $background-color-base;
       background: $table-hover-bg;
-      color: $--table-text-color;
+      color: $text-color;
     }
   }
 
@@ -415,7 +415,7 @@
   @include e(footer-wrapper) {
     margin-top: -1px;
     td {
-      border-top: $--table-border;
+      border-top: $table-border;
     }
   }
 
@@ -428,9 +428,9 @@
     overflow: hidden;
 
     & tbody td {
-      // background-color: $--table-row-hover-background;
+      // background-color: $background-color-base;
       background: $table-hover-bg;
-      color: $--table-text-color;
+      color: $text-color;
     }
   }
 
@@ -460,13 +460,13 @@
     .el-table--border {
       @include when(scrolling-right) {
         ~ .el-table__fixed-right {
-          border-left: $--table-border;
+          border-left: $table-border;
         }
       }
 
       @include when(scrolling-left) {
         ~ .el-table__fixed {
-          border-right: $--table-border;
+          border-right: $table-border;
         }
       }
     }
@@ -524,7 +524,7 @@
         }
 
         &.current-row td {
-          background-color: $--table-current-row-background;
+          background-color: $table-current-row-background;
         }
       }
     }
@@ -535,7 +535,7 @@
       &, &.el-table__row--striped {
         &, &.current-row {
           > td {
-            // background-color: $--table-current-row-background;
+            // background-color: $table-current-row-background;
             background: $table-hover-bg;
           }
         }
@@ -543,7 +543,7 @@
     }
 
     tr.current-row > td {
-      // background-color: $--table-current-row-background;
+      // background-color: $table-current-row-background;
       background: $table-hover-bg;
     }
   }
@@ -554,7 +554,7 @@
     top: 0;
     bottom: 0;
     width: 0;
-    border-left: $--table-border;
+    border-left: $table-border;
     z-index: 10;
   }
 
@@ -564,7 +564,7 @@
     cursor: pointer;
 
     & i {
-      color: $info-color;
+      color: $gray-color;
       font-size: 12px;
       transform: scale(.75);
     }
@@ -578,7 +578,7 @@
 
   @include m(enable-row-hover) {
     .el-table__body tr:hover > td {
-      // background-color: $--table-row-hover-background;
+      // background-color: $background-color-base;
       background: $table-hover-bg;
     }
   }

@@ -40,10 +40,10 @@
   @include m(medium) {
     &.is-bordered {
       padding: $radio-bordered-md-pad;
-      border-radius: $--button-medium-border-radius;
+      border-radius: $border-radius-base;
       height: $radio-bordered-md-height;
       .el-radio__label {
-        font-size: $--button-medium-font-size;
+        font-size: $font-size-base;
       }
       .el-radio__inner {
         height: $radio-bordered-md-input-height;
@@ -54,10 +54,10 @@
   @include m(small) {
     &.is-bordered {
       padding: $radio-bordered-sm-pad;
-      border-radius: $--button-small-border-radius;
+      border-radius: $border-radius-sm;
       height: $radio-bordered-sm-height;
       .el-radio__label {
-        font-size: $--button-small-font-size;
+        font-size: $font-size-base;
       }
       .el-radio__inner {
         height: $radio-bordered-sm-input-height;
@@ -68,10 +68,10 @@
   @include m(mini) {
     &.is-bordered {
       padding: $radio-bordered-mini-pad;
-      border-radius: $--button-mini-border-radius;
+      border-radius: $border-radius-sm;
       height: $radio-bordered-mini-height;
       .el-radio__label {
-        font-size: $--button-mini-font-size;
+        font-size: $font-size-tiny;
       }
       .el-radio__inner {
         height: $radio-bordered-mini-input-height;
@@ -96,7 +96,7 @@
     @include when(disabled) {
       .el-radio__inner {
         background-color: $disabled-color;
-        border-color: $disabled-border-base;
+        border-color: $border-color-disabled;
         cursor: not-allowed;
 
         &::after {
@@ -111,7 +111,7 @@
       &.is-checked {
         .el-radio__inner {
           background-color: $disabled-color;
-          border-color: $disabled-border-base;
+          border-color: $border-color-disabled;
 
           &::after {
             background-color: $text-color-disabled;

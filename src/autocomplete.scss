@@ -43,11 +43,11 @@
     text-overflow: ellipsis;
 
     &:hover {
-      background-color: $--select-option-hover-background;
+      background-color: $background-color-base;
     }
 
     &.highlighted {
-      background-color: $--select-option-hover-background;
+      background-color: $background-color-base;
     }
 
     &.divider {

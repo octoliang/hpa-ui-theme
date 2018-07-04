@@ -31,9 +31,9 @@
 
   @include e(title) {
     padding-left: $gap;
-    font-size: $--select-group-font-size;
-    color: $--select-group-color;
-    line-height: $--select-group-height;
+    font-size: $font-size-tiny;
+    color: $gray-color;
+    line-height: $select-group-height;
   }
 
   & .el-select-dropdown__item {

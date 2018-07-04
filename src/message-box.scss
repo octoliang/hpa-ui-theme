@@ -6,13 +6,13 @@
 
 @include b(message-box) {
   display: inline-block;
-  width: $--msgbox-width;
+  width: $msgbox-width;
   padding-bottom: 10px;
   vertical-align: middle;
   background-color: $white-color;
-  border-radius: $--msgbox-border-radius;
+  border-radius: $border-radius-base;
   border: 1px solid $border-color-sub;
-  font-size: $--msgbox-font-size;
+  font-size: $font-size-lg;
   box-shadow: $box-shadow-light;
   text-align: left;
   overflow: hidden;
@@ -37,31 +37,31 @@
 
   @include e(header) {
     position: relative;
-    padding: $--msgbox-padding-primary;
+    padding: $padding-sm;
     padding-bottom: 10px;
   }
 
   @include e(title) {
     padding-left: 0;
     margin-bottom: 0;
-    font-size: $--msgbox-font-size;
+    font-size: $font-size-lg;
     line-height: 1;
     color: $title-color;
   }
 
   @include e(headerbtn) {
     position: absolute;
-    top: $--msgbox-padding-primary;
-    right: $--msgbox-padding-primary;
+    top: $padding-sm;
+    right: $padding-sm;
     padding: 0;
     border: none;
     outline: none;
     background: transparent;
-    font-size: $--message-close-size;
+    font-size: $font-size-lg;
     cursor: pointer;
 
     .el-message-box__close {
-      color: $info-color;
+      color: $gray-color;
     }
 
     &:focus, &:hover {
@@ -74,9 +74,9 @@
 
   @include e(content) {
     position: relative;
-    padding: 10px $--msgbox-padding-primary;
-    color: $--msgbox-content-color;
-    font-size: $--msgbox-content-font-size;
+    padding: 10px $padding-sm;
+    color: $text-color;
+    font-size: $font-size-base;
   }
 
   @include e(input) {
@@ -107,19 +107,19 @@
     }
 
     &.el-icon-success {
-      color: $--msgbox-success-color;
+      color: $success-color;
     }
 
     &.el-icon-info {
-      color: $--msgbox-info-color;
+      color: $gray-color ;
     }
 
     &.el-icon-warning {
-      color: $--msgbox-warning-color;
+      color: $warning-color;
     }
 
     &.el-icon-error {
-      color: $--msgbox-danger-color;
+      color: $danger-color;
     }
   }
 
@@ -134,7 +134,7 @@
 
   @include e(errormsg) {
     color: $danger-color;
-    font-size: $--msgbox-error-font-size;
+    font-size: $font-size-tiny;
     min-height: 18px;
     margin-top: 2px;
   }
@@ -184,7 +184,7 @@
     }
 
     @include e(content) {
-      $padding-horizontal: $--msgbox-padding-primary + 12px;
+      $padding-horizontal: $padding-sm + 12px;
 
       padding-left: $padding-horizontal;
       padding-right: $padding-horizontal;

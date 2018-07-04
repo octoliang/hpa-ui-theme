@@ -5,9 +5,9 @@
   display: inline-flex;
   align-items: center;
   position: relative;
-  font-size: $--switch-font-size;
-  line-height: $--switch-height;
-  height: $--switch-height;
+  font-size: $font-size-base;
+  line-height: $switch-height;
+  height: $switch-height;
   vertical-align: middle;
   @include when(disabled) {
     & .el-switch__core,
@@ -18,9 +18,9 @@
 
   @include e(label) {
     transition: .2s;
-    height: $--switch-height;
+    height: $switch-height;
     display: inline-block;
-    font-size: $--switch-font-size;
+    font-size: $font-size-base;
     font-weight: 500;
     cursor: pointer;
     vertical-align: middle;
@@ -38,7 +38,7 @@
     }
     & * {
       line-height: 1;
-      font-size: $--switch-font-size;
+      font-size: $font-size-base;
       display: inline-block;
     }
   }
@@ -58,13 +58,13 @@
     margin: 0;
     display: inline-block;
     position: relative;
-    width: $--switch-width !important;
-    height: $--switch-height !important;
-    border: 1px solid $--switch-off-color;
+    width: $switch-width !important;
+    height: $switch-height !important;
+    border: 1px solid $border-color-base;
     outline: none;
-    border-radius: $--switch-core-border-radius;
+    border-radius: $switch-core-border-radius;
     box-sizing: border-box;
-    background: $--switch-off-color;
+    background: $border-color-base;
     cursor: pointer;
     transition: border-color .3s, background-color .3s;
     vertical-align: middle;
@@ -76,19 +76,19 @@
       left: 1px;
       border-radius: $border-radius-circle;
       transition: all .3s;
-      width: $--switch-button-size;
-      height: $--switch-button-size;
+      width: $font-size-md;
+      height: $font-size-md;
       background-color: $white-color;
     }
   }
 
   @include when(checked) {
     .el-switch__core {
-      border-color: $--switch-on-color;
-      background-color: $--switch-on-color;
+      border-color: $primary-color-main;
+      background-color: $primary-color-main;
       &::after {
         left: 100%;
-        margin-left: -$--switch-button-size - 1px;
+        margin-left: -$font-size-md - 1px;
       }
     }
   }
@@ -125,11 +125,11 @@
 //     position: relative;
 //     width:$width !important;
 //     height: $height !important;
-//     border: 1px solid $--switch-off-color;
+//     border: 1px solid $border-color-base;
 //     outline: none;
-//     border-radius: $--switch-core-border-radius;
+//     border-radius: $switch-core-border-radius;
 //     box-sizing: border-box;
-//     background: $--switch-off-color;
+//     background: $border-color-base;
 //     cursor: pointer;
 //     transition: border-color .3s, background-color .3s;
 //     vertical-align: middle;

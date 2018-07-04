@@ -12,8 +12,8 @@
   }
 
   &:active {
-    background: mix($black-color, $color, $--button-active-shade-percent);
-    border-color: mix($black-color, $color, $--button-active-shade-percent);
+    background: mix($black-color, $color, $btn-active-shade-percent);
+    border-color: mix($black-color, $color, $btn-active-shade-percent);
     color: $white-color;
     outline: none;
   }
@@ -37,21 +37,21 @@
 
   &:hover,
   &:focus {
-    background: mix($white-color, $background-color, $--button-hover-tint-percent);
-    border-color: mix($white-color, $border-color, $--button-hover-tint-percent);
+    background: mix($white-color, $background-color, $btn-hover-tint-percent);
+    border-color: mix($white-color, $border-color, $btn-hover-tint-percent);
     color: $color;
   }
   
   &:active {
-    background: mix($black-color, $background-color, $--button-active-shade-percent);
-    border-color: mix($black-color, $border-color, $--button-active-shade-percent);
+    background: mix($black-color, $background-color, $btn-active-shade-percent);
+    border-color: mix($black-color, $border-color, $btn-active-shade-percent);
     color: $color;
     outline: none;
   }
 
   &.is-active {
-    background: mix($black-color, $background-color, $--button-active-shade-percent);
-    border-color: mix($black-color, $border-color, $--button-active-shade-percent);
+    background: mix($black-color, $background-color, $btn-active-shade-percent);
+    border-color: mix($black-color, $border-color, $btn-active-shade-percent);
     color: $color;
   }
 
@@ -71,10 +71,10 @@
   }
 }
 
-@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $border-radius) {
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $border-radius-base) {
   padding: $padding-vertical $padding-horizontal;
   font-size: $font-size;
-  border-radius: $border-radius;
+  border-radius: $border-radius-base;
   &.is-round {
     padding: $padding-vertical $padding-horizontal;
   }

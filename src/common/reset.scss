@@ -75,11 +75,11 @@ a {
 
   &:hover,
   &:focus {
-    color: mix($white-color, $primary-color, $--button-hover-tint-percent);
+    color: mix($white-color, $primary-color, $btn-hover-tint-percent);
   }
 
   &:active {
-    color: mix($black-color, $primary-color, $--button-active-shade-percent);
+    color: mix($black-color, $primary-color, $btn-active-shade-percent);
   }
 }
 

@@ -233,7 +233,7 @@
     padding: 15px;
     font-size: 12px;
     &:hover {
-      color: tint($primary-color, $--button-hover-tint-percent);
+      color: tint($primary-color, $btn-hover-tint-percent);
     }
   }
 }
@@ -379,6 +379,6 @@
     background-color: $white-color;
     border: 1px solid $border-color-sub;
     border-radius: $border-radius-base;
-    box-shadow: $--dropdown-menu-box-shadow;
+    box-shadow: $box-shadow-light;
   }
 }

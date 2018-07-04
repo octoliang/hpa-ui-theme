@@ -7,7 +7,7 @@
   display: inline-block;
   position: relative;
   font-size: $font-size-base;
-  line-height: $--input-height;
+  line-height: $input-height;
 
   .el-input,
   .el-input__inner {
@@ -29,7 +29,7 @@
 
   .el-icon-circle-close {
     z-index: #{$index-normal + 1};
-    transition: $--color-transition-base;
+    transition: $color-transition-base;
 
     &:hover {
       color: $text-color-sub;
@@ -47,7 +47,7 @@
     top: 0;
     height: 100%;
     padding: 0 25px 0 15px;
-    color: $--input-color;
+    color: $text-color;
     width: 100%;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -63,18 +63,18 @@
   }
 
   @include m(medium) {
-    font-size: $--input-medium-font-size;
-    line-height: #{$--input-medium-height};
+    font-size: $font-size-base;
+    line-height: #{$input-medium-height};
   }
 
   @include m(small) {
-    font-size: $--input-small-font-size;
-    line-height: #{$--input-small-height};
+    font-size: $font-size-sm;
+    line-height: #{$input-small-height};
   }
 
   @include m(mini) {
-    font-size: $--input-mini-font-size;
-    line-height: #{$--input-mini-height};
+    font-size: $font-size-tiny;
+    line-height: #{$input-mini-height};
   }
 
   @include when(disabled) {
@@ -119,8 +119,8 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: $--select-option-color;
-    height: $--select-option-height;
+    color: $text-color ;
+    height: $select-option-height;
     line-height: 1.5;
     box-sizing: border-box;
     cursor: pointer;
@@ -137,8 +137,8 @@
     }
 
     @include when(disabled) {
-      color: $--select-option-disabled-color;
-      background-color: $--select-option-disabled-background;
+      color: $text-color-disabled;
+      background-color: $white-color;
       cursor: not-allowed;
 
       &:hover {
@@ -147,16 +147,16 @@
     }
 
     @include when(active) {
-      color: $--select-option-selected;
+      color: $primary-color-main;
     }
 
     &:hover, &:focus:not(:active) {
-      background-color: $--select-option-hover-background;
+      background-color: $background-color-base;
     }
 
     &.selected {
       color: $white-color;
-      background-color: $--select-option-selected-hover;
+      background-color: $primary-color-main;
     }
   }
 

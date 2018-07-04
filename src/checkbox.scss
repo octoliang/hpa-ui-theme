@@ -36,12 +36,12 @@
 
     &.el-checkbox--medium {
       padding: $checkbox-bordered-md-pad;
-      border-radius: $--button-medium-border-radius;
+      border-radius: $border-radius-base;
       height: $checkbox-bordered-md-height;
 
       .el-checkbox__label {
         line-height: 17px;
-        font-size: $--button-medium-font-size;
+        font-size: $font-size-base;
       }
 
       .el-checkbox__inner {
@@ -52,12 +52,12 @@
 
     &.el-checkbox--small {
       padding: $checkbox-bordered-sm-pad;
-      border-radius: $--button-small-border-radius;
+      border-radius: $border-radius-sm;
       height: $checkbox-bordered-sm-height;
 
       .el-checkbox__label {
         line-height: 15px;
-        font-size: $--button-small-font-size;
+        font-size: $font-size-base;
       }
 
       .el-checkbox__inner {
@@ -73,12 +73,12 @@
 
     &.el-checkbox--mini {
       padding: $checkbox-bordered-mini-pad;
-      border-radius: $--button-mini-border-radius;
+      border-radius: $border-radius-sm;
       height: $checkbox-bordered-mini-height;
 
       .el-checkbox__label {
         line-height: 12px;
-        font-size: $--button-mini-font-size;
+        font-size: $font-size-tiny;
       }
 
       .el-checkbox__inner {
@@ -255,20 +255,20 @@
     white-space: nowrap;
     vertical-align: middle;
     cursor: pointer;
-    background: $--button-default-fill;
+    background: $white-color;
     border: $border-base;
     border-left: 0;
-    color: $--button-default-color;
+    color: $text-color;
     -webkit-appearance: none;
     text-align: center;
     box-sizing: border-box;
     outline: none;
     margin: 0;
     position: relative;
-    transition: $--all-transition;
+    transition: $all-transition;
     @include utils-user-select(none);
 
-    @include button-size($--button-padding-vertical, $--button-padding-horizontal, $--button-font-size, 0);
+    @include button-size($btn-padding-vertical, $btn-padding-horizontal, $font-size-base, 0);
 
     &:hover {
       color: $primary-color;
@@ -305,15 +305,15 @@
 
   &.is-disabled {
     & .el-checkbox-button__inner {
-      color: $--button-disabled-color;
+      color: $text-color-disabled;
       cursor: not-allowed;
       background-image: none;
-      background-color: $--button-disabled-fill;
-      border-color: $--button-disabled-border;
+      background-color: $btn-disabled-bg;
+      border-color: $border-color-sub;
       box-shadow: none;
     }
     &:first-child .el-checkbox-button__inner {
-      border-left-color: $--button-disabled-border;
+      border-left-color: $border-color-sub;
     }
   }
 
@@ -338,17 +338,17 @@
   }
   @include m(medium) {
     .el-checkbox-button__inner {
-      @include button-size($--button-medium-padding-vertical, $--button-medium-padding-horizontal, $--button-medium-font-size, 0);
+      @include button-size($btn-padding-vertical, $btn-padding-horizontal, $font-size-base, 0);
     }
   }
   @include m(small) {
     .el-checkbox-button__inner {
-      @include button-size($--button-small-padding-vertical, $--button-small-padding-horizontal, $--button-small-font-size, 0);
+      @include button-size($btn-small-padding-vertical, $btn-small-padding-horizontal, $font-size-base, 0);
     }
   }
   @include m(mini) {
     .el-checkbox-button__inner {
-      @include button-size($--button-mini-padding-vertical, $--button-mini-padding-horizontal, $--button-mini-font-size, 0);
+      @include button-size($btn-mini-padding-vertical, $btn-mini-padding-horizontal, $font-size-tiny, 0);
     }
   }
 }

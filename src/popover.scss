@@ -4,25 +4,25 @@
 
 @include b(popover) {
   position: absolute;
-  background: $--popover-fill;
+  background: $white-color;
   min-width: 150px;
   border-radius: 4px;
-  border: 1px solid $--popover-border-color;
-  padding: $--popover-padding;
+  border: 1px solid $border-color-sub;
+  padding: $padding-sm;
   z-index: $index-popper;
   color: $text-color;
   line-height: 1.4;
   text-align: justify;
-  // font-size: $--popover-font-size;
+  // font-size: $font-size-base;
   box-shadow: $box-shadow-light;
 
   @include m(plain) {
-    padding: $--popover-padding-large;
+    padding: $padding-sm;
   }
 
   @include e(title) {
-    color: $--popover-title-color;
-    font-size: $--popover-title-font-size;
+    color: $title-color;
+    font-size: $font-size-md;
     line-height: 1;
     margin-bottom: 12px;
   }

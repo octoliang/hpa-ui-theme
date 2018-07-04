@@ -15,19 +15,19 @@
     outline: none;
     padding: 0;
     margin: 0;
-    height: $--carousel-arrow-size;
-    width: $--carousel-arrow-size;
+    height: $carousel-arrow-size;
+    width: $carousel-arrow-size;
     cursor: pointer;
     transition: .3s;
     border-radius: 50%;
-    background-color: $--carousel-arrow-background;
+    background-color: $carousel-arrow-bg;
     color: $white-color;
     position: absolute;
     top: 50%;
     z-index: 10;
     transform: translateY(-50%);
     text-align: center;
-    font-size: $--carousel-arrow-font-size;
+    font-size: $font-size-tiny;
 
     @include m(left) {
       left: 16px;
@@ -38,7 +38,7 @@
     }
 
     &:hover {
-      background-color: $--carousel-arrow-hover-background;
+      background-color: $carousel-arrow-hover-bg;
     }
 
     & i {
@@ -57,7 +57,7 @@
     z-index: #{$index-normal + 1};
 
     @include m(outside) {
-      bottom: #{$--carousel-indicator-height + $--carousel-indicator-padding-vertical * 2};
+      bottom: #{$carousel-indicator-height + $carousel-indicator-padding-vertical * 2};
       text-align: center;
       position: static;
       transform: none;
@@ -65,7 +65,7 @@
         opacity: 0.64;
       }
       button {
-        background-color: $--carousel-indicator-out-color;
+        background-color: $border-color-hover;
         opacity: 0.24;
       }
     }
@@ -92,7 +92,7 @@
   @include e(indicator) {
     display: inline-block;
     background-color: transparent;
-    padding: $--carousel-indicator-padding-vertical $--carousel-indicator-padding-horizontal;
+    padding: $carousel-indicator-padding-vertical $carousel-indicator-padding-horizontal;
     cursor: pointer;
 
     &:hover button {
@@ -109,8 +109,8 @@
   @include e(button) {
     display: block;
     opacity: 0.48;
-    width: $--carousel-indicator-width;
-    height: $--carousel-indicator-height;
+    width: $carousel-indicator-width;
+    height: $carousel-indicator-height;
     background-color: $white-color;
     border: none;
     outline: none;

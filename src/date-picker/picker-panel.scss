@@ -2,7 +2,7 @@
 
 @include b(picker-panel) {
   color: $text-color;
-  border: 1px solid $--datepicker-border-color;
+  border: 1px solid $border-color-disabled;
   box-shadow: $box-shadow-light;
   background: $white-color;
   border-radius: $border-radius-base;
@@ -23,7 +23,7 @@
   }
 
   @include e(footer) {
-    border-top: 1px solid $--datepicker-inner-border-color;
+    border-top: 1px solid $datepicker-inner-border-color;
     padding: 4px;
     text-align: right;
     background-color: $white-color;
@@ -38,19 +38,19 @@
     background-color: transparent;
     line-height: 28px;
     font-size: 14px;
-    color: $--datepicker-color;
+    color: $text-color ;
     padding-left: 12px;
     text-align: left;
     outline: none;
     cursor: pointer;
 
     &:hover {
-      color: $--datepicker-text-hover-color;
+      color: $primary-color-main;
     }
 
     &.active {
       background-color: #e6f1fe;
-      color: $--datepicker-active-color;
+      color: $primary-color-main;
     }
   }
 
@@ -73,7 +73,7 @@
 
   @include e(icon-btn) {
     font-size: 12px;
-    color: $--datepicker-icon-color;
+    color: $title-color;
     border: 0;
     background: transparent;
     cursor: pointer;
@@ -81,7 +81,7 @@
     margin-top: 8px;
 
     &:hover {
-      color: $--datepicker-text-hover-color;
+      color: $primary-color-main;
     }
 
     @include when(disabled) {
@@ -104,7 +104,7 @@
   top: 0;
   bottom: 0;
   width: 110px;
-  border-right: 1px solid $--datepicker-inner-border-color;
+  border-right: 1px solid $datepicker-inner-border-color;
   box-sizing: border-box;
   padding-top: 6px;
   background-color: $white-color;

@@ -14,7 +14,7 @@
 
   &:hover {
     .el-input__inner {
-      border-color: $--select-border-color-hover;
+      border-color: $border-color-base;
     }
   }
 
@@ -23,14 +23,14 @@
     padding-right: 35px;
 
     &:focus {
-      border-color: $--select-input-focus-background;
+      border-color: $primary-color-main;
     }
   }
 
   .el-input {
     & .el-select__caret {
-      color: $--select-input-color;
-      font-size: $--select-input-font-size;
+      color: $text-color-disabled;
+      font-size: $font-size-base;
       transition: transform .3s;
       transform: rotateZ(180deg);
       cursor: pointer;
@@ -44,11 +44,11 @@
         text-align: center;
         transform: rotateZ(180deg);
         border-radius: $border-radius-circle;
-        color: $--select-input-color;
-        transition: $--color-transition-base;
+        color: $text-color-disabled;
+        transition: $color-transition-base;
 
         &:hover {
-          color: $--select-close-hover-color;
+          color: $text-color-sub;
         }
       }
     }
@@ -58,13 +58,13 @@
         cursor: not-allowed;
 
         &:hover {
-          border-color: $--select-disabled-border;
+          border-color: $border-color-disabled;
         }
       }
     }
 
     &.is-focus .el-input__inner {
-      border-color: $--select-input-focus-background;
+      border-color: $primary-color-main;
     }
   }
 
@@ -77,7 +77,7 @@
     outline: none;
     padding: 0;
     margin-left: 15px;
-    color: $--select-multiple-input-color;
+    color: $select-multiple-input-color;
     font-size: $font-size-base;
     appearance: none;
     height: 28px;
@@ -93,12 +93,12 @@
     top: 8px;
     z-index: $index-top;
     right: 25px;
-    color: $--select-input-color;
+    color: $text-color-disabled;
     line-height: 18px;
-    font-size: $--select-input-font-size;
+    font-size: $font-size-base;
 
     &:hover {
-      color: $--select-close-hover-color;
+      color: $text-color-sub;
     }
   }
 

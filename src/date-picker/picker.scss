@@ -106,16 +106,16 @@
 
   @include m(medium) {
     &.el-input__inner {
-      height: $--input-medium-height;
+      height: $input-medium-height;
     }
 
     .el-range-separator {
       line-height: 28px;
-      font-size: $--input-medium-font-size;
+      font-size: $font-size-base;
     }
 
     .el-range-input {
-      font-size: $--input-medium-font-size;
+      font-size: $font-size-base;
     }
 
     .el-range__icon,
@@ -126,16 +126,16 @@
 
   @include m(small) {
     &.el-input__inner {
-      height: $--input-small-height;
+      height: $input-small-height;
     }
 
     .el-range-separator {
       line-height: 24px;
-      font-size: $--input-small-font-size;
+      font-size: $font-size-sm;
     }
 
     .el-range-input {
-      font-size: $--input-small-font-size;
+      font-size: $font-size-sm;
     }
 
     .el-range__icon,
@@ -146,16 +146,16 @@
 
   @include m(mini) {
     &.el-input__inner {
-      height: $--input-mini-height;
+      height: $input-mini-height;
     }
 
     .el-range-separator {
       line-height: 20px;
-      font-size: $--input-mini-font-size;
+      font-size: $font-size-tiny;
     }
 
     .el-range-input {
-      font-size: $--input-mini-font-size;
+      font-size: $font-size-tiny;
     }
 
     .el-range__icon,
@@ -165,26 +165,26 @@
   }
 
   @include when(disabled) {
-    background-color: $--input-disabled-fill;
-    border-color: $--input-disabled-border;
-    color: $--input-disabled-color;
+    background-color: $disabled-color;
+    border-color: $border-color-disabled;
+    color: $disabled-color;
     cursor: not-allowed;
 
     &:hover, &:focus {
-      border-color: $--input-disabled-border;
+      border-color: $border-color-disabled;
     }
 
     input {
-      background-color: $--input-disabled-fill;
-      color: $--input-disabled-color;
+      background-color: $disabled-color;
+      color: $disabled-color;
       cursor: not-allowed;
       &::placeholder {
-        color: $--input-disabled-placeholder-color;
+        color: $text-color-disabled;
       }
     }
 
     .el-range-separator {
-      color: $--input-disabled-color;
+      color: $disabled-color;
     }
   }
 }

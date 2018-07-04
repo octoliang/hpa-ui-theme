@@ -10,8 +10,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     color: $text-color;
-    height: $--select-option-height;
-    line-height: $--select-option-height;
+    height: $select-option-height;
+    line-height: $select-option-height;
     box-sizing: border-box;
     cursor: pointer;
 
@@ -32,7 +32,7 @@
     }
 
     // &.selected {
-    //   color: $--select-option-selected;
+    //   color: $primary-color-main;
     //   font-weight: bold;
     // }
 
