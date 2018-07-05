@@ -84,7 +84,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $text-color;
+  color: $title-color;
   font-weight: 600;
 
   &:first-child {
@@ -174,51 +174,51 @@ input::-ms-reveal {
 /* Text =================== */
 .el-text{
   &-default{
-      color: $text-color !important;
+    color: $text-color !important;
   }
   &-success{
-      color: $success-color !important;
+    color: $success-color !important;
   }
   &-danger{
-      color: $danger-color !important;
+    color: $danger-color !important;
   }
   &-primary{
-      color: $primary-color-main !important;
+    color: $primary-color-main !important;
   }
   &-warning{
-      color: $warning-color !important;
+    color: $warning-color !important;
   }
   // &-warning-soft{
   //     color: $warning-soft-color !important;
   // }
 
   &-left{
-      text-align: left !important;
+    text-align: left !important;
   }
   &-right{
-      text-align: right !important;
+    text-align: right !important;
   }
 }
 
 /* Float ================== */
 .el-pull{
   &-left{
-      float: left;
+    float: left;
   }
   &-right{
-      float: right;
+    float: right;
   }
 }
 
 /* Display ================== */
 .el{
   &-inline{
-      display: inline !important;
+    display: inline !important;
   }
   &-inlineBlock{
-      display: inline-block !important;
+    display: inline-block !important;
   }
   &-block{
-      display: block !important;
+    display: block !important;
   }
 }

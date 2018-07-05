@@ -338,54 +338,16 @@ $input-mini-height: 28px !default;
 
 /* Button
 -------------------------- */
-// $--button-font-size: 14px !default;
-// $--button-font-weight: $font-weight-base !default;
-// $--button-border-radius: $border-radius-base !default;
 $btn-padding-vertical: 8px !default;
 $btn-padding-horizontal: 20px !default;
 
-// $--button-medium-font-size: 14px !default;
-// $--button-medium-border-radius: $border-radius-base !default;
-// $--button-medium-padding-vertical: 8px !default;
-// $--button-medium-padding-horizontal: 20px !default;
-
-// $--button-small-font-size: 14px !default;
-// $--button-small-border-radius: #{$border-radius-base - 2} !default;
 $btn-small-padding-vertical: 5px !default;
 $btn-small-padding-horizontal: 15px !default;
 
-// $--button-mini-font-size: 12px !default;
-// $--button-mini-border-radius: #{$border-radius-base - 1} !default;
 $btn-mini-padding-vertical: 7px !default;
 $btn-mini-padding-horizontal: 15px !default;
 
-// $--button-default-color: $text-color !default;
-// $--button-default-fill: $white-color !default;
-// $--button-default-border: $border-color-base !default;
-
-// $--button-disabled-color: $text-color-disabled !default;
 $btn-disabled-bg: #f5f5f5 !default;
-// $--button-disabled-border: $border-color-sub !default;
-
-// $--button-primary-border: $primary-color !default;
-// $--button-primary-color: $white-color !default;
-// $--button-primary-fill: $primary-color !default;
-
-// $--button-success-border: $success-color !default;
-// $--button-success-color: $white-color !default;
-// $--button-success-fill: $success-color !default;
-
-// $--button-warning-border: $warning-color !default;
-// $--button-warning-color: $white-color !default;
-// $--button-warning-fill: $warning-color !default;
-
-// $--button-danger-border: $danger-color !default;
-// $--button-danger-color: $white-color !default;
-// $--button-danger-fill: $danger-color !default;
-
-// $--button-info-border: $gray-color !default;
-// $--button-info-color: $white-color !default;
-// $--button-info-fill: $gray-color !default;
 
 $btn-hover-tint-percent: 20% !default;
 $btn-active-shade-percent: 10% !default;
@@ -415,31 +377,14 @@ $dialog-padding-primary: 20px !default;
 
 /* Table
 -------------------------- */
-// $--table-border-color: $border-color-sub !default;
 $table-border: 1px solid $border-color-sub !default;
-// $--table-text-color: $text-color !default;
-// $--table-header-color: $text-color-sub !default;
-// $--table-row-hover-background: $background-color-base !default;
 $table-current-row-background: $primary-color-light-9 !default;
-// $--table-header-background: $white-color !default;
-// $--table-footer-background: $text-color-disabled !default;
 $table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, .12) !default;
 $table-header-bg: #F5F7F9 !default;
 $table-hover-bg: rgba(255,163,0,0.1) !default;
 
 /* Pagination
 -------------------------- */
-// $--pagination-font-size: 13px !default;
-// $--pagination-fill: $white-color !default;
-// $--pagination-color: $title-color !default;
-// $--pagination-border-radius: 3px !default;
-// $--pagination-button-color: $title-color !default;
-// $--pagination-button-width: 35.5px !default;
-// $--pagination-button-height: 28px !default;
-// $--pagination-button-disabled-color: $text-color-disabled !default;
-// $--pagination-button-disabled-fill: $white-color !default;
-// $--pagination-hover-fill: $primary-color !default;
-// $--pagination-hover-color: $white-color !default;
 $pagenation-size-base: 32px !default;
 
 /* Popover
@@ -455,21 +400,12 @@ $popover-arrow-size: 6px !default;
 
 /* Tooltip
 -------------------------- */
-// $--tooltip-fill: $title-color !default;
-// $--tooltip-color: $white-color !default;
-// $--tooltip-font-size: 12px !default;
-// $--tooltip-border-color: $title-color !default;
 $tooltip-arrow-size: 6px !default;
-// $--tooltip-padding: 10px !default;
 
 /* Tag
 -------------------------- */
-// $--tag-padding: 0 10px !default;
 $tag-bg: rgba($primary-color, 0.10) !default;
-// $--tag-color: $primary-color !default;
 $tag-border: rgba($primary-color, 0.20) !default;
-// $--tag-font-size: 12px !default;
-// $--tag-border-radius: 4px !default;
 
 $tag-info-bg: rgba($gray-color, 0.10) !default;
 $tag-info-border: rgba($gray-color, 0.20) !default;
@@ -499,22 +435,14 @@ $tag-danger-color: $danger-color !default;
 
 /* Dropdown
 -------------------------- */
-// $--dropdown-menu-box-shadow: $box-shadow-light !default;
 $dropdown-menuItem-hover-bg: $primary-color-light-9 !default;
-// $--dropdown-menuItem-hover-color: $link-color !default;
 
 /* Badge
 -------------------------- */
-// $--badge-fill: $danger-color !default;
 $badge-radius: 10px !default;
-// $--badge-font-size: 12px !default;
-// $--badge-padding: 6px !default;
-// $--badge-size: 18px !default;
 
 /* Card
 --------------------------*/
-// $--card-border-color: $border-color-sub !default;
-// $--card-border-radius: 4px !default;
 $card-padding: 20px !default;
 
 /* Slider
@@ -541,7 +469,6 @@ $slider-button-wrapper-offset: -15px !default;
 /* Menu
 --------------------------*/
 $sidebar-bg: darken(saturate($primary-color,20%),16%) !default;
-// $--menu-item-color: $title-color !default;
 $menu-item-hover: lighten($primary-color,3.8%) !default;
 
 /* Rate
@@ -658,62 +585,52 @@ $--breakpoints-spec: (
 
 /* the new variable  tanxukai
 --------------------------*/
-
 /*button*/
+// $btn-huge-font: 18px !default;
+// $btn-huge-border-radius: $border-radius-base !default;
+// $btn-huge-padding-vertical: 12px !default;
+// $btn-huge-padding-horizontal: 20px !default;
 
-$btn-huge-font: 18px !default;
-$btn-huge-border-radius: $border-radius-base !default;
-$btn-huge-padding-vertical: 12px !default;
-$btn-huge-padding-horizontal: 20px !default;
+// $btn-large-font: 16px !default;
+// $btn-large-border-radius: $border-radius-base !default;
+// $btn-large-padding-vertical: 10px !default;
+// $btn-large-padding-horizontal: 20px !default;
 
-
-$btn-large-font: 16px !default;
-$btn-large-border-radius: $border-radius-base !default;
-$btn-large-padding-vertical: 10px !default;
-$btn-large-padding-horizontal: 20px !default;
-
-
-$btn-tiny-font: 10px !default;
-$btn-tiny-border-radius: #{$border-radius-base - 2} !default;
-$btn-tiny-padding-vertical: 4px !default;
-$btn-tiny-padding-horizontal: 20px !default;
-
-
+// $btn-tiny-font: 10px !default;
+// $btn-tiny-border-radius: #{$border-radius-base - 2} !default;
+// $btn-tiny-padding-vertical: 4px !default;
+// $btn-tiny-padding-horizontal: 20px !default;
 
 /*input*/
-$input-large-font: 16px !default;
+// $input-large-font: 16px !default;
 $input-large-height: 44px !default;
 
-$input-small-font: 14px !default;
+// $input-small-font: 14px !default;
 $input-small-height: 24px !default;
 
-$input-disabled-color:#f5f5f5 !default;
+// $input-disabled-color:#f5f5f5 !default;
 
 /*radio*/
-$border-fl-radius:12px !default;
+// $border-fl-radius:12px !default;
 $radio-group-circle-radius:36px !default;
 $radio-group-circle-bg: #f8f8f8 !default;
-
 
 /*step*/
 $DeepOrange-bcolor:#FF7E70 !default;
 $Green-bcolor:#93DD7B !default;
 $LightOrange-bcolor:#FFCB52 !default;
 $blue-bcolor:#36A3F7 !default;
-$content-color:#38485A !default;
-$stitle-color:#0F7AE6 !default;
+// $content-color:#38485A !default;
+// $stitle-color:#0F7AE6 !default;
 $mg-top-3:3px !default;
 $mg-top-5:5px !default;
-$mg-top-6:6px !default;
+// $mg-top-6:6px !default;
 $mg-top-8:8px !default;
 $mg-top-26:26px !default;
 $mg-bottom-20:20px !default;
 $mg-bottom-25:25px !default;
 $mg-bottom-15:15px !default;
 $step-size:12px !default;
-
-
-
 
 /* Base Style (By Lucinda)
 --------------------------------- */

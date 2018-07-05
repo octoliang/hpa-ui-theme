@@ -183,7 +183,7 @@
   }
 
   @include m(large) {
-    font-size: $input-large-font;
+    font-size: $font-size-md;
 
     @include e(inner) {
       height: $input-large-height;
@@ -208,7 +208,7 @@
     }
   }
   @include m(small) {
-    font-size: $input-small-font;
+    font-size: $font-size-base;
 
     @include e(inner) {
       height: $input-small-height;

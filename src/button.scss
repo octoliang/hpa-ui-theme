@@ -12,6 +12,7 @@
 
 @include b(button) {
   display: inline-block;
+  padding: ($padding-sm - 2) $padding-sm;
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
@@ -31,7 +32,7 @@
     margin-left: $margin-xs;
   }
 
-  @include button-size($btn-padding-vertical, $btn-padding-horizontal, $font-size-base, $border-radius-base);
+  @include button-size($padding-sm - 2, $padding-sm, $font-size-base, $border-radius-base);
 
   &:hover,
   &:focus {
@@ -128,7 +129,7 @@
     padding: $btn-padding-vertical;
   }
   @include m(primary) {
-    @include button-variant($white-color, $primary-color-main, $primary-color-main);
+    @include button-variant($white-color, $primary-color, $primary-color);
   }
   @include m(success) {
     @include button-variant($white-color, $success-color, $success-color);
@@ -140,27 +141,27 @@
     @include button-variant($white-color, $danger-color, $danger-color);
   }
   @include m(huge) {
-    @include button-size($btn-huge-padding-vertical, $btn-huge-padding-horizontal, $btn-huge-font, $btn-huge-border-radius);
+    @include button-size($padding-sm + 2, $padding-base, $font-size-lg, $border-radius-base);
     @include when(circle) {
-      padding:$btn-huge-padding-vertical;
+      padding: $padding-sm;
     }
   }
   @include m(large) {
-    @include button-size($btn-large-padding-vertical, $btn-large-padding-horizontal, $btn-large-font, $btn-large-border-radius);
+    @include button-size($padding-sm, $padding-base, $font-size-md, $border-radius-base);
     @include when(circle) {
-      padding:$btn-large-padding-vertical;
+      padding: $padding-sm;
     }
   }
   @include m(small) {
-    @include button-size($btn-small-padding-vertical, $btn-small-padding-horizontal, $font-size-base, $border-radius-sm);
+    @include button-size($padding-xs - 2, $padding-sm, $font-size-sm, $border-radius-sm);
     @include when(circle) {
-      padding: $btn-small-padding-vertical;
+      padding: $padding-xs - 2;
     }
   }
   @include m(tiny) {
-    @include button-size($btn-tiny-padding-vertical, $btn-tiny-padding-horizontal, $btn-tiny-font, $btn-tiny-border-radius);
+    @include button-size($padding-xs / 2, $padding-xs, $font-size-tiny, $border-radius-sm);
     @include when(circle) {
-      padding:$btn-tiny-padding-vertical;
+      padding: $padding-xs / 2;
     }
   }
   @include m(text) {
