@@ -113,6 +113,21 @@ $line-height-base: 24px !default;
 $font-size-no:0px !default;
 $fir-step-top:-22px !default;
 
+/* Padding and Margin
+------------------------------------ */
+$padding-base: 24px !default;
+$padding-sm: 12px !default;
+$padding-xs: 6px !default;
+$padding-lg: 36px !default;
+$padding-xl: 48px !default;
+
+$margin-base: $padding-base !default;
+$margin-sm: $padding-sm !default;
+$margin-xs: $padding-xs !default;
+$margin-lg: $padding-lg !default;
+$margin-xl: $padding-xl !default;
+
+
 /* z-index
 -------------------------- */
 $index-normal: 1 !default;
@@ -166,26 +181,9 @@ $radio-bordered-mini-height: 28px !default;
 
 /* Select
 -------------------------- */
-// $--select-disabled-border: $border-color-disabled !default;
-// $--select-close-hover-color: $text-color-sub !default;
-
-// $--select-input-color: $text-color-disabled !default;
 $select-multiple-input-color: #666 !default;
-// $--select-input-focus-background: $primary-color-main !default;
-// $--select-input-font-size: 14px !default;
-
-// $--select-option-color: $text-color !default;
-// $--select-option-disabled-color: $text-color-disabled !default;
-// $--select-option-disabled-background: $white-color !default;
 $select-option-height: 34px !default;
-// $--select-option-hover-background: $background-color-base !default;
-// $--select-option-selected: $primary-color !default;
-// $--select-option-selected-hover: $background-color-base !default;
-
-// $--select-group-color: $gray-color !default;
 $select-group-height: 30px !default;
-// $--select-group-font-size: 12px !default;
-
 $select-dropdown-max-height: 274px !default;
 
 /* Alert
@@ -239,59 +237,14 @@ $message-padding: 15px 15px 15px 20px !default;
 $notification-width: 330px !default;
 $notification-padding: 14px 26px 14px 13px !default;
 $notification-radius: 8px !default;
-// $--notification-shadow: $box-shadow-light !default;
-// $--notification-border-color: $border-color-sub !default;
 $notification-icon-size: 24px !default;
-// $--notification-close-font-size: $font-size-lg !default;
 $notification-group-margin: 13px !default;
-// $--notification-font-size: $font-size-base !default;
-// $--notification-color: $text-color !default;
-// $--notification-title-font-size: 16px !default;
-// $--notification-title-color: $title-color !default;
-
-// $--notification-close-color: $text-color-sub !default;
-// $--notification-close-hover-color: $text-color !default;
-
-// $--notification-success-color: $success-color !default;
-// $--notification-info-color: $gray-color !default;
-// $--notification-warning-color: $warning-color !default;
-// $--notification-danger-color: $danger-color !default;
 
 /* Input
 -------------------------- */
-// $--input-font-size: $font-size-base !default;
-// $--input-color: $text-color !default;
-// $--input-width: 140px !default;
 $input-height: 36px !default;
-// $--input-border: $border-base !default;
-// $--input-border-color: $border-color-base !default;
-// $--input-border-radius: $border-radius-base !default;
-// $--input-border-color-hover: $border-color-hover !default;
-// $--input-fill: $white-color !default;
-// $--input-fill-disabled: $disabled-color !default;
-// $--input-color-disabled: $font-color-disabled-base !default;
-// $--input-icon-color: $text-color-disabled !default;
-// $--input-placeholder-color: $text-color-disabled !default;
-// $--input-max-width: 314px !default;
-
-// $--input-hover-border: $border-color-hover !default;
-// $--input-clear-hover-color: $text-color-sub !default;
-
-// $--input-focus-border: $primary-color !default;
-// $--input-focus-fill: $white-color !default;
-
-// $--input-disabled-fill: $disabled-color !default;
-// $--input-disabled-border: $border-color-disabled !default;
-// $--input-disabled-color: $disabled-color-base !default;
-// $--input-disabled-placeholder-color: $text-color-disabled !default;
-
-// $--input-medium-font-size: 14px !default;
 $input-medium-height: 36px !default;
-
-// $--input-small-font-size: 13px !default;
 $input-small-height: 32px !default;
-
-// $--input-mini-font-size: 12px !default;
 $input-mini-height: 28px !default;
 
 /* Cascader
@@ -356,25 +309,13 @@ $btn-active-shade-percent: 10% !default;
 
 /* Switch
 -------------------------- */
-// $--switch-on-color: $primary-color !default;
-// $--switch-off-color: $border-color-base !default;
-// $--switch-disabled-color: $border-color-sub !default;
-// $--switch-disabled-text-color: $text-color-disabled !default;
-
-// $--switch-font-size: $font-size-base !default;
 $switch-core-border-radius: 10px !default;
 $switch-width: 44px !default;
 $switch-height: 20px !default;
-// $--switch-button-size: 16px !default;
 
 /* Dialog
 -------------------------- */
-// $--dialog-background-color: $primary-color-light-4 !default;
 $dialog-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !default;
-// $--dialog-close-hover-color: $primary-color !default;
-// $--dialog-title-font-size: $font-size-lg !default;
-// $--dialog-font-size: 14px !default;
-// $--dialog-line-height: $line-height-base !default;
 $dialog-padding-primary: 20px !default;
 
 /* Table
@@ -391,14 +332,7 @@ $pagenation-size-base: 32px !default;
 
 /* Popover
 -------------------------- */
-// $--popover-fill: $white-color !default;
-// $--popover-font-size: $font-size-base !default;
-// $--popover-border-color: $border-color-sub !default;
 $popover-arrow-size: 6px !default;
-// $--popover-padding: 12px !default;
-// $--popover-padding-large: 18px 20px !default;
-// $--popover-title-font-size: 16px !default;
-// $--popover-title-color: $title-color !default;
 
 /* Tooltip
 -------------------------- */
@@ -633,17 +567,3 @@ $mg-bottom-20:20px !default;
 $mg-bottom-25:25px !default;
 $mg-bottom-15:15px !default;
 $step-size:12px !default;
-
-/* Base Style (By Lucinda)
---------------------------------- */
-$padding-base: 24px !default;
-$padding-sm: 12px !default;
-$padding-xs: 6px !default;
-$padding-lg: 36px !default;
-$padding-xl: 48px !default;
-
-$margin-base: $padding-base !default;
-$margin-sm: $padding-sm !default;
-$margin-xs: $padding-xs !default;
-$margin-lg: $padding-lg !default;
-$margin-xl: $padding-xl !default;
