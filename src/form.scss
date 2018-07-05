@@ -170,3 +170,11 @@
     }
   }
 }
+
+.el-form-vertical{
+  .el-form-item__label{
+      float: initial;
+      width: 100%;
+      text-align: left;
+  }
+}

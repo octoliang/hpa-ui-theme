@@ -188,9 +188,9 @@ input::-ms-reveal {
   &-warning{
     color: $warning-color !important;
   }
-  // &-warning-soft{
-  //     color: $warning-soft-color !important;
-  // }
+  &-pink{
+      color: $pink-color !important;
+  }
 
   &-left{
     text-align: left !important;
@@ -215,10 +215,213 @@ input::-ms-reveal {
   &-inline{
     display: inline !important;
   }
-  &-inlineBlock{
+  &-inline-block{
     display: inline-block !important;
   }
   &-block{
     display: block !important;
+  }
+}
+
+/* Margin and Padding =================== */
+.el-mar{
+  &-xxs{
+      margin: $margin-base * 0 !important;
+  }
+  &-xs{
+      margin: $margin-xs !important;
+  }
+  &-s{
+      margin: $margin-sm !important;
+  }
+  &-m{
+      margin: $margin-base !important;
+  }
+  &-l{
+      margin: $margin-lg !important;
+  }
+  &-xl{
+      margin: $margin-xl !important;
+  }
+  &-b-xxs{
+      margin-bottom: $margin-base * 0 !important;
+  }
+  &-b-xs{
+      margin-bottom: $margin-xs !important;
+  }
+  &-b-s{
+      margin-bottom: $margin-sm !important;
+  }
+  &-b-m{
+      margin-bottom: $margin-base !important;
+  }
+  &-b-l{
+      margin-bottom: $margin-lg !important;
+  }
+  &-b-xl{
+      margin-bottom: $margin-xl !important;
+  }
+  &-t-xxs{
+      margin-top: $margin-base * 0 !important;
+  }
+  &-t-xs{
+      margin-top: $margin-xs !important;
+  }
+  &-t-s{
+      margin-top: $margin-sm !important;
+  }
+  &-t-m{
+      margin-top: $margin-base !important;
+  }
+  &-t-l{
+      margin-top: $margin-lg !important;
+  }
+  &-t-xl{
+      margin-top: $margin-xl !important;
+  }
+  &-r-xxs{
+      margin-right: $margin-base * 0 !important;
+  }
+  &-r-xs{
+      margin-right: $margin-xs !important;
+  }
+  &-r-s{
+      margin-right: $margin-sm !important;
+  }
+  &-r-m{
+      margin-right: $margin-base !important;
+  }
+  &-r-l{
+      margin-right: $margin-lg !important;
+  }
+  &-r-xl{
+      margin-right: $margin-xl !important;
+  }
+  &-l-xxs{
+      margin-left: $margin-base * 0 !important;
+  }
+  &-l-xs{
+      margin-left: $margin-xs !important;
+  }
+  &-l-s{
+      margin-left: $margin-sm !important;
+  }
+  &-l-m{
+      margin-left: $margin-base !important;
+  }
+  &-l-l{
+      margin-left: $margin-lg !important;
+  }
+  &-l-xl{
+      margin-left: $margin-xl !important;
+  }
+}
+.el-pad{
+  &-xxs{
+      padding: $padding-base * 0 !important;
+  }
+  &-xs{
+      padding: $padding-xs !important;
+  }
+  &-s{
+      padding: $padding-sm !important;
+  }
+  &-m{
+      padding: $padding-base !important;
+  }
+  &-l{
+      padding: $padding-lg !important;
+  }
+  &-xl{
+      padding: $padding-xl !important;
+  }
+  &-b-xxs{
+      padding-bottom: $padding-base * 0 !important;
+  }
+  &-b-xs{
+      padding-bottom: $padding-xs !important;
+  }
+  &-b-s{
+      padding-bottom: $padding-sm !important;
+  }
+  &-b-m{
+      padding-bottom: $padding-base !important;
+  }
+  &-b-l{
+      padding-bottom: $padding-lg !important;
+  }
+  &-b-xl{
+      padding-bottom: $padding-xl !important;
+  }
+  &-t-xxs{
+      padding-top: $padding-base * 0 !important;
+  }
+  &-t-xs{
+      padding-top: $padding-xs !important;
+  }
+  &-t-s{
+      padding-top: $padding-sm !important;
+  }
+  &-t-m{
+      padding-top: $padding-base !important;
+  }
+  &-t-l{
+      padding-top: $padding-lg !important;
+  }
+  &-t-xl{
+      padding-top: $padding-xl !important;
+  }
+  &-r-xxs{
+      padding-right: $padding-base * 0 !important;
+  }
+  &-r-xs{
+      padding-right: $padding-xs !important;
+  }
+  &-r-s{
+      padding-right: $padding-sm !important;
+  }
+  &-r-m{
+      padding-right: $padding-base !important;
+  }
+  &-r-l{
+      padding-right: $padding-lg !important;
+  }
+  &-r-xl{
+      padding-right: $padding-xl !important;
+  }
+  &-l-xxs{
+      padding-left: $padding-base * 0 !important;
+  }
+  &-l-xs{
+      padding-left: $padding-xs !important;
+  }
+  &-l-s{
+      padding-left: $padding-sm !important;
+  }
+  &-l-m{
+      padding-left: $padding-base !important;
+  }
+  &-l-l{
+      padding-left: $padding-lg !important;
+  }
+  &-l-xl{
+      padding-left: $padding-xl !important;
+  }
+}
+.el-font{
+  &-s{
+      font-size: $font-size-sm !important;
+  }
+  &-m{
+      font-size: $font-size-base !important;
+  }
+  &-md{
+      font-size: $font-size-md !important;
+  }
+  &-l{
+      font-size: $font-size-lg !important;
+  }
+  &-xl{
+      font-size: $font-size-xl !important;
   }
 }

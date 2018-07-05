@@ -69,3 +69,16 @@
     }
   }
 }
+
+/* Steps-wrap (By Lucinda) ======================*/
+.el-steps-vertical-wrap{
+  margin: 64px 0;
+  .el-steps{
+    padding-left: 100px;
+  }
+
+  .el-step-prefix{
+    position: absolute;
+    left: 0;
+  }
+}
