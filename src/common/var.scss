@@ -20,7 +20,6 @@ $body-default-bg: #F4F6F9 !default;
 $white-color: #fff !default;
 $black-color: #000 !default;
 $primary-color: #0f7ae6 !default;
-$primary-color-main: #4CA8FD !default;
 $success-color: #3fae2a !default;
 $warning-color: #ffa300 !default;
 $danger-color: #ff5347 !default;
@@ -28,6 +27,11 @@ $gray-color: #909399 !default;
 $cyan-color:#87e8de !default;
 $pink-color:#ffadd2 !default;
 $purple-color:#d3adf7 !default;
+$orange-color:#FF7E70 !default;
+
+$primary-color-main: #4CA8FD !default;
+$success-color-light: #93DD7B !default;
+$warning-color-light: #FFCB52 !default;
 
 $primary-color-light-1: mix($white-color, $primary-color, 10%) !default; /* 53a8ff */
 $primary-color-light-2: mix($white-color, $primary-color, 20%) !default; /* 66b1ff */
@@ -39,8 +43,8 @@ $primary-color-light-7: mix($white-color, $primary-color, 70%) !default; /* c6e2
 $primary-color-light-8: mix($white-color, $primary-color, 80%) !default; /* d9ecff */
 $primary-color-light-9: mix($white-color, $primary-color, 90%) !default; /* ecf5ff */
 
-$success-color-light: mix($white-color, $success-color, 80%) !default;
-$warning-color-light: mix($white-color, $warning-color, 80%) !default;
+// $success-color-light: mix($white-color, $success-color, 80%) !default;
+// $warning-color-light: mix($white-color, $warning-color, 80%) !default;
 $danger-color-light: mix($white-color, $danger-color, 80%) !default;
 $gray-color-light: mix($white-color, $gray-color, 80%) !default;
 
@@ -552,18 +556,22 @@ $radio-group-circle-radius:36px !default;
 $radio-group-circle-bg: #f8f8f8 !default;
 
 /*step*/
-$DeepOrange-bcolor:#FF7E70 !default;
-$Green-bcolor:#93DD7B !default;
-$LightOrange-bcolor:#FFCB52 !default;
-$blue-bcolor:#36A3F7 !default;
 // $content-color:#38485A !default;
 // $stitle-color:#0F7AE6 !default;
-$mg-top-3:3px !default;
-$mg-top-5:5px !default;
+// $mg-top-3:3px !default;
+// $mg-top-5:5px !default;
 // $mg-top-6:6px !default;
-$mg-top-8:8px !default;
-$mg-top-26:26px !default;
-$mg-bottom-20:20px !default;
-$mg-bottom-25:25px !default;
-$mg-bottom-15:15px !default;
+// $mg-top-8:8px !default;
+// $mg-top-26:26px !default;
+// $mg-bottom-20:20px !default;
+// $mg-bottom-25:25px !default;
+// $mg-bottom-15:15px !default;
 $step-size:12px !default;
+
+
+/* Timeline (By Lucinda)
+--------------------------------------- */
+$timeline-line-width: 3px !default;
+$timeline-dot-size: 12px !default;
+$timeline-info-width: 110px !default; 
+$timeline-content-min-height: 36px !default;

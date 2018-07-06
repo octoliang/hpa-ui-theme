@@ -24,16 +24,16 @@
       left: 0;
 
       > div{
-          margin-bottom:$mg-bottom-20;
+          margin-bottom:20px;
       }
 
       > div:last-child{
-        margin-top: $mg-top-26;
+        margin-top: 26px;
       }
 
       > div:first-child{
         margin-top: $margin-xs;
-        margin-bottom: $mg-bottom-25;
+        margin-bottom: 25px;
       }
 
       > div p:first-child{
@@ -50,35 +50,22 @@
         font-size: $font-size-tiny;
         font-weight: 400;
         text-align: right;
-        margin-top: -($mg-top-5);
+        margin-top: -($margin-xs - 1);
       }
 
     }
     > div:nth-child(2){
         .el-step__main{
-          margin-bottom: $mg-bottom-20;
+          margin-bottom: 20px;
         }
     }
     > div:last-child{
         .el-step__main{
-          margin-top: $mg-top-8;
+          margin-top: 8px;
         }
         .el-step__icon {
           top: 16%;;
         }
     }
-  }
-}
-
-/* Steps-wrap (By Lucinda) ======================*/
-.el-steps-vertical-wrap{
-  margin: 64px 0;
-  .el-steps{
-    padding-left: 100px;
-  }
-
-  .el-step-prefix{
-    position: absolute;
-    left: 0;
   }
 }

@@ -351,24 +351,21 @@
       color: $title-color;
    }
    .el-step__main{
-     margin-bottom: $mg-bottom-15;
-     margin-top: $mg-top-3;
+     margin-bottom: 15px;
+     margin-top: $margin-xs / 2;
    }
   }
   &-DeepOrange{
-    @include BdColor($DeepOrange-bcolor);
+    @include BdColor($orange-color);
   }
   &-green{
-    @include BdColor($Green-bcolor);
-  }
-  &-primary{
-    @include BdColor($primary-color-main);
+    @include BdColor($success-color-light);
   }
   &-LightOrange{
-    @include BdColor($LightOrange-bcolor);
+    @include BdColor($warning-color-light);
   }
   &-blue{
-    @include BdColor($blue-bcolor);
+    @include BdColor($primary-color-main);
   }
 
   &-bluecircle{
@@ -403,5 +400,76 @@
    display: block;
 }
 
+/* Timeline (Add by Lucinda)
+-------------------------------------- */
+.el-timeline{
+  position: relative;
+  padding: $padding-base 0 0;
+  margin: $margin-base 0;
+  box-sizing: border-box;
 
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: $timeline-line-width;
+    background: $border-color-base;
+    left: ($timeline-info-width + 5);
+  }
 
+  &-item{
+    position: relative;
+    padding: 0 0 $padding-base $timeline-info-width;
+
+    &-dot{
+      position: absolute;
+      width: $timeline-dot-size;
+      height: $timeline-dot-size;
+      background-color: $white-color;
+      border-radius: $border-radius-circle;
+      border: 2px solid $primary-color;
+
+      &.danger{
+        border-color: $danger-color;
+      }
+      &.warning{
+        border-color: $warning-color-light;
+      }
+      &.success{
+        border-color: $success-color-light;
+      }
+    }
+
+    &-info{
+      position: absolute;
+      left: 0;
+      top: -4px;
+      width: $timeline-info-width;
+      padding: 0 $padding-sm;
+      text-align: right;
+      color: $text-color;
+      font-size: $font-size-md;
+
+      &-affix{
+        font-size: $font-size-tiny;
+      }
+    }
+
+    &-content{
+      position: relative;
+      top: -4px;
+      padding: 0 0 0 $padding-base;
+      color: $title-color;
+      min-height: $timeline-content-min-height;
+
+      &-title{
+        font-size: $font-size-base;
+        color: $primary-color;
+        line-height: 1.5;
+        font-weight: 400;
+      }
+    }
+
+  }
+}
