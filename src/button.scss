@@ -217,12 +217,12 @@
     }
   }
 
-  &-btnblock{
+  &-block{
     width:100%;
     //  padding: 10px 20px;
     display: block;
 
-    & + .el-button-btnblock{
+    & + .el-button-block{
       margin-left: 0;
       margin-top: $margin-xs;
     }
