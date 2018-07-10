@@ -96,7 +96,9 @@
 
             <!-- Start Table -->
             <el-table
-              :data="tableData">
+              :data="tableData"
+              :header-cell-class-name="cellTextRight"
+              :cell-class-name="cellTextRight">
               <el-table-column
                 fixed
                 prop="team"
@@ -441,7 +443,20 @@
             leaseEndDate: '5/11/2018'
           }]
         };
+      },
+      methods: {
+        cellTextRight({row, column, rowIndex, columnIndex}) {
+          if ([8,9,10,11,12,15,16,17,18].indexOf(columnIndex)>=0) {
+            return 'el-text-right'
+          } 
+          return ''
+        }
       }
     })
   </script>
+  <style module>
+    /* .el-table .table-text-right {
+      text-align: right;
+    } */
+  </style>
 </html>
