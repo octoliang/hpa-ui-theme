@@ -145,38 +145,38 @@
   }
   // by  txk
   &-blue{
-    background-color:#e6f7ff;
-    border:solid 1px #91d5ff;
-    color:#91d5ff;
+    background: lighten($primary-color, 47%);
+    border:solid 1px lighten($primary-color, 31%);
+    color:$primary-color;
   }
   &-cyan{
-    background-color: #e6fffb;
-    border: solid 1px #87e8de;
-    color:#87e8de;
+    background: lighten($cyan-color, 52%);
+    border: solid 1px lighten($cyan-color, 33.5%);
+    color:$cyan-color;
   }
   &-green{
-    background-color: #f6ffed;
-    border: solid 1px #b7eb8f;
-    color:#b7eb8f;
+    background: lighten($success-color,55%);
+    border: solid 1px lighten($success-color, 40%);
+    color:$success-color;
   }
   &-orange{
-    background-color: #fff2e8;
-    border: solid 1px #ffbb96;
-    color:#ffbb96;
+    background: lighten($orange-color, 42%);
+    border: solid 1px lighten($orange-color, 35%);
+    color:$orange-color;
   }
   &-pink{
-    background-color: #fff0f6;
-    border: solid 1px #ffadd2;
-    color:#ffadd2;
+    background: lighten($pink-color, 43%);
+    border: solid 1px lighten($pink-color, 33%);
+    color:$pink-color;
   }
   &-purple{
-    background-color: #f9f0ff;
-    border: solid 1px #d3adf7;
-    color:#d3adf7;
+    background: lighten($purple-color,48%);
+    border: solid 1px lighten($purple-color,34%);
+    color:$purple-color;
   }
   &-red{
-    background-color: #fff1f0;
-    border: solid 1px #ffa39e;
-    color:#ffa39e;
+    background: lighten($danger-color,34%);
+    border: solid 1px lighten($danger-color,18%);
+    color:$danger-color;
   }
 }
