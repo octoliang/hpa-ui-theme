@@ -4,7 +4,7 @@
 
 @mixin menu-item {
   position: relative;
-  padding: 12px 24px;
+  padding: 0 !important;
   font-size: inherit;
   // height: 56px;
   // line-height: 56px;
@@ -33,6 +33,16 @@
   &:hover,
   &:focus {
     outline: none;
+    background-color: $menu-item-hover;
+  }
+
+  & > a {
+    color: $white-color;
+    display: block;
+    padding: 12px 24px;
+  }
+
+  & > a.router-link-active {
     background-color: $menu-item-hover;
   }
 
