@@ -17,6 +17,10 @@
   cursor: pointer;
   @include utils-ellipsis;
 
+  >a{
+    color: $white-color;
+  }
+  
   * {
     vertical-align: middle;
   }
@@ -67,7 +71,7 @@
 
       &:not(.is-disabled):hover,
       &:not(.is-disabled):focus{
-        background-color: #fff;
+        background-color: $white-color;
       }
     }
     & > .el-submenu {
@@ -95,7 +99,7 @@
         color: $text-color-sub;
 
         &:hover {
-          background-color: #fff;
+          background-color: $white-color;
         }
       }
       & .el-submenu__icon-arrow {
