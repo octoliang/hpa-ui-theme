@@ -40,7 +40,7 @@
     .el-textarea__inner {
       background-color: $disabled-color;
       border-color: $border-color-disabled;
-      color: $disabled-color;
+      color: $text-color-disabled;
       cursor: not-allowed;
 
       &::placeholder {

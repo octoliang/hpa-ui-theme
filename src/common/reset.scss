@@ -171,6 +171,18 @@ input::-ms-reveal {
   display: none;
 }
 
+/* Clearfix ============ */
+.el-clearfix{
+    &:before,
+    &:after{
+        display: block;
+        content: "";
+        min-height: 0;
+        clear: both;
+        zoom: 1;
+    }
+}
+
 /* Text =================== */
 .el-text{
   &-default{
