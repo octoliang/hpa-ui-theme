@@ -8,6 +8,7 @@
   color: $text-color;
   transition: 0.3s;
   overflow: hidden;
+  margin-bottom: $margin-base;
 
   @include when(always-shadow) {
     box-shadow: $card-box-shadow;
@@ -22,14 +23,16 @@
 
   @include e(header) {
     color: $title-color;
-    padding: #{$card-padding - 2 $card-padding};
+    // padding: #{$card-padding - 2 $card-padding};
+    padding: $padding-sm $padding-base;
     font-size: $font-size-lg;
+    line-height: 1.5;
     font-weight: 500;
     border-bottom: 1px solid $border-color-sub;
     box-sizing: border-box;
   }
 
   @include e(body) {
-    padding: $card-padding;
+    padding: $padding-sm $padding-base;
   }
 }
