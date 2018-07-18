@@ -8,7 +8,7 @@
 <body>
   <div id="app">
     <el-container>
-      <el-aside width="200px">
+      <el-aside>
         <div class="el-aside-logo">
           <a href="javascript:void(0)"></a>
         </div>
@@ -60,7 +60,9 @@
       </el-aside>
       
       <el-container>
-        <el-header></el-header>
+        <el-header>
+          <el-button icon="el-icon-menu" @click="menuToggle"></el-button>
+        </el-header>
         <el-main>
           <el-breadcrumb>
             <el-breadcrumb-item :to="{ path: '/' }">Dashboard</el-breadcrumb-item>
@@ -395,6 +397,7 @@
       el: '#app',
       data: function() {
         return { 
+          sidebarCollapse: false,
           dialogVisible: false,
           tabActive: 'second',
           formInline: {
@@ -455,18 +458,22 @@
         };
       },
       methods: {
+        /* Table Cell Text Align ================== */
         cellTextRight({row, column, rowIndex, columnIndex}) {
           if ([8,9,10,11,12,15,16,17,18].indexOf(columnIndex)>=0) {
-            return 'el-text-right'
+            return 'el-text-right';
           } 
-          return ''
+          return '';
+        },
+        
+        /* Menu Toggle =================== */
+        menuToggle () {
+          this.sidebarCollapse = !this.sidebarCollapse;
         }
       }
     })
   </script>
-  <style module>
-    /* .el-table .table-text-right {
-      text-align: right;
-    } */
-  </style>
+  <!-- <style module>
+    
+  </style> -->
 </html>
