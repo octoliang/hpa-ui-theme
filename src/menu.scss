@@ -236,14 +236,14 @@
     //   padding: $padding-sm $padding-base;
     // }
     .el-menu-item-group__title,
-    .el-menu-item,
-    .el-submenu__title{
+    .el-menu-item>a,
+    .el-submenu__title>a{
       padding: $padding-sm $padding-base $padding-sm $padding-xl !important;
     }
 
     .el-submenu{
       .el-menu{
-        .el-menu-item{
+        .el-menu-item>a{
           padding: $padding-sm $padding-base $padding-sm ($padding-xl+$padding-sm) !important;
         }
       }

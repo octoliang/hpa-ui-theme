@@ -41,3 +41,84 @@
     }
   }
 }
+
+
+/* Aside Collapse 
+------------------------------ */
+.el-aside-collapse{
+  // Aside
+  .el-aside{
+    min-width: 60px;
+    max-width: 60px;
+    overflow: visible;
+  }
+
+  // Menu
+  .el-menu{
+    .el-submenu__icon-arrow{
+      display: none;
+    }
+
+    >.el-submenu>.el-submenu__title>a,
+    >.el-menu-item>a{
+      padding: $padding-sm;
+      text-align: center;
+
+      .el-menu-item-text{
+        display: none;
+      }
+    }
+
+    >.el-submenu>.el-menu-item[class^=el-icon-],
+    >.el-menu-item[class^=icon-]{
+      margin-right: 0;
+    }
+
+    .el-submenu{
+      position: relative;
+
+      &:hover{
+        >.el-menu{
+          display: block !important;
+        }
+      }
+      .el-menu{
+        // display: block !important;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        background: $white-color;
+        border-radius: $border-radius-base;
+        box-shadow: $box-shadow-base;
+
+        .el-menu-item-group__title{
+          padding: $padding-sm $padding-base!important;
+          color: $text-color-disabled;
+          cursor: not-allowed;
+        }
+
+        .el-menu-item>a,
+        .el-submenu__title>a{
+          color: $title-color;
+          padding: $padding-sm $padding-base $padding-sm $padding-lg !important;
+
+          &:hover{
+            color: $white-color;
+          }
+        }
+      }
+    }
+  
+  }
+
+  // Container
+  .el-container.is-vertical,
+  .el-header{
+    padding-left: 60px;
+  }
+
+  // Header
+  // .el-header{
+
+  // }
+}

@@ -114,13 +114,13 @@
   }
 
   th, td {
+    position: relative;
     // padding: 12px 0;
     padding: $padding-xs $padding-sm;
     min-width: 0;
     box-sizing: border-box;
     // text-overflow: ellipsis;
     // vertical-align: middle;
-    position: relative;
 
     @include when(center) {
       text-align: center;
@@ -210,23 +210,16 @@
     background: $table-header-bg;
     color: $text-color;
     font-weight: 400;
+    vertical-align: bottom;
 
     div {
       display: inline-block;
-      // padding-left: 10px;
-      // padding-right: 10px;
-      // line-height: 40px;
       box-sizing: border-box;
-      // overflow: hidden;
-      // white-space: nowrap;
-      // text-overflow: ellipsis;
       @include utils-ellipsis;
     }
 
     > .cell {
       position: relative;
-      // word-wrap: normal;
-      // text-overflow: ellipsis;
       display: inline-block;
       vertical-align: middle;
       width: 100%;
@@ -251,6 +244,7 @@
 
   td {
     color: $title-color;
+    vertical-align: middle;
 
     div {
       box-sizing: border-box;
