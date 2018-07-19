@@ -116,7 +116,7 @@
   th, td {
     position: relative;
     // padding: 12px 0;
-    padding: $padding-xs $padding-sm;
+    padding: ($padding-xs + 2) $padding-sm;
     min-width: 0;
     box-sizing: border-box;
     // text-overflow: ellipsis;
@@ -210,7 +210,6 @@
     background: $table-header-bg;
     color: $text-color;
     font-weight: 400;
-    vertical-align: bottom;
 
     div {
       display: inline-block;

@@ -17,6 +17,7 @@
     display: block;
     padding: $padding-sm $padding-base; 
     color: $white-color;
+    @include utils-ellipsis;
 
     &.router-link-active,
     &:hover{
