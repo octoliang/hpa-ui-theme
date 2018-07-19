@@ -17,18 +17,24 @@
     display: block;
     padding: $padding-sm $padding-base; 
     color: $white-color;
+
+    &.router-link-active,
+    &:hover{
+      outline: none;
+      background-color: $menu-item-hover;
+    }
   }
 
   * {
     vertical-align: middle;
   }
   
-  &.is-active,
-  &:hover,
-  &:focus {
-    outline: none;
-    background-color: $menu-item-hover;
-  }
+  // &.is-active,
+  // &:hover,
+  // &:focus {
+  //   outline: none;
+  //   background-color: $menu-item-hover;
+  // }
 
   @include when(disabled) {
     opacity: 0.25;

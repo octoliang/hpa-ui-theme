@@ -17,4 +17,46 @@
   line-height: $header-height;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
   z-index: 9;
+
+  &-container{
+    padding: 0 $padding-sm;
+
+    &:before,
+    &:after{
+        display: block;
+        content: "";
+        min-height: 0;
+        clear: both;
+        zoom: 1;
+    }
+  }
+
+  &-left{
+    float: left;
+  }
+
+  &-right{
+    float: right;
+  }
+
+  &-collapse{
+    float: left;
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    margin-right: 12px;
+    margin-left: -12px;
+    font-size: 20px;
+    border-right: $border-width-base $border-style-base $border-color-split;
+    cursor: pointer;
+  }
+
+  &-search{
+    width: auto;
+    
+    .el-input__inner{
+      border: 0;
+    }
+  }
 }

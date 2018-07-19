@@ -4,15 +4,19 @@
   <meta charset="UTF-8">
   <!-- import CSS -->
   <link rel="stylesheet" href="lib/index.css">
+  <link href="https://at.alicdn.com/t/font_750677_mvm1u1ogwcj.css" rel="stylesheet">
 </head>
 <body>
   <div id="app">
     <el-container id="wrapper">
       <el-aside>
         <div class="el-aside-logo">
-          <a href="javascript:void(0)"></a>
+          <a href="javascript:void(0)">
+            <img src="./logo.png" alt="HPA" />
+            <img src="./logo-sm.png" class="el-aside-logo-sm" alt="HPA" />
+          </a>
         </div>
-        <el-menu default-active="3">
+        <el-menu>
           <el-submenu index="1">
             <template slot="title">
               <a href="javascript:void(0)">
@@ -43,7 +47,7 @@
             </el-submenu>
           </el-submenu>
           <el-menu-item index="2">
-            <a href="javascript:void(0)" slot="title">
+            <a href="javascript:void(0)" slot="title" class="router-link-active">
               <i class="el-icon-menu"></i>
               <span class="el-menu-item-text">Application</span>
             </a>
@@ -71,7 +75,19 @@
       
       <el-container>
         <el-header>
-          <el-button icon="el-icon-menu" @click="menuToggle"></el-button>
+          <div class="el-header-container">
+            <div class="el-header-left">
+              <!-- <el-button icon="el-icon-menu" @click="menuToggle" type="text"></el-button> -->
+              <span class="el-header-collapse" @click="menuToggle">
+                <i class="el-icon-menu"></i>
+              </span>
+              <el-input class="el-header-search" placeholder="Search..." prefix-icon="el-icon-search"></el-input>
+            </div>
+            <div class="el-header-right">
+              <el-button type="primary" icon="el-icon-star-on" size="large" circle></el-button>
+              <el-button type="warning" icon="el-icon-menu" size="large" circle></el-button>
+            </div>
+          </div>
         </el-header>
         <el-main>
           <el-breadcrumb>

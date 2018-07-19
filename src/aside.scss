@@ -40,6 +40,10 @@
       }
     }
   }
+
+  .el-aside-logo-sm{
+    display: none;
+  }
 }
 
 
@@ -51,6 +55,17 @@
     min-width: 60px;
     max-width: 60px;
     overflow: visible;
+  }
+
+  .el-aside-logo{
+    >a>img{
+      display: none;
+
+      &.el-aside-logo-sm{
+        display: block;
+        margin-top: $margin-xs;
+      }
+    }
   }
 
   // Menu
@@ -116,9 +131,4 @@
   .el-header{
     padding-left: 60px;
   }
-
-  // Header
-  // .el-header{
-
-  // }
 }
