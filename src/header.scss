@@ -19,7 +19,7 @@
   z-index: 9;
 
   &-container{
-    padding: 0 $padding-sm;
+    padding: 0 $padding-sm 0 0;
 
     &:before,
     &:after{
@@ -45,8 +45,8 @@
     width: 60px;
     height: 60px;
     text-align: center;
-    margin-right: 12px;
-    margin-left: -12px;
+    // margin-right: 12px;
+    // margin-left: -12px;
     font-size: 20px;
     border-right: $border-width-base $border-style-base $border-color-split;
     cursor: pointer;
@@ -54,6 +54,7 @@
 
   &-search{
     width: auto;
+    margin-left: $margin-sm;
     
     .el-input__inner{
       border: 0;
