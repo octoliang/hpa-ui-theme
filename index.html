@@ -11,34 +11,145 @@
     <!-- button -->
     <h2 class="first-h2">button</h2>
     <div style="padding: 20px;">
-        <el-button  size="huge">huge button</el-button>
-        <el-button  size="large">large button</el-button>
-        <el-button>default button</el-button>
-        <el-button  size="small">small button</el-button>
-        <el-button  size="tiny">tiny button</el-button>
-        <div style="padding:20px 20px 0px 0;">
-          <el-button  type="primary">primary</el-button>
-          <el-button  type="success">success</el-button>   
-          <el-button  type="warning">warning</el-button>   
-          <el-button  type="danger">danger</el-button>
-          <el-button  class="secondary">secondary</el-button>   
-          <el-button  disabled>disabled</el-button>
-          <el-button  icon="el-icon-delete" circle  class="el-button-nb-green"></el-button>
-          <el-button  icon="el-icon-delete" circle  class="el-button-nb-blue"></el-button>
-          <el-button  icon="el-icon-delete" circle  type="primary"></el-button>    
-          <el-button  icon="el-icon-delete" circle  type="warning"></el-button>       
-        </div>
-        <div style="padding:20px 20px 0px 0;">
-          <el-button class="el-button-block" type="primary">save</el-button> 
-        </div>
+      <!-- <el-button size="huge">huge button</el-button>
+      <el-button size="large">large button</el-button>
+      <el-button>default button</el-button>
+      <el-button size="small">small button</el-button>
+      <el-button size="tiny">tiny button</el-button>
+      <div style="padding:20px 20px 0px 0;">
+        <el-button type="primary">primary</el-button>
+        <el-button type="success">success</el-button>   
+        <el-button type="warning">warning</el-button>   
+        <el-button type="danger">danger</el-button>
+        <el-button class="secondary">secondary</el-button>   
+        <el-button disabled>disabled</el-button>
+        <el-button icon="el-icon-delete" circle class="el-button-nb-green"></el-button>
+        <el-button icon="el-icon-delete" circle class="el-button-nb-blue"></el-button>
+        <el-button icon="el-icon-delete" circle type="primary"></el-button>    
+        <el-button icon="el-icon-delete" circle type="warning"></el-button>       
+      </div> -->
+      <h3>Normal</h3>
+      <el-row class="el-mar-b-s">
+        <el-button>默认按钮</el-button>
+        <el-button type="primary">主要按钮</el-button>
+        <el-button type="success">成功按钮</el-button>
+        <el-button type="info">信息按钮</el-button>
+        <el-button type="warning">警告按钮</el-button>
+        <el-button type="danger">危险按钮</el-button>
+      </el-row>
+      <el-row class="el-mar-b-m">
+        <el-button size="huge">超大型按钮</el-button>
+        <el-button type="primary" size="large">大型按钮</el-button>
+        <el-button type="success" size="medium">中等按钮</el-button>
+        <el-button type="info">默认按钮</el-button>
+        <el-button type="warning" size="small">小型按钮</el-button>
+        <el-button type="danger" size="mini">超小按钮</el-button>
+      </el-row>
+
+      <h3>Plan</h3>
+      <el-row class="el-mar-b-s">
+        <el-button plain>朴素按钮</el-button>
+        <el-button type="primary" plain>主要按钮</el-button>
+        <el-button type="success" plain>成功按钮</el-button>
+        <el-button type="info" plain>信息按钮</el-button>
+        <el-button type="warning" plain>警告按钮</el-button>
+        <el-button type="danger" plain>危险按钮</el-button>
+      </el-row>
+      <el-row class="el-mar-b-m">
+        <el-button plain size="huge">朴素按钮</el-button>
+        <el-button type="primary" plain size="large">主要按钮</el-button>
+        <el-button type="success" plain size="medium">成功按钮</el-button>
+        <el-button type="info" plain>信息按钮</el-button>
+        <el-button type="warning" plain size="small">警告按钮</el-button>
+        <el-button type="danger" plain size="mini">危险按钮</el-button>
+      </el-row>
+
+      <h3>Round</h3>
+      <el-row class="el-mar-b-s">
+        <el-button round>圆角按钮</el-button>
+        <el-button type="primary" round>主要按钮</el-button>
+        <el-button type="success" round>成功按钮</el-button>
+        <el-button type="info" round>信息按钮</el-button>
+        <el-button type="warning" round>警告按钮</el-button>
+        <el-button type="danger" round>危险按钮</el-button>
+      </el-row>
+      <el-row class="el-mar-b-m">
+        <el-button round size="huge">圆角按钮</el-button>
+        <el-button type="primary" round size="large">主要按钮</el-button>
+        <el-button type="success" round size="medium">成功按钮</el-button>
+        <el-button type="info" round>信息按钮</el-button>
+        <el-button type="warning" round size="small">警告按钮</el-button>
+        <el-button type="danger" round size="mini">危险按钮</el-button>
+      </el-row>
+
+      <h3>Circle</h3>
+      <el-row class="el-mar-b-s">
+        <el-button icon="el-icon-search" circle></el-button>
+        <el-button type="primary" icon="el-icon-edit" circle></el-button>
+        <el-button type="success" icon="el-icon-check" circle></el-button>
+        <el-button type="info" icon="el-icon-message" circle></el-button>
+        <el-button type="warning" icon="el-icon-star-off" circle></el-button>
+        <el-button type="danger" icon="el-icon-delete" circle></el-button>
+      </el-row>
+      <el-row class="el-mar-b-m">
+        <el-button icon="el-icon-search" circle size="huge"></el-button>
+        <el-button type="primary" icon="el-icon-edit" circle size="large"></el-button>
+        <el-button type="success" icon="el-icon-check" circle size="medium"></el-button>
+        <el-button type="info" icon="el-icon-message" circle></el-button>
+        <el-button type="warning" icon="el-icon-star-off" circle size="small"></el-button>
+        <el-button type="danger" icon="el-icon-delete" circle size="mini"></el-button>
+      </el-row>
+
+      <h3>Block</h3>
+      <el-row class="el-mar-b-m">
+        <el-button class="el-button-block el-mar-b-s" type="primary">save</el-button>
+        <el-button class="el-button-block el-mar-b-s" type="success">save</el-button>
+      </el-row>
+
+      <h3>Disabled</h3>
+      <el-row class="el-mar-b-s">
+        <el-button disabled>默认按钮</el-button>
+        <el-button type="primary" disabled>主要按钮</el-button>
+        <el-button type="success" disabled>成功按钮</el-button>
+        <el-button type="info" disabled>信息按钮</el-button>
+        <el-button type="warning" disabled>警告按钮</el-button>
+        <el-button type="danger" disabled>危险按钮</el-button>
+      </el-row>
+      <el-row class="el-mar-b-m">
+        <el-button plain disabled>朴素按钮</el-button>
+        <el-button type="primary" plain disabled>主要按钮</el-button>
+        <el-button type="success" plain disabled>成功按钮</el-button>
+        <el-button type="info" plain disabled>信息按钮</el-button>
+        <el-button type="warning" plain disabled>警告按钮</el-button>
+        <el-button type="danger" plain disabled>危险按钮</el-button>
+      </el-row>
+
+      <h3>Text</h3>
+      <el-row class="el-mar-b-m">
+        <el-button type="text">文字按钮</el-button>
+        <el-button type="text" disabled>文字按钮</el-button>
+      </el-row>
+
+      <el-button type="primary" :loading="true" class="el-mar-b-m">加载中</el-button>
+
+      <h3>Btn-Group</h3>
+      <el-button-group>
+        <el-button type="primary" icon="el-icon-arrow-left">上一页</el-button>
+        <el-button type="primary">下一页<i class="el-icon-arrow-right el-icon--right"></i></el-button>
+      </el-button-group>
+      <el-button-group>
+        <el-button type="primary" icon="el-icon-edit"></el-button>
+        <el-button type="primary" icon="el-icon-share"></el-button>
+        <el-button type="primary" icon="el-icon-delete"></el-button>
+      </el-button-group>
     </div>
     <!-- button -->
 
     <!-- check -->
     <h2>check</h2>
     <div class="check-box">
-        <el-checkbox  v-model="check">备选项</el-checkbox>
-        <el-checkbox  v-model="check" disabled>禁用项</el-checkbox>
+      <el-checkbox  v-model="check">备选项</el-checkbox>
+      <el-checkbox  v-model="check" disabled>禁用项</el-checkbox>
     </div>  
     <!-- check -->
 

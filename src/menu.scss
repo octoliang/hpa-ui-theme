@@ -141,7 +141,8 @@
 
     > .el-menu-item,
     > .el-submenu > .el-submenu__title {
-      [class^="el-icon-"] {
+      [class^="el-icon-"],
+      [class^=iconfont] {
         margin: 0;
         vertical-align: middle;
         width: 24px;

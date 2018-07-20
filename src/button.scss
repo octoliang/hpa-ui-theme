@@ -8,11 +8,9 @@
 @mixin new-Btn($Bgcolor: transparent){
   background-color:$Bgcolor;
 }
-//by txk
-
 @include b(button) {
   display: inline-block;
-  padding: ($padding-sm - 2) $padding-sm;
+  padding: ($padding-sm - 2) ($padding-sm + 4);
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
@@ -122,14 +120,17 @@
   }
   @include when(round) {
     border-radius: 20px;
-    padding: 12px 23px;
+    padding: ($padding-sm - 2) $padding-base;
   }
   @include when(circle) {
     border-radius: 50%;
-    padding: $btn-padding-vertical;
+    padding: $padding-sm - 2;
   }
   @include m(primary) {
     @include button-variant($white-color, $primary-color, $primary-color);
+  }
+  @include m(info) {
+    @include button-variant($white-color, $primary-color-main, $primary-color-main);
   }
   @include m(success) {
     @include button-variant($white-color, $success-color, $success-color);
@@ -143,13 +144,19 @@
   @include m(huge) {
     @include button-size($padding-sm + 2, $padding-base, $font-size-lg, $border-radius-base);
     @include when(circle) {
-      padding: $padding-sm;
+      padding: $padding-sm + 2;
     }
   }
   @include m(large) {
-    @include button-size($padding-sm, $padding-base, $font-size-md, $border-radius-base);
+    @include button-size($padding-sm + 1, $padding-base, $font-size-md, $border-radius-base);
     @include when(circle) {
-      padding: $padding-sm;
+      padding: $padding-sm + 1;
+    }
+  }
+  @include m(medium) {
+    @include button-size($padding-sm - 1, $padding-base, $font-size-md, $border-radius-base);
+    @include when(circle) {
+      padding: $padding-sm - 1;
     }
   }
   @include m(small) {
@@ -158,12 +165,18 @@
       padding: $padding-xs - 2;
     }
   }
-  @include m(tiny) {
+  @include m(mini) {
     @include button-size($padding-xs / 2, $padding-xs, $font-size-tiny, $border-radius-sm);
     @include when(circle) {
       padding: $padding-xs / 2;
     }
   }
+  // @include m(tiny) {
+  //   @include button-size($padding-xs / 2, $padding-xs, $font-size-tiny, $border-radius-sm);
+  //   @include when(circle) {
+  //     padding: $padding-xs / 2;
+  //   }
+  // }
   @include m(text) {
     border-color: transparent;
     color: $primary-color-main;
