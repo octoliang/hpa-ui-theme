@@ -118,53 +118,65 @@
       background-color: rgba(255,255,255,.35);
     }
   }
+  
   @include when(round) {
     border-radius: 20px;
     padding: ($padding-sm - 2) $padding-base;
   }
+
   @include when(circle) {
     border-radius: 50%;
     padding: $padding-sm - 2;
   }
+
   @include m(primary) {
     @include button-variant($white-color, $primary-color, $primary-color);
   }
+
   @include m(info) {
     @include button-variant($white-color, $primary-color-main, $primary-color-main);
   }
+
   @include m(success) {
     @include button-variant($white-color, $success-color, $success-color);
   }
+
   @include m(warning) {
     @include button-variant($white-color, $warning-color, $warning-color);
   }
+
   @include m(danger) {
     @include button-variant($white-color, $danger-color, $danger-color);
   }
+
   @include m(huge) {
     @include button-size($padding-sm + 2, $padding-base, $font-size-lg, $border-radius-base);
     @include when(circle) {
       padding: $padding-sm + 2;
     }
   }
+
   @include m(large) {
     @include button-size($padding-sm + 1, $padding-base, $font-size-md, $border-radius-base);
     @include when(circle) {
       padding: $padding-sm + 1;
     }
   }
+
   @include m(medium) {
     @include button-size($padding-sm - 1, $padding-base, $font-size-md, $border-radius-base);
     @include when(circle) {
       padding: $padding-sm - 1;
     }
   }
+
   @include m(small) {
     @include button-size($padding-xs - 2, $padding-sm, $font-size-sm, $border-radius-sm);
     @include when(circle) {
       padding: $padding-xs - 2;
     }
   }
+
   @include m(mini) {
     @include button-size($padding-xs / 2, $padding-xs, $font-size-tiny, $border-radius-sm);
     @include when(circle) {

@@ -26,7 +26,8 @@
   &-logo{
     width: 100%;
     height: $header-height;
-    padding: $padding-xs $padding-sm;
+    // padding: $padding-xs $padding-sm;
+    padding: 5px 20px;
     background: darken(saturate($primary-color,15%),29%);
 
     >a{
@@ -43,6 +44,16 @@
 
   .el-aside-logo-sm{
     display: none;
+  }
+
+  &-title{
+    margin-top: -$margin-sm;
+    color: $white-color;
+    text-align: center;
+  }
+
+  .el-menu{
+    margin: 20px 0;
   }
 }
 

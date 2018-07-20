@@ -36,7 +36,7 @@
   }
 }
 @include b(form-item) {
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   @include utils-clearfix;
 
   & .el-form-item {
@@ -90,12 +90,12 @@
     float: left;
     font-size: inherit;
     color: $text-color;
-    line-height: 40px;
+    // line-height: 40px;
     padding: 0 12px 0 0;
     box-sizing: border-box;
   }
   @include e(content) {
-    line-height: 40px;
+    // line-height: 40px;
     position: relative;
     font-size: inherit;
     @include utils-clearfix;
