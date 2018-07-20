@@ -397,12 +397,12 @@
 }
 
 .el-step.el-step-timeline:last-of-type .el-step__line{
-   display: block;
+  display: block;
 }
 
 /* Timeline (Add by Lucinda)
 -------------------------------------- */
-.el-timeline{
+@mixin timeline{
   position: relative;
   padding: $padding-base 0 0;
   margin: $margin-base 0;
@@ -471,5 +471,47 @@
       }
     }
 
+  }
+}
+.el-timeline{
+  @include timeline;
+
+  &-log{
+    @include timeline;
+
+    padding: 0;
+
+    &:before{
+      top: -12px;
+      left: 12px;
+      width: 1px;
+      background: $border-color-base;
+    }
+
+    .el-timeline-item{
+      padding: 0 0 $padding-base $padding-xs;
+
+      &:last-child{
+        padding: 0 0 0 $padding-xs;
+      }
+    }
+
+    .el-timeline-item-dot{
+      left: 8px;
+      width: 8px;
+      height: 8px;
+      background: $primary-color;
+      border-color: $primary-color;
+    }
+
+    .el-timeline-item-content{
+      top: -6px;
+      font-size: inherit;
+
+      &-title{
+        color: $title-color;
+        font-size: $font-size-base + 1;
+      }
+    }
   }
 }
