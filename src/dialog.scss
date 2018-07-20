@@ -105,9 +105,9 @@
     overflow-x: hidden;
     overflow-y: auto;
 
-    // @include e(header) {
-    //   display: none;
-    // }
+    @include e(body) {
+      font-size: $font-size-tiny;
+    }
   }
 }
 
