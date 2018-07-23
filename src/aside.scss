@@ -27,7 +27,7 @@
     width: 100%;
     height: $header-height;
     // padding: $padding-xs $padding-sm;
-    padding: 5px 20px;
+    padding: $padding-xs $padding-sm;
     background: darken(saturate($primary-color,15%),29%);
 
     >a{
@@ -53,7 +53,7 @@
   }
 
   .el-menu{
-    margin: 20px 0;
+    margin: $margin-md 0;
   }
 }
 
@@ -77,6 +77,10 @@
         margin-top: $margin-xs;
       }
     }
+  }
+
+  .el-aside-title{
+    display: none;
   }
 
   // Menu

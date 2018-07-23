@@ -13,7 +13,7 @@
       float: none;
       display: inline-block;
       text-align: left;
-      padding: 0 0 10px 0;
+      // padding: 0 0 10px 0;
     }
   }
   @include m(inline) {
@@ -36,7 +36,7 @@
   }
 }
 @include b(form-item) {
-  margin-bottom: 20px;
+  margin-bottom: $margin-base;
   @include utils-clearfix;
 
   & .el-form-item {
@@ -91,11 +91,13 @@
     font-size: inherit;
     color: $text-color;
     // line-height: 40px;
+    line-height: 36px;
     padding: 0 12px 0 0;
     box-sizing: border-box;
   }
   @include e(content) {
     // line-height: 40px;
+    line-height: 36px;
     position: relative;
     font-size: inherit;
     @include utils-clearfix;

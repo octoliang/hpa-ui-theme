@@ -7,7 +7,7 @@
   position: relative;
   margin: 0 auto 50px;
   background: $white-color;
-  border-radius: $border-radius;
+  border-radius: $border-radius-base;
   box-shadow: $dialog-box-shadow;
   box-sizing: border-box;
   width: 50%;
@@ -31,14 +31,13 @@
   }
 
   @include e(header) {
-    padding: $padding-sm $padding-lg;
-    padding-bottom: 10px;
+    padding: $padding-xl $padding-xl $padding-sm;
   }
 
   @include e(headerbtn) {
     position: absolute;
-    top: $padding-sm;
-    right: $padding-lg;
+    top: $padding-xl;
+    right: $padding-xl;
     padding: 0;
     background: transparent;
     border: none;
@@ -58,13 +57,14 @@
   }
 
   @include e(title) {
-    line-height: $line-height-base;
-    font-size: $font-size-lg;
     color: $title-color;
+    // line-height: $line-height-base;
+    font-size: $font-size-lg;
+    font-weight: 600;
   }
 
   @include e(body) {
-    padding: $padding-sm $padding-lg;
+    padding: $padding-md $padding-xl;
     color: $text-color;
     // font-size: $font-size-base;
   }

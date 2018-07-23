@@ -119,15 +119,17 @@ $fir-step-top:-22px !default;
 
 /* Padding and Margin
 ------------------------------------ */
-$padding-base: 24px !default;
-$padding-sm: 12px !default;
-$padding-xs: 6px !default;
-$padding-lg: 36px !default;
-$padding-xl: 48px !default;
+$padding-xs: 5px !default;
+$padding-sm: 10px !default;
+$padding-md: 15px !default;
+$padding-base: 20px !default;
+$padding-lg: 25px !default;
+$padding-xl: 30px !default;
 
-$margin-base: $padding-base !default;
-$margin-sm: $padding-sm !default;
 $margin-xs: $padding-xs !default;
+$margin-sm: $padding-sm !default;
+$margin-base: $padding-base !default;
+$margin-md: $padding-md !default;
 $margin-lg: $padding-lg !default;
 $margin-xl: $padding-xl !default;
 

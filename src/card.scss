@@ -25,7 +25,7 @@
     color: $title-color;
     // padding: #{$card-padding - 2 $card-padding};
     // padding: $padding-sm $padding-base;
-    padding: 30px;
+    padding: $padding-md $padding-xl;
     font-size: $font-size-lg;
     line-height: 1.5;
     font-weight: 500;
@@ -35,6 +35,6 @@
 
   @include e(body) {
     // padding: $padding-sm $padding-base;
-    padding: 30px;
+    padding: $padding-xl;
   }
 }
