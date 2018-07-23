@@ -424,19 +424,35 @@ input::-ms-reveal {
   }
 }
 .el-font{
-  &-s{
-      font-size: $font-size-sm !important;
-  }
-  &-m{
-      font-size: $font-size-base !important;
-  }
-  &-md{
-      font-size: $font-size-md !important;
-  }
-  &-l{
-      font-size: $font-size-lg !important;
-  }
-  &-xl{
-      font-size: $font-size-xl !important;
-  }
+    &-mini{
+        font-size: $font-size-mini !important;
+    }
+    &-xs{
+        font-size: $font-size-xs !important;
+    }
+    &-sm{
+        font-size: $font-size-sm !important;
+    }
+    &-m{
+        font-size: $font-size-base !important;
+    }
+    &-md{
+        font-size: $font-size-md !important;
+    }
+    &-lg{
+        font-size: $font-size-lg !important;
+    }
+    &-xl{
+        font-size: $font-size-xl !important;
+    }
+    &-hg{
+        font-size: $font-size-hg !important;
+    }
+
+    &-s{
+        font-size: $font-size-sm !important;
+    }
+    &-l{
+        font-size: $font-size-lg !important;
+    }
 }

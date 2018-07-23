@@ -31,7 +31,7 @@
 
   @include e(title) {
     padding-left: $gap;
-    font-size: $font-size-tiny;
+    font-size: $font-size-xs;
     color: $gray-color;
     line-height: $select-group-height;
   }

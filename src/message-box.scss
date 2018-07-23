@@ -134,7 +134,7 @@
 
   @include e(errormsg) {
     color: $danger-color;
-    font-size: $font-size-tiny;
+    font-size: $font-size-xs;
     min-height: 18px;
     margin-top: 2px;
   }

@@ -152,39 +152,51 @@
   @include m(huge) {
     @include button-size($padding-sm + 2, $padding-base, $font-size-lg, $border-radius-base);
     @include when(circle) {
-      padding: $padding-sm + 2;
+      // padding: $padding-sm + 2;
+      width: $btn-circle-hg-size;
+      height: $btn-circle-hg-size;
     }
   }
 
   @include m(large) {
     @include button-size($padding-sm + 1, $padding-base, $font-size-md, $border-radius-base);
     @include when(circle) {
-      padding: $padding-sm + 1;
+      // padding: $padding-sm + 1;
+      width: $btn-circle-lg-size;
+      height: $btn-circle-lg-size;
     }
   }
 
   @include m(medium) {
     @include button-size($padding-sm - 1, $padding-base, $font-size-md, $border-radius-base);
     @include when(circle) {
-      padding: $padding-sm - 1;
+      // padding: $padding-sm - 1;
+      width: $btn-circle-md-size;
+      height: $btn-circle-md-size;
     }
   }
 
   @include m(small) {
     @include button-size($padding-xs - 2, $padding-sm, $font-size-sm, $border-radius-sm);
     @include when(circle) {
-      padding: $padding-xs - 2;
+      // padding: $padding-xs - 2;
+      width: $btn-circle-sm-size;
+      height: $btn-circle-sm-size;
+      padding: 0;
     }
   }
 
   @include m(mini) {
-    @include button-size($padding-xs / 2, $padding-xs, $font-size-tiny, $border-radius-sm);
+    @include button-size($padding-xs / 2, $padding-xs, $font-size-xs, $border-radius-sm);
     @include when(circle) {
-      padding: $padding-xs / 2;
+      // padding: $padding-xs / 2;
+      width: $btn-circle-mini-size;
+      height: $btn-circle-mini-size;
+      padding: 0;
     }
   }
   // @include m(tiny) {
-  //   @include button-size($padding-xs / 2, $padding-xs, $font-size-tiny, $border-radius-sm);
+  //   @include button-size($padding-xs / 2, $padding-xs, $font-size-xs, $border-radius-sm);
   //   @include when(circle) {
   //     padding: $padding-xs / 2;
   //   }

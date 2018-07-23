@@ -78,7 +78,7 @@
 
       .el-checkbox__label {
         line-height: 12px;
-        font-size: $font-size-tiny;
+        font-size: $font-size-xs;
       }
 
       .el-checkbox__inner {
@@ -348,7 +348,7 @@
   }
   @include m(mini) {
     .el-checkbox-button__inner {
-      @include button-size($btn-mini-padding-vertical, $btn-mini-padding-horizontal, $font-size-tiny, 0);
+      @include button-size($btn-mini-padding-vertical, $btn-mini-padding-horizontal, $font-size-xs, 0);
     }
   }
 }

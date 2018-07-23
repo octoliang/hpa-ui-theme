@@ -221,7 +221,7 @@
     }
   }
   @include m(mini) {
-    font-size: $font-size-tiny;
+    font-size: $font-size-xs;
 
     @include e(inner) {
       height: $input-mini-height;

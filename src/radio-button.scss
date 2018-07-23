@@ -103,7 +103,7 @@
   }
   @include m(mini) {
     & .el-radio-button__inner {
-      @include button-size($btn-mini-padding-vertical, $btn-mini-padding-horizontal, $font-size-tiny, 0);
+      @include button-size($btn-mini-padding-vertical, $btn-mini-padding-horizontal, $font-size-xs, 0);
     }
   }
 

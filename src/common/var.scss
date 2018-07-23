@@ -104,11 +104,12 @@ $fill-base: $white-color !default;
 $font-path: 'fonts' !default;
 $font-size-base: 14px !default;
 $font-size-sm: 13px !default;
-$font-size-tiny: 12px !default;
+$font-size-xs: 12px !default;
+$font-size-mini: 11px !default;
 $font-size-md: 16px !default;
 $font-size-lg: 18px !default;
-$font-size-hg: 20px !default;
-$font-size-xl: 24px !default;
+$font-size-xl: 20px !default;
+$font-size-hg: 24px !default;
 $font-color-disabled-base: #bbb !default;
 $font-weight-base: 400 !default;
 $font-weight-normal: 500 !default;
@@ -299,6 +300,13 @@ $input-mini-height: 28px !default;
 
 /* Button
 -------------------------- */
+$btn-circle-hg-size: 44px !default;
+$btn-circle-lg-size: 40px !default;
+$btn-circle-md-size: 36px !default;
+$btn-circle-sm-size: 24px !default;
+$btn-circle-mini-size: 20px !default;
+
+
 $btn-padding-vertical: 10px !default;
 $btn-padding-horizontal: 20px !default;
 

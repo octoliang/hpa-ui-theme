@@ -109,7 +109,7 @@
 
     @include e((increase, decrease)) {
       width: $input-mini-height;
-      font-size: $font-size-tiny;
+      font-size: $font-size-xs;
 
       [class*=el-icon] {
         transform: scale(.8);
