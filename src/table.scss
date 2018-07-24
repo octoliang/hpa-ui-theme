@@ -295,7 +295,7 @@
 
   // 表格底部伪 border，总是有的
   &::before {
-    @include extend-rule(border-pseudo);
+    // @include extend-rule(border-pseudo);
     left: 0;
     bottom: 0;
     width: 100%;
@@ -348,7 +348,7 @@
       bottom: 0;
       width: 100%;
       height: 1px;
-      background-color: $border-color-sub;
+      // background-color: $border-color-sub;
       z-index: 4;
     }
   }

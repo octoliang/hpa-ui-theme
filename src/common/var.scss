@@ -12,8 +12,8 @@ $color-transition-base: color .2s cubic-bezier(.645,.045,.355,1) !default;
 /* Background
 -------------------------- */
 $background-color-base: #f5f7fa !default;
-$body-default-bg: #F4F6F9 !default;
-// $disabled-color-base: $body-default-bg !default;
+$body-color-base: #F4F6F9 !default;
+// $disabled-color-base: $body-color-base !default;
 
 /* Colors
 -------------------------- */
@@ -53,7 +53,7 @@ $warning-color-lighter: mix($white-color, $warning-color, 90%) !default;
 $danger-color-lighter: mix($white-color, $danger-color, 90%) !default;
 $gray-color-lighter: mix($white-color, $gray-color, 90%) !default;
 
-/* Text
+/* Text Color
 ---------------------------- */
 $title-color: #38485a !default;
 $text-color: #525B65 !default;  //#8391A0
@@ -115,6 +115,7 @@ $font-weight-base: 400 !default;
 $font-weight-normal: 500 !default;
 $font-weight-bold: 600 !default;
 $line-height-base: 24px !default;
+
 $font-size-no:0px !default;
 $fir-step-top:-22px !default;
 
