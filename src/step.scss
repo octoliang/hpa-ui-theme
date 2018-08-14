@@ -414,7 +414,7 @@
     top: 0;
     bottom: 0;
     width: $timeline-line-width;
-    background: $border-color-base;
+    background: $timeline-color;
     left: ($timeline-info-width + 5);
   }
 
@@ -445,8 +445,8 @@
       position: absolute;
       left: 0;
       top: -4px;
-      width: $timeline-info-width;
-      padding: 0 $padding-sm;
+      padding: 0;
+      min-width: ($timeline-info-width - 10);
       text-align: right;
       color: $text-color;
       font-size: $font-size-md;
@@ -469,6 +469,16 @@
         line-height: 1.5;
         font-weight: 400;
       }
+      .discribe-span{
+        margin-left: 20px;
+      }
+    }
+    &-date{
+      color: $title-color;
+      font-family: Roboto;
+      font-size: $font-size-base;
+      font-weight: 700;
+      text-align: right;
     }
 
   }
