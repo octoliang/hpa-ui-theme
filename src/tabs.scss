@@ -2,6 +2,9 @@
 @import "common/var";
 
 @include b(tabs) {
+   &_newtest{
+     font-size: 14px;
+   }
   @include e(header) {
     padding: 0;
     position: relative;
